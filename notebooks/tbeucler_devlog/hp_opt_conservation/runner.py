@@ -1,8 +1,8 @@
-import os
 import sherpa
 import sherpa.schedulers
 import argparse
 
+from utils import build_directory
 from default import default_params
 
 parser = argparse.ArgumentParser()
@@ -61,13 +61,6 @@ opt = '-N MNISTPBT -P {} -q {} -l {} -l gpu=1'.format(FLAGS.P, FLAGS.q, FLAGS.l)
 scheduler = sherpa.schedulers.SGEScheduler(environment=FLAGS.env, submit_options=opt)
 
 #scheduler = sherpa.schedulers.LocalScheduler()
-def build_directory(path, current_path=''):
-    # iterate through folders in specifide path
-    for folder in path.split('/'):
-        current_path += folder +'/'
-        # if it doesn't exist build that director
-        if not os.path.exists(current_path):
-            os.mkdir(current_path)
 
 output_path = 'SherpaResults/{data}/{net_type}_{loss_type}/output/'.format(data=FLAGS.data, net_type=FLAGS.net_type, loss_type=FLAGS.loss_type)
 models_path = 'SherpaResults/{data}/{net_type}_{loss_type}/Models/'.format(data=FLAGS.data,net_type=FLAGS.net_type, loss_type=FLAGS.loss_type)
