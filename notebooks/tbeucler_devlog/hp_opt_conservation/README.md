@@ -29,9 +29,10 @@ Where `Models` contains the saved architecure and weights in `h5` files and `out
 
 ## Model Diagnostics
 Model Diagnostics can easily be run via:  
-`python3.6 process.py --net_type [normal or conservation] --loss_type [mse or weak_loss]`
+`python3.6 process.py --net_type [normal or conservation] --loss_type [mse or weak_loss] --diagnostics`
 
 This script iterates through the models in `SherpaResults/{data}/{net_type}_{loss_type}/Models/`:  
 1. Loads the model
 2. Runs diagnostics via `ModelDiagnostics(NN,config_fn,data_fn)`
 3. Outputs the results to `SherpaResults/{data}/{net_type}_{loss_type}/Diagnostics/` with the file name matching the model it corresponds to
+4. Outputs plots of loss and val_loss to `SherpaResults/{data}/{net_type}_{loss_type}/Diagnostics/Plots/`
