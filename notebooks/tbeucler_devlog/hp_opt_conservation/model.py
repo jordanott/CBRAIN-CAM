@@ -13,15 +13,8 @@ from tensorflow.keras.models import *
 from tensorflow.keras.backend import eval
 from tensorflow.keras.optimizers import RMSprop
 from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
+from stored_dictionaries.data_options import data_opts
 
-input_shapes = {
-    'land_data': 64,
-    'fluxbypass_aqua': 304
-}
-output_shapes = {
-    'land_data': 65,
-    'fluxbypass_aqua': 218
-}
 class Network:
     def __init__(self, args, ID, scale_dict=None, sub=None, div=None):
         self.ID = ID
@@ -54,7 +47,7 @@ class Network:
         self.args['model_dir'] = self.args['results_dir'] + 'Models/'
 
     def build_model(self):
-        x = input = Input(shape=(input_shapes[self.args['data']],))
+        x = input = Input(shape=(data_opts[self.args['data']]['input_shape'],))
         for i in range(self.args['num_layers']):
             x = Dense(self.args['layer_%d'%i])(x)
             x = LeakyReLU(alpha=self.args['leaky_relu'])(x)
@@ -87,7 +80,7 @@ class Network:
                 hyai=hyai, hybi=hybi
             )([input, massout])
         else:
-            x = Dense(output_shapes[self.args['data']])(x)
+            x = Dense(data_opts[self.args['data']]['output_shape'])(x)
 
         model = Model(inputs=input, outputs=x)
 

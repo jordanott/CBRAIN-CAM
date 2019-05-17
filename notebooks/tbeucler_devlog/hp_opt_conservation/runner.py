@@ -13,11 +13,13 @@ parser.add_argument('-q',help='Defines a list of cluster queues or queue instanc
 parser.add_argument('-l', help='the given resource list.',default="hostname=\'(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)\'")
 parser.add_argument('--env', help='Your environment path.',default='/home/jott1/Projects/SHERPA_EX/.profile',type=str)
 parser.add_argument('--alg',default='local',type=str, choices=['local', 'random', 'bayes'])
+parser.add_argument('--sch',default='local',type=str, choices=['local', 'sge'])
+parser.add_argument('--gpus',default='0,1,2,3',type=str)
 
-#
-parser.add_argument('--data', type=str, default='fluxbypass_aqua', choices=['fluxbypass_aqua', 'land_data'])
-parser.add_argument('--net_type', type=str, default='normal', choices=['normal', 'conservation'], help='What to run?')
+# ---------------- Important parameters -------------------------
 parser.add_argument('--loss_type', type=str, default='mse', choices=['mse', 'weak_loss'], help='What to run?')
+parser.add_argument('--net_type', type=str, default='normal', choices=['normal', 'conservation'], help='What to run?')
+parser.add_argument('--data', type=str, choices=['fluxbypass_aqua', 'land_data', '8col', '32col'])
 
 # params okay left as defaults
 parser.add_argument('--batch_size', type=int, default=2048, help='Batch size')
@@ -58,8 +60,11 @@ else:
     algorithm = sherpa.algorithms.RandomSearch(max_num_trials=10*FLAGS.max_concurrent)
 
 # The scheduler
-opt = '-N MNISTPBT -P {} -q {} -l {} -l gpu=1'.format(FLAGS.P, FLAGS.q, FLAGS.l)
-scheduler = sherpa.schedulers.SGEScheduler(environment=FLAGS.env, submit_options=opt)
+if FLAGS.sch == 'sge':
+    opt = '-N MNISTPBT -P {} -q {} -l {} -l gpu=1'.format(FLAGS.P, FLAGS.q, FLAGS.l)
+    scheduler = sherpa.schedulers.SGEScheduler(environment=FLAGS.env, submit_options=opt)
+else:
+    scheduler = sherpa.schedulers.LocalScheduler(resources=[FLAGS.gpus])
 
 output_path = 'SherpaResults/{data}/{net_type}_{loss_type}/output/'.format(data=FLAGS.data, net_type=FLAGS.net_type, loss_type=FLAGS.loss_type)
 models_path = 'SherpaResults/{data}/{net_type}_{loss_type}/Models/'.format(data=FLAGS.data,net_type=FLAGS.net_type, loss_type=FLAGS.loss_type)

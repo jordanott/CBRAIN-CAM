@@ -1,5 +1,9 @@
 # tgb - 4/18/2019 - Python script callable from command line
 # Follows notebook 010 @ https://github.com/tbeucler/CBRAIN-CAM/blob/master/notebooks/tbeucler_devlog/010_Conserving_Network_Paper_Runs.ipynb
+import os
+
+gpu = os.environ.get("SHERPA_RESOURCE", '')
+os.environ['CUDA_VISIBLE_DEVICES'] = str(gpu or args.gpu)
 
 # set random seeds
 import numpy as np
@@ -10,15 +14,13 @@ set_random_seed(0)
 import sys
 sys.path.append('../')
 sys.path.append('../../../')
-
-import os
-import argparse
 # import xarray as xr
 import numpy as np
 
 # from cbrain.imports import *
 from cbrain.data_generator import *
 from cbrain.utils import limit_mem
+from stored_dictionaries.data_options import data_opts
 
 from model import Network
 from cbrain.model_diagnostics import ModelDiagnostics
@@ -71,10 +73,10 @@ elif trial.parameters['data'] == 'land_data':
 
     train_gen = DataGenerator(
         data_dir=trial.parameters['data_dir'] + trial.parameters['data'] + '/',
-        feature_fn='full_physics_essentials_train_month01_shuffle_features.nc',
-        target_fn='full_physics_essentials_train_month01_shuffle_targets.nc',
+        feature_fn=data_opts[trial.parameters['data']]['train']['feature_fn'],
+        target_fn=data_opts[trial.parameters['data']]['train']['target_fn'],
         batch_size=trial.parameters['batch_size'],
-        norm_fn='full_physics_essentials_train_month01_norm.nc',
+        norm_fn=data_opts[trial.parameters['data']]['norm_fn'],
         fsub='feature_means',
         fdiv='feature_stds',
         tmult='target_conv',
@@ -83,10 +85,10 @@ elif trial.parameters['data'] == 'land_data':
 
     valid_gen = DataGenerator(
         data_dir=trial.parameters['data_dir'] + trial.parameters['data'] + '/',
-        feature_fn='full_physics_essentials_valid_month02_features.nc',
-        target_fn='full_physics_essentials_valid_month02_targets.nc',
+        feature_fn=data_opts[trial.parameters['data']]['test']['feature_fn'],
+        target_fn=data_opts[trial.parameters['data']]['test']['target_fn'],
         batch_size=trial.parameters['batch_size'],
-        norm_fn='full_physics_essentials_train_month01_norm.nc',
+        norm_fn=data_opts[trial.parameters['data']]['norm_fn'],
         fsub='feature_means',
         fdiv='feature_stds',
         tmult='target_conv',
