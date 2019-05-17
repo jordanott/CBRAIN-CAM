@@ -32,42 +32,68 @@ trial = client.get_trial()  # contains ID and parameters
 # Otherwise tensorflow will use ALL your GPU RAM for no reason
 limit_mem()
 
-print (trial.parameters)
+if trial.parameters['data'] == 'fluxbypass_aqua':
+    PREFIX = '8col009_01_'
+    DATADIR = trial.parameters['data_dir'] + trial.parameters['data'] + '/'
 
-PREFIX = '8col009_01_'
-DATADIR = trial.parameters['data_dir'] + trial.parameters['data'] + '/'
+    scale_dict = load_pickle(DATADIR + '009_Wm2_scaling.pkl'); in_vars = load_pickle(DATADIR + '009_Wm2_in_vars.pkl')
+    out_vars = load_pickle(DATADIR + '009_Wm2_out_vars.pkl'); dP = load_pickle(DATADIR + '009_Wm2_dP.pkl')
 
-scale_dict = load_pickle(DATADIR + '009_Wm2_scaling.pkl'); in_vars = load_pickle(DATADIR + '009_Wm2_in_vars.pkl')
-out_vars = load_pickle(DATADIR + '009_Wm2_out_vars.pkl'); dP = load_pickle(DATADIR + '009_Wm2_dP.pkl')
+    train_gen = DataGenerator(
+        data_fn = DATADIR+PREFIX+'train.nc',
+        input_vars = in_vars,
+        output_vars = out_vars,
+        norm_fn = DATADIR+PREFIX+'norm.nc',
+        input_transform = ('mean', 'maxrs'),
+        output_transform = scale_dict,
+        batch_size=trial.parameters['batch_size'],
+        shuffle=True
+    )
 
+    valid_gen = DataGenerator(
+        data_fn = DATADIR+PREFIX+'valid.nc',
+        input_vars = in_vars,
+        output_vars = out_vars,
+        norm_fn = DATADIR+PREFIX+'norm.nc',
+        input_transform = ('mean', 'maxrs'),
+        output_transform = scale_dict,
+        batch_size=trial.parameters['batch_size'],
+        shuffle=False
+    )
 
-train_gen = DataGenerator(
-    data_fn = DATADIR+PREFIX+'train.nc',
-    input_vars = in_vars,
-    output_vars = out_vars,
-    norm_fn = DATADIR+PREFIX+'norm.nc',
-    input_transform = ('mean', 'maxrs'),
-    output_transform = scale_dict,
-    batch_size=trial.parameters['batch_size'],
-    shuffle=True
-)
+    net = Network(trial.parameters, trial.id,
+    	scale_dict=scale_dict,
+    	sub=train_gen.input_transform.sub,
+    	div=train_gen.input_transform.div
+    )
+elif trial.parameters['data'] == 'land_data':
+    from data_generator import DataGenerator
 
-valid_gen = DataGenerator(
-    data_fn = DATADIR+PREFIX+'valid.nc',
-    input_vars = in_vars,
-    output_vars = out_vars,
-    norm_fn = DATADIR+PREFIX+'norm.nc',
-    input_transform = ('mean', 'maxrs'),
-    output_transform = scale_dict,
-    batch_size=trial.parameters['batch_size'],
-    shuffle=False
-)
+    train_gen = DataGenerator(
+        data_dir=trial.parameters['data_dir'] + trial.parameters['data'] + '/',
+        feature_fn='full_physics_essentials_train_month01_shuffle_features.nc',
+        target_fn='full_physics_essentials_train_month01_shuffle_targets.nc',
+        batch_size=trial.parameters['batch_size'],
+        norm_fn='full_physics_essentials_train_month01_norm.nc',
+        fsub='feature_means',
+        fdiv='feature_stds',
+        tmult='target_conv',
+        shuffle=True,
+    )
 
-net = Network(trial.parameters, trial.id,
-	scale_dict=scale_dict,
-	sub=train_gen.input_transform.sub,
-	div=train_gen.input_transform.div
-)
+    valid_gen = DataGenerator(
+        data_dir=trial.parameters['data_dir'] + trial.parameters['data'] + '/',
+        feature_fn='full_physics_essentials_valid_month02_features.nc',
+        target_fn='full_physics_essentials_valid_month02_targets.nc',
+        batch_size=trial.parameters['batch_size'],
+        norm_fn='full_physics_essentials_train_month01_norm.nc',
+        fsub='feature_means',
+        fdiv='feature_stds',
+        tmult='target_conv',
+        shuffle=False,
+    )
+
+    net = Network(trial.parameters, trial.id)
 
 # save lr model
 net.save()

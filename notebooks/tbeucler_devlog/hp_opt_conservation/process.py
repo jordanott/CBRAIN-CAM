@@ -16,6 +16,7 @@ from cbrain.utils import limit_mem
 from cbrain.layers import *
 from tensorflow.keras.models import load_model
 from utils import build_directory
+from numpy import inf
 
 import matplotlib
 matplotlib.use('Agg')

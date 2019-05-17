@@ -3,7 +3,6 @@ import sherpa.schedulers
 import argparse
 
 from utils import build_directory
-from default import default_params
 
 parser = argparse.ArgumentParser()
 
@@ -13,9 +12,10 @@ parser.add_argument('-P',help="Specifies the project to which this  job  is  ass
 parser.add_argument('-q',help='Defines a list of cluster queues or queue instances which may be used to execute this job.',default='arcus.q')
 parser.add_argument('-l', help='the given resource list.',default="hostname=\'(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)\'")
 parser.add_argument('--env', help='Your environment path.',default='/home/jott1/Projects/SHERPA_EX/.profile',type=str)
+parser.add_argument('--alg',default='local',type=str, choices=['local', 'random', 'bayes'])
 
 #
-parser.add_argument('--data', type=str, default='fluxbypass_aqua', choices=['fluxbypass_aqua'])
+parser.add_argument('--data', type=str, default='fluxbypass_aqua', choices=['fluxbypass_aqua', 'land_data'])
 parser.add_argument('--net_type', type=str, default='normal', choices=['normal', 'conservation'], help='What to run?')
 parser.add_argument('--loss_type', type=str, default='mse', choices=['mse', 'weak_loss'], help='What to run?')
 
@@ -45,22 +45,21 @@ parameters.extend([
 
 dict_flags = vars(FLAGS)
 
-default_params.update(dict_flags)
-
 for arg in dict_flags:
     parameters.append(sherpa.Choice(name=arg, range=[dict_flags[arg] ]))
 
-# algorithm = sherpa.algorithms.LocalSearch(default_params)
-# algorithm = sherpa.algorithms.GPyOpt(max_num_trials=100)
-algorithm = sherpa.algorithms.RandomSearch(max_num_trials=10*FLAGS.max_concurrent)
-
-# study = sherpa.Study(parameters=parameters,algorithm=algorithm,lower_is_better=True,output_dir='Params')
+if FLAGS.alg == 'local':
+    from default import default_params
+    default_params.update(dict_flags)
+    algorithm = sherpa.algorithms.LocalSearch(default_params)
+elif FLAGS.alg == 'bayes':
+    algorithm = sherpa.algorithms.GPyOpt(max_num_trials=100)
+else:
+    algorithm = sherpa.algorithms.RandomSearch(max_num_trials=10*FLAGS.max_concurrent)
 
 # The scheduler
 opt = '-N MNISTPBT -P {} -q {} -l {} -l gpu=1'.format(FLAGS.P, FLAGS.q, FLAGS.l)
 scheduler = sherpa.schedulers.SGEScheduler(environment=FLAGS.env, submit_options=opt)
-
-#scheduler = sherpa.schedulers.LocalScheduler()
 
 output_path = 'SherpaResults/{data}/{net_type}_{loss_type}/output/'.format(data=FLAGS.data, net_type=FLAGS.net_type, loss_type=FLAGS.loss_type)
 models_path = 'SherpaResults/{data}/{net_type}_{loss_type}/Models/'.format(data=FLAGS.data,net_type=FLAGS.net_type, loss_type=FLAGS.loss_type)

@@ -14,8 +14,16 @@ from tensorflow.keras.backend import eval
 from tensorflow.keras.optimizers import RMSprop
 from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
 
+input_shapes = {
+    'land_data': 64,
+    'fluxbypass_aqua': 304
+}
+output_shapes = {
+    'land_data': 65,
+    'fluxbypass_aqua': 218
+}
 class Network:
-    def __init__(self, args, ID, scale_dict, sub, div):
+    def __init__(self, args, ID, scale_dict=None, sub=None, div=None):
         self.ID = ID
         self.args = args
         self.scale_dict = scale_dict
@@ -24,7 +32,7 @@ class Network:
 
         self.init_paths()
 
-        self.build_model()  
+        self.build_model()
 
     def baseline_model(self):
         self.args['num_layers'] = 5
@@ -46,7 +54,7 @@ class Network:
         self.args['model_dir'] = self.args['results_dir'] + 'Models/'
 
     def build_model(self):
-        x = input = Input(shape=(304,))
+        x = input = Input(shape=(input_shapes[self.args['data']],))
         for i in range(self.args['num_layers']):
             x = Dense(self.args['layer_%d'%i])(x)
             x = LeakyReLU(alpha=self.args['leaky_relu'])(x)
@@ -79,7 +87,7 @@ class Network:
                 hyai=hyai, hybi=hybi
             )([input, massout])
         else:
-            x = Dense(218)(x)
+            x = Dense(output_shapes[self.args['data']])(x)
 
         model = Model(inputs=input, outputs=x)
 
@@ -113,13 +121,26 @@ class Network:
         if trial is not None: callbacks.append(client.keras_send_metrics(trial, objective_name='val_loss', context_names=['loss', 'val_loss']))
 
         # training
-        history = self.model.fit_generator(
-            train_gen,
-            epochs=self.args['epochs'],
-            validation_data=valid_gen,
-            verbose=2,
-            callbacks=callbacks,
-        )
+        if self.args['data'] == 'fluxbypass_aqua':
+            history = self.model.fit_generator(
+                train_gen,
+                epochs=self.args['epochs'],
+                validation_data=valid_gen,
+                verbose=2,
+                callbacks=callbacks,
+            )
+        else:
+            history = self.model.fit_generator(
+                train_gen.return_generator(),
+                steps_per_epoch=train_gen.n_batches,
+                epochs=self.args['epochs'],
+                validation_data=valid_gen.return_generator(),
+                validation_steps=valid_gen.n_batches,
+                verbose=2,
+           	    workers=16,
+                max_queue_size=50,
+                callbacks=callbacks,
+            )
 
         with open(self.args['model_dir'] + '%05d.json' % self.ID, "w") as json_file:
             # write to file
