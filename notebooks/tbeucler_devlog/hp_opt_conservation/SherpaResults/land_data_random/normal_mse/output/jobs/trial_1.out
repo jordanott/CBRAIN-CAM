@@ -1,0 +1,17 @@
+2019-05-20 11:46:43.875661: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: Tesla K40c major: 3 minor: 5 memoryClockRate(GHz): 0.745
+pciBusID: 0000:84:00.0
+totalMemory: 11.17GiB freeMemory: 10.89GiB
+2019-05-20 11:46:43.875708: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-20 11:46:50.470573: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-20 11:46:50.470643: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-20 11:46:50.470655: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-20 11:46:50.471130: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10316 MB memory) -> physical GPU (device: 0, name: Tesla K40c, pci bus id: 0000:84:00.0, compute capability: 3.5)
+Generator will have 200378880 samples in 97841 batches
+Features have shape 64; targets have shape 65
+Generator will have 200378880 samples in 97841 batches
+Features have shape 64; targets have shape 65
+Epoch 1/25
+ - 7224s - loss: 0.0040 - mean_squared_error: 0.0040 - val_loss: 0.0037 - val_mean_squared_error: 0.0037
+Epoch 2/25
+ - 7379s - loss: 0.0039 - mean_squared_error: 0.0039 - val_loss: 0.0037 - val_mean_squared_error: 0.0037

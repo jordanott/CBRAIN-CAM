@@ -1,0 +1,48 @@
+Running from arcus-10
+2019-05-16 04:41:52.601805: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-16 04:41:55.457595: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: TITAN V major: 7 minor: 0 memoryClockRate(GHz): 1.455
+pciBusID: 0000:83:00.0
+totalMemory: 11.75GiB freeMemory: 11.34GiB
+2019-05-16 04:41:55.457655: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-16 04:41:55.912540: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-16 04:41:55.912590: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-16 04:41:55.912598: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-16 04:41:55.912907: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10955 MB memory) -> physical GPU (device: 0, name: TITAN V, pci bus id: 0000:83:00.0, compute capability: 7.0)
+{'alpha': 0.12208221089881477, 'dropout': 0.4190414153005941, 'lr': 0.004489593450601912, 'leaky_relu': 0.334638323978301, 'batch_norm': 0, 'num_layers': 5, 'layer_0': 372, 'layer_1': 231, 'layer_2': 316, 'layer_3': 281, 'layer_4': 274, 'layer_5': 394, 'layer_6': 161, 'layer_7': 355, 'max_concurrent': 3, 'P': 'arcus_gpu.p', 'q': 'arcus.q', 'l': "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", 'env': '/home/jott1/Projects/SHERPA_EX/.profile', 'data': 'fluxbypass_aqua', 'net_type': 'normal', 'loss_type': 'mse', 'batch_size': 2048, 'data_dir': '/baldig/chemistry/earth_system_science/', 'max_dense_layers': 8, 'epochs': 25, 'patience': 10}
+Epoch 1/25
+ - 2472s - loss: 589.2428 - mean_squared_error: 589.2428 - val_loss: 439.2484 - val_mean_squared_error: 439.2484
+Epoch 2/25
+ - 435s - loss: 467.2542 - mean_squared_error: 467.2542 - val_loss: 582.2157 - val_mean_squared_error: 582.2157
+Epoch 3/25
+ - 450s - loss: 446.7037 - mean_squared_error: 446.7037 - val_loss: 413.5663 - val_mean_squared_error: 413.5663
+Epoch 4/25
+ - 469s - loss: 439.2418 - mean_squared_error: 439.2418 - val_loss: 493.2328 - val_mean_squared_error: 493.2328
+Epoch 5/25
+ - 462s - loss: 436.6867 - mean_squared_error: 436.6867 - val_loss: 435.2901 - val_mean_squared_error: 435.2901
+Epoch 6/25
+ - 431s - loss: 433.5206 - mean_squared_error: 433.5206 - val_loss: 312.3209 - val_mean_squared_error: 312.3209
+Epoch 7/25
+ - 420s - loss: 430.8765 - mean_squared_error: 430.8765 - val_loss: 405.8005 - val_mean_squared_error: 405.8005
+Epoch 8/25
+ - 451s - loss: 430.2221 - mean_squared_error: 430.2221 - val_loss: 443.0418 - val_mean_squared_error: 443.0418
+Epoch 9/25
+ - 432s - loss: 428.9064 - mean_squared_error: 428.9064 - val_loss: 404.9201 - val_mean_squared_error: 404.9201
+Epoch 10/25
+ - 431s - loss: 426.3856 - mean_squared_error: 426.3856 - val_loss: 439.6272 - val_mean_squared_error: 439.6272
+Epoch 11/25
+ - 445s - loss: 426.0926 - mean_squared_error: 426.0926 - val_loss: 495.9946 - val_mean_squared_error: 495.9946
+Epoch 12/25
+ - 431s - loss: 425.3560 - mean_squared_error: 425.3560 - val_loss: 443.7356 - val_mean_squared_error: 443.7356
+Epoch 13/25
+ - 440s - loss: 425.0396 - mean_squared_error: 425.0396 - val_loss: 447.4906 - val_mean_squared_error: 447.4906
+Epoch 14/25
+ - 456s - loss: 424.5929 - mean_squared_error: 424.5929 - val_loss: 415.0579 - val_mean_squared_error: 415.0579
+Epoch 15/25
+ - 610s - loss: 423.7669 - mean_squared_error: 423.7669 - val_loss: 368.9724 - val_mean_squared_error: 368.9724
+Epoch 16/25
+ - 2444s - loss: 424.4333 - mean_squared_error: 424.4333 - val_loss: 431.4812 - val_mean_squared_error: 431.4812
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Done with trial 11

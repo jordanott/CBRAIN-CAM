@@ -1,0 +1,56 @@
+2019-05-18 00:51:53.452117: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-18 00:51:53.810040: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: TITAN V major: 7 minor: 0 memoryClockRate(GHz): 1.455
+pciBusID: 0000:83:00.0
+totalMemory: 11.75GiB freeMemory: 9.78GiB
+2019-05-18 00:51:53.810100: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-18 00:51:54.557963: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-18 00:51:54.558019: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-18 00:51:54.558027: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-18 00:51:54.558359: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 9429 MB memory) -> physical GPU (device: 0, name: TITAN V, pci bus id: 0000:83:00.0, compute capability: 7.0)
+Epoch 1/25
+ - 3810s - loss: 334.7413 - mean_squared_error: 334.7413 - val_loss: 238.7339 - val_mean_squared_error: 238.7339
+Epoch 2/25
+ - 665s - loss: 255.4690 - mean_squared_error: 255.4690 - val_loss: 216.8325 - val_mean_squared_error: 216.8325
+Epoch 3/25
+ - 3554s - loss: 243.0724 - mean_squared_error: 243.0724 - val_loss: 202.0007 - val_mean_squared_error: 202.0007
+Epoch 4/25
+ - 687s - loss: 236.8845 - mean_squared_error: 236.8845 - val_loss: 214.6710 - val_mean_squared_error: 214.6710
+Epoch 5/25
+ - 2708s - loss: 233.2816 - mean_squared_error: 233.2816 - val_loss: 224.5024 - val_mean_squared_error: 224.5024
+Epoch 6/25
+ - 675s - loss: 230.7366 - mean_squared_error: 230.7366 - val_loss: 201.4231 - val_mean_squared_error: 201.4231
+Epoch 7/25
+ - 2684s - loss: 229.0323 - mean_squared_error: 229.0323 - val_loss: 204.9492 - val_mean_squared_error: 204.9492
+Epoch 8/25
+ - 695s - loss: 227.6990 - mean_squared_error: 227.6990 - val_loss: 199.2695 - val_mean_squared_error: 199.2695
+Epoch 9/25
+ - 3405s - loss: 226.5417 - mean_squared_error: 226.5417 - val_loss: 232.5301 - val_mean_squared_error: 232.5301
+Epoch 10/25
+ - 3182s - loss: 225.4469 - mean_squared_error: 225.4469 - val_loss: 229.7430 - val_mean_squared_error: 229.7430
+Epoch 11/25
+ - 696s - loss: 224.4996 - mean_squared_error: 224.4996 - val_loss: 196.2993 - val_mean_squared_error: 196.2993
+Epoch 12/25
+ - 672s - loss: 223.5555 - mean_squared_error: 223.5555 - val_loss: 199.7953 - val_mean_squared_error: 199.7953
+Epoch 13/25
+ - 675s - loss: 222.8366 - mean_squared_error: 222.8366 - val_loss: 197.5131 - val_mean_squared_error: 197.5131
+Epoch 14/25
+ - 623s - loss: 221.6762 - mean_squared_error: 221.6762 - val_loss: 219.5540 - val_mean_squared_error: 219.5540
+Epoch 15/25
+ - 653s - loss: 220.8867 - mean_squared_error: 220.8867 - val_loss: 211.0212 - val_mean_squared_error: 211.0212
+Epoch 16/25
+ - 662s - loss: 220.1331 - mean_squared_error: 220.1331 - val_loss: 209.4642 - val_mean_squared_error: 209.4642
+Epoch 17/25
+ - 690s - loss: 219.5436 - mean_squared_error: 219.5436 - val_loss: 247.5463 - val_mean_squared_error: 247.5463
+Epoch 18/25
+ - 668s - loss: 218.7911 - mean_squared_error: 218.7911 - val_loss: 228.0785 - val_mean_squared_error: 228.0785
+Epoch 19/25
+ - 691s - loss: 218.0870 - mean_squared_error: 218.0870 - val_loss: 243.4181 - val_mean_squared_error: 243.4181
+Epoch 20/25
+ - 654s - loss: 217.3662 - mean_squared_error: 217.3662 - val_loss: 232.2120 - val_mean_squared_error: 232.2120
+Epoch 21/25
+ - 674s - loss: 216.7082 - mean_squared_error: 216.7082 - val_loss: 275.9727 - val_mean_squared_error: 275.9727
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Done with trial 13

@@ -1,0 +1,26 @@
+2019-05-20 08:05:37.743520: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-20 08:05:42.914922: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: GeForce GTX TITAN X major: 5 minor: 2 memoryClockRate(GHz): 1.076
+pciBusID: 0000:02:00.0
+totalMemory: 11.93GiB freeMemory: 11.60GiB
+2019-05-20 08:05:42.915039: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-20 08:05:49.643352: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-20 08:05:49.643447: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-20 08:05:49.643462: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-20 08:05:49.643931: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11098 MB memory) -> physical GPU (device: 0, name: GeForce GTX TITAN X, pci bus id: 0000:02:00.0, compute capability: 5.2)
+Generator will have 71163904 samples in 34748 batches
+Features have shape 94; targets have shape 65
+Generator will have 72343552 samples in 35324 batches
+Features have shape 94; targets have shape 65
+Epoch 1/25
+ - 5713s - loss: 3408.5432 - mean_squared_error: 3408.5432 - val_loss: 22.3455 - val_mean_squared_error: 22.3455
+Epoch 2/25
+ - 5103s - loss: 2768.0921 - mean_squared_error: 2768.0921 - val_loss: 0.5441 - val_mean_squared_error: 0.5441
+Epoch 3/25
+ - 4724s - loss: 2741.1034 - mean_squared_error: 2741.1034 - val_loss: 0.0263 - val_mean_squared_error: 0.0263
+Epoch 4/25
+ - 5001s - loss: 1957.2327 - mean_squared_error: 1957.2327 - val_loss: 0.0304 - val_mean_squared_error: 0.0304
+Epoch 5/25
+ - 5137s - loss: 2078.8847 - mean_squared_error: 2078.8847 - val_loss: 6.5685 - val_mean_squared_error: 6.5685
+Epoch 6/25
+ - 4425s - loss: 2298.8412 - mean_squared_error: 2298.8412 - val_loss: 0.0613 - val_mean_squared_error: 0.0613

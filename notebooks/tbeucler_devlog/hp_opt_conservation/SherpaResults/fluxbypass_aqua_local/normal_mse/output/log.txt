@@ -1,0 +1,55 @@
+2019-05-20T11:26:28.534-0700 I JOURNAL  [initandlisten] journal dir=SherpaResults/fluxbypass_aqua_local/normal_mse/output/journal
+2019-05-20T11:26:28.550-0700 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2019-05-20T11:26:28.601-0700 I JOURNAL  [durability] Durability thread started
+2019-05-20T11:26:28.601-0700 I JOURNAL  [journal writer] Journal writer thread started
+2019-05-20T11:26:28.614-0700 I CONTROL  [initandlisten] MongoDB starting : pid=10570 port=27001 dbpath=SherpaResults/fluxbypass_aqua_local/normal_mse/output/ 64-bit host=arcus-8
+2019-05-20T11:26:28.615-0700 I CONTROL  [initandlisten] 
+2019-05-20T11:26:28.615-0700 I CONTROL  [initandlisten] ** WARNING: You are running on a NUMA machine.
+2019-05-20T11:26:28.615-0700 I CONTROL  [initandlisten] **          We suggest launching mongod like this to avoid performance problems:
+2019-05-20T11:26:28.615-0700 I CONTROL  [initandlisten] **              numactl --interleave=all mongod [other options]
+2019-05-20T11:26:28.615-0700 I CONTROL  [initandlisten] 
+2019-05-20T11:26:28.615-0700 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2019-05-20T11:26:28.615-0700 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2019-05-20T11:26:28.615-0700 I CONTROL  [initandlisten] 
+2019-05-20T11:26:28.615-0700 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2019-05-20T11:26:28.615-0700 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2019-05-20T11:26:28.615-0700 I CONTROL  [initandlisten] 
+2019-05-20T11:26:28.615-0700 I CONTROL  [initandlisten] db version v3.0.1
+2019-05-20T11:26:28.615-0700 I CONTROL  [initandlisten] git version: 534b5a3f9d10f00cd27737fbcd951032248b5952
+2019-05-20T11:26:28.615-0700 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1e-fips 11 Feb 2013
+2019-05-20T11:26:28.615-0700 I CONTROL  [initandlisten] build info: Linux ip-10-147-45-189 2.6.32-220.el6.x86_64 #1 SMP Wed Nov 9 08:03:13 EST 2011 x86_64 BOOST_LIB_VERSION=1_49
+2019-05-20T11:26:28.615-0700 I CONTROL  [initandlisten] allocator: tcmalloc
+2019-05-20T11:26:28.615-0700 I CONTROL  [initandlisten] options: { net: { port: 27001 }, storage: { dbPath: "SherpaResults/fluxbypass_aqua_local/normal_mse/output/" }, systemLog: { destination: "file", path: "SherpaResults/fluxbypass_aqua_local/normal_mse/output/log.txt" } }
+2019-05-20T11:26:28.657-0700 I INDEX    [initandlisten] allocating new ns file SherpaResults/fluxbypass_aqua_local/normal_mse/output/local.ns, filling with zeroes...
+2019-05-20T11:26:28.831-0700 I STORAGE  [FileAllocator] allocating new datafile SherpaResults/fluxbypass_aqua_local/normal_mse/output/local.0, filling with zeroes...
+2019-05-20T11:26:28.832-0700 I STORAGE  [FileAllocator] creating directory SherpaResults/fluxbypass_aqua_local/normal_mse/output/_tmp
+2019-05-20T11:26:28.835-0700 I STORAGE  [FileAllocator] done allocating datafile SherpaResults/fluxbypass_aqua_local/normal_mse/output/local.0, size: 64MB,  took 0.001 secs
+2019-05-20T11:26:28.850-0700 I NETWORK  [initandlisten] waiting for connections on port 27001
+2019-05-20T11:26:29.703-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:35012 #1 (1 connection now open)
+2019-05-20T11:26:29.705-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:35014 #2 (2 connections now open)
+2019-05-20T11:26:29.710-0700 I INDEX    [conn2] allocating new ns file SherpaResults/fluxbypass_aqua_local/normal_mse/output/sherpa.ns, filling with zeroes...
+2019-05-20T11:26:29.883-0700 I STORAGE  [FileAllocator] allocating new datafile SherpaResults/fluxbypass_aqua_local/normal_mse/output/sherpa.0, filling with zeroes...
+2019-05-20T11:26:29.888-0700 I STORAGE  [FileAllocator] done allocating datafile SherpaResults/fluxbypass_aqua_local/normal_mse/output/sherpa.0, size: 64MB,  took 0.004 secs
+2019-05-20T11:26:29.902-0700 I WRITE    [conn2] insert sherpa.trials query: { trial_id: 1, parameters: { num_layers: 5, layer_0: 512, layer_1: 512, layer_2: 512, layer_3: 512, layer_4: 512, layer_5: 512, layer_6: 512, layer_7: 512, layer_8: 512, dropout: 0.25, batch_norm: 0, leaky_relu: 0.3, lr: 0.001, max_concurrent: 4, P: "arcus_gpu.p", q: "arcus.q", l: "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", env: "/home/jott1/Projects/SHERPA_EX/.profile", alg: "local", sch: "local", gpus: "0", loss_type: "mse", net_type: "normal", data: "fluxbypass_aqua", batch_size: 2048, data_dir: "/baldig/chemistry/earth_system_science/", max_dense_layers: 8, epochs: 25, patience: 10 }, _id: ObjectId('5ce2f15526078194da61b3bb') } ninserted:1 keyUpdates:0 writeConflicts:0 numYields:0 locks:{ Global: { acquireCount: { w: 2 } }, MMAPV1Journal: { acquireCount: { w: 8 } }, Database: { acquireCount: { w: 1, W: 1 } }, Collection: { acquireCount: { W: 1 } }, Metadata: { acquireCount: { W: 4 } } } 193ms
+2019-05-20T11:26:29.902-0700 I COMMAND  [conn2] command sherpa.$cmd command: insert { insert: "trials", ordered: true, documents: [ { trial_id: 1, parameters: { num_layers: 5, layer_0: 512, layer_1: 512, layer_2: 512, layer_3: 512, layer_4: 512, layer_5: 512, layer_6: 512, layer_7: 512, layer_8: 512, dropout: 0.25, batch_norm: 0, leaky_relu: 0.3, lr: 0.001, max_concurrent: 4, P: "arcus_gpu.p", q: "arcus.q", l: "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", env: "/home/jott1/Projects/SHERPA_EX/.profile", alg: "local", sch: "local", gpus: "0", loss_type: "mse", net_type: "normal", data: "fluxbypass_aqua", batch_size: 2048, data_dir: "/baldig/chemistry/earth_system_science/", max_dense_layers: 8, epochs: 25, patience: 10 }, _id: ObjectId('5ce2f15526078194da61b3bb') } ] } keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{} 193ms
+2019-05-20T11:26:29.920-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:35016 #3 (3 connections now open)
+2019-05-20T11:26:29.928-0700 I NETWORK  [conn2] end connection 127.0.0.1:35014 (2 connections now open)
+2019-05-20T11:26:29.960-0700 I NETWORK  [conn3] end connection 127.0.0.1:35016 (1 connection now open)
+2019-05-20T11:26:29.961-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:35018 #4 (2 connections now open)
+2019-05-20T11:26:43.610-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:32998 #5 (3 connections now open)
+2019-05-20T11:26:43.610-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:33000 #6 (4 connections now open)
+2019-05-20T11:26:43.610-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:33002 #7 (5 connections now open)
+2019-05-20T11:26:43.611-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:33004 #8 (6 connections now open)
+2019-05-20T11:26:43.611-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:33006 #9 (7 connections now open)
+2019-05-20T11:26:43.611-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:33008 #10 (8 connections now open)
+2019-05-20T11:26:43.612-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:33010 #11 (9 connections now open)
+2019-05-20T11:26:43.612-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:33012 #12 (10 connections now open)
+2019-05-20T11:27:46.079-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:33018 #13 (11 connections now open)
+2019-05-20T11:27:46.079-0700 I NETWORK  [conn13] end connection 128.195.8.132:33018 (10 connections now open)
+2019-05-20T11:29:26.696-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:33116 #14 (11 connections now open)
+2019-05-20T11:29:26.696-0700 I NETWORK  [conn14] end connection 128.195.8.132:33116 (10 connections now open)
+2019-05-20T11:33:07.220-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:33154 #15 (11 connections now open)
+2019-05-20T11:33:07.220-0700 I NETWORK  [conn15] end connection 128.195.8.132:33154 (10 connections now open)
+2019-05-20T11:34:12.087-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:33194 #16 (11 connections now open)
+2019-05-20T11:34:12.088-0700 I NETWORK  [conn16] end connection 128.195.8.132:33194 (10 connections now open)
+2019-05-20T15:37:16.115-0700 I COMMAND  [conn12] command sherpa.$cmd command: insert { insert: "results", ordered: true, documents: [ { parameters: { num_layers: 5, layer_0: 512, layer_1: 512, layer_2: 512, layer_3: 409, layer_4: 512, layer_5: 512, layer_6: 512, layer_7: 512, layer_8: 512, dropout: 0.25, batch_norm: 0, leaky_relu: 0.3, lr: 0.001, max_concurrent: 4, P: "arcus_gpu.p", q: "arcus.q", l: "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", env: "/home/jott1/Projects/SHERPA_EX/.profile", alg: "local", sch: "local", gpus: "0", loss_type: "mse", net_type: "normal", data: "fluxbypass_aqua", batch_size: 2048, data_dir: "/baldig/chemistry/earth_system_science/", max_dense_layers: 8, epochs: 25, patience: 10, results_dir: "SherpaResults/fluxbypass_aqua_local/normal_mse/", model_dir: "SherpaResults/fluxbypass_aqua_local/normal_mse/Models/" }, trial_id: 2, objective: 230.7662812571883, iteration: 1, context: { loss: 256.7332212049096, val_loss: 230.7662812571883 }, _id: ObjectId('5ce32c1bd70c3c0b11acd50a') } ] } keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{} 114ms

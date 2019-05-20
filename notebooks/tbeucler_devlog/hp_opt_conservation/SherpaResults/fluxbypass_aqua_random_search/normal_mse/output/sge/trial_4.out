@@ -1,0 +1,38 @@
+Running from arcus-5
+2019-05-14 16:25:09.866985: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-14 16:25:11.797272: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: GeForce GTX 980 major: 5 minor: 2 memoryClockRate(GHz): 1.2155
+pciBusID: 0000:82:00.0
+totalMemory: 3.95GiB freeMemory: 3.87GiB
+2019-05-14 16:25:11.797402: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-14 16:25:17.709456: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-14 16:25:17.709593: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-14 16:25:17.709614: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-14 16:25:17.710192: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3594 MB memory) -> physical GPU (device: 0, name: GeForce GTX 980, pci bus id: 0000:82:00.0, compute capability: 5.2)
+{'alpha': 0.697308862854787, 'dropout': 0.25784071641080286, 'lr': 0.006252736614988113, 'leaky_relu': 0.4462336113926902, 'batch_norm': 1, 'num_layers': 3, 'layer_0': 319, 'layer_1': 198, 'layer_2': 257, 'layer_3': 251, 'layer_4': 141, 'layer_5': 506, 'layer_6': 319, 'layer_7': 261, 'max_concurrent': 3, 'P': 'arcus_gpu.p', 'q': 'arcus.q', 'l': "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", 'env': '/home/jott1/Projects/SHERPA_EX/.profile', 'data': 'fluxbypass_aqua', 'net_type': 'normal', 'loss_type': 'mse', 'batch_size': 2048, 'data_dir': '/baldig/chemistry/earth_system_science/', 'max_dense_layers': 8, 'epochs': 25, 'patience': 10}
+Epoch 1/25
+ - 7298s - loss: 436.9989 - mean_squared_error: 436.9989 - val_loss: 318.4093 - val_mean_squared_error: 318.4093
+Epoch 2/25
+ - 6991s - loss: 414.4870 - mean_squared_error: 414.4870 - val_loss: 320.5161 - val_mean_squared_error: 320.5161
+Epoch 3/25
+ - 7032s - loss: 412.1928 - mean_squared_error: 412.1928 - val_loss: 324.7750 - val_mean_squared_error: 324.7750
+Epoch 4/25
+ - 7193s - loss: 411.4959 - mean_squared_error: 411.4959 - val_loss: 358.1496 - val_mean_squared_error: 358.1496
+Epoch 5/25
+ - 6432s - loss: 410.9578 - mean_squared_error: 410.9578 - val_loss: 322.6012 - val_mean_squared_error: 322.6012
+Epoch 6/25
+ - 7035s - loss: 410.8225 - mean_squared_error: 410.8225 - val_loss: 341.3737 - val_mean_squared_error: 341.3737
+Epoch 7/25
+ - 7180s - loss: 410.5689 - mean_squared_error: 410.5689 - val_loss: 352.6468 - val_mean_squared_error: 352.6468
+Epoch 8/25
+ - 7311s - loss: 410.4289 - mean_squared_error: 410.4289 - val_loss: 341.6619 - val_mean_squared_error: 341.6619
+Epoch 9/25
+ - 7393s - loss: 409.8540 - mean_squared_error: 409.8540 - val_loss: 369.8124 - val_mean_squared_error: 369.8124
+Epoch 10/25
+ - 7028s - loss: 409.6910 - mean_squared_error: 409.6910 - val_loss: 363.8790 - val_mean_squared_error: 363.8790
+Epoch 11/25
+ - 5752s - loss: 409.5354 - mean_squared_error: 409.5354 - val_loss: 347.5557 - val_mean_squared_error: 347.5557
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Done with trial 4

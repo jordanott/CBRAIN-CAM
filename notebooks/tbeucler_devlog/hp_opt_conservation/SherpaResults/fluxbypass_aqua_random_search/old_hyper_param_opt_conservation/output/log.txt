@@ -1,0 +1,103 @@
+2019-05-11T11:36:45.158-0700 I JOURNAL  [initandlisten] journal dir=SherpaResults/fluxbypass_aqua/hyper_param_opt_conservation/output/journal
+2019-05-11T11:36:45.159-0700 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2019-05-11T11:36:45.208-0700 I JOURNAL  [durability] Durability thread started
+2019-05-11T11:36:45.208-0700 I JOURNAL  [journal writer] Journal writer thread started
+2019-05-11T11:36:45.210-0700 I CONTROL  [initandlisten] MongoDB starting : pid=15377 port=27001 dbpath=SherpaResults/fluxbypass_aqua/hyper_param_opt_conservation/output/ 64-bit host=arcus-2.ics.uci.edu
+2019-05-11T11:36:45.211-0700 I CONTROL  [initandlisten] 
+2019-05-11T11:36:45.211-0700 I CONTROL  [initandlisten] ** WARNING: You are running on a NUMA machine.
+2019-05-11T11:36:45.211-0700 I CONTROL  [initandlisten] **          We suggest launching mongod like this to avoid performance problems:
+2019-05-11T11:36:45.211-0700 I CONTROL  [initandlisten] **              numactl --interleave=all mongod [other options]
+2019-05-11T11:36:45.211-0700 I CONTROL  [initandlisten] 
+2019-05-11T11:36:45.211-0700 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2019-05-11T11:36:45.211-0700 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2019-05-11T11:36:45.211-0700 I CONTROL  [initandlisten] 
+2019-05-11T11:36:45.211-0700 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2019-05-11T11:36:45.211-0700 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2019-05-11T11:36:45.211-0700 I CONTROL  [initandlisten] 
+2019-05-11T11:36:45.211-0700 I CONTROL  [initandlisten] db version v3.0.1
+2019-05-11T11:36:45.211-0700 I CONTROL  [initandlisten] git version: 534b5a3f9d10f00cd27737fbcd951032248b5952
+2019-05-11T11:36:45.211-0700 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1e-fips 11 Feb 2013
+2019-05-11T11:36:45.211-0700 I CONTROL  [initandlisten] build info: Linux ip-10-147-45-189 2.6.32-220.el6.x86_64 #1 SMP Wed Nov 9 08:03:13 EST 2011 x86_64 BOOST_LIB_VERSION=1_49
+2019-05-11T11:36:45.211-0700 I CONTROL  [initandlisten] allocator: tcmalloc
+2019-05-11T11:36:45.211-0700 I CONTROL  [initandlisten] options: { net: { port: 27001 }, storage: { dbPath: "SherpaResults/fluxbypass_aqua/hyper_param_opt_conservation/output/" }, systemLog: { destination: "file", path: "SherpaResults/fluxbypass_aqua/hyper_param_opt_conservation/output/log.txt" } }
+2019-05-11T11:36:45.237-0700 I INDEX    [initandlisten] allocating new ns file SherpaResults/fluxbypass_aqua/hyper_param_opt_conservation/output/local.ns, filling with zeroes...
+2019-05-11T11:36:45.394-0700 I STORAGE  [FileAllocator] allocating new datafile SherpaResults/fluxbypass_aqua/hyper_param_opt_conservation/output/local.0, filling with zeroes...
+2019-05-11T11:36:45.394-0700 I STORAGE  [FileAllocator] creating directory SherpaResults/fluxbypass_aqua/hyper_param_opt_conservation/output/_tmp
+2019-05-11T11:36:45.398-0700 I STORAGE  [FileAllocator] done allocating datafile SherpaResults/fluxbypass_aqua/hyper_param_opt_conservation/output/local.0, size: 64MB,  took 0.001 secs
+2019-05-11T11:36:45.412-0700 I NETWORK  [initandlisten] waiting for connections on port 27001
+2019-05-11T11:36:46.616-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:45368 #1 (1 connection now open)
+2019-05-11T11:36:46.618-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:45370 #2 (2 connections now open)
+2019-05-11T11:36:46.624-0700 I INDEX    [conn2] allocating new ns file SherpaResults/fluxbypass_aqua/hyper_param_opt_conservation/output/sherpa.ns, filling with zeroes...
+2019-05-11T11:36:46.789-0700 I STORAGE  [FileAllocator] allocating new datafile SherpaResults/fluxbypass_aqua/hyper_param_opt_conservation/output/sherpa.0, filling with zeroes...
+2019-05-11T11:36:46.794-0700 I STORAGE  [FileAllocator] done allocating datafile SherpaResults/fluxbypass_aqua/hyper_param_opt_conservation/output/sherpa.0, size: 64MB,  took 0.003 secs
+2019-05-11T11:36:46.804-0700 I WRITE    [conn2] insert sherpa.trials query: { trial_id: 1, parameters: { alpha: 0.38824137847825, dropout: 0.4523806923838769, lr: 0.001251318233650101, leaky_relu: 0.3790948777471251, batch_norm: 0, loss_type: "weak_loss", num_layers: 4, layer_0: 390, layer_1: 201, layer_2: 429, layer_3: 458, layer_4: 292, layer_5: 90, layer_6: 176, layer_7: 283, max_concurrent: 3, P: "arcus_gpu.p", q: "arcus.q", l: "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", env: "/home/jott1/Projects/SHERPA_EX/.profile", data: "fluxbypass_aqua", run_type: "hyper_param_opt_conservation", batch_size: 2048, data_dir: "/baldig/chemistry/earth_system_science/", max_dense_layers: 8, epochs: 100, patience: 10, conservation: 0 }, _id: ObjectId('5cd7163ec4a3ff3a71e7b984') } ninserted:1 keyUpdates:0 writeConflicts:0 numYields:0 locks:{ Global: { acquireCount: { w: 2 } }, MMAPV1Journal: { acquireCount: { w: 8 } }, Database: { acquireCount: { w: 1, W: 1 } }, Collection: { acquireCount: { W: 1 } }, Metadata: { acquireCount: { W: 4 } } } 180ms
+2019-05-11T11:36:46.804-0700 I COMMAND  [conn2] command sherpa.$cmd command: insert { insert: "trials", ordered: true, documents: [ { trial_id: 1, parameters: { alpha: 0.38824137847825, dropout: 0.4523806923838769, lr: 0.001251318233650101, leaky_relu: 0.3790948777471251, batch_norm: 0, loss_type: "weak_loss", num_layers: 4, layer_0: 390, layer_1: 201, layer_2: 429, layer_3: 458, layer_4: 292, layer_5: 90, layer_6: 176, layer_7: 283, max_concurrent: 3, P: "arcus_gpu.p", q: "arcus.q", l: "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", env: "/home/jott1/Projects/SHERPA_EX/.profile", data: "fluxbypass_aqua", run_type: "hyper_param_opt_conservation", batch_size: 2048, data_dir: "/baldig/chemistry/earth_system_science/", max_dense_layers: 8, epochs: 100, patience: 10, conservation: 0 }, _id: ObjectId('5cd7163ec4a3ff3a71e7b984') } ] } keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{} 181ms
+2019-05-11T11:36:47.250-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.133:34936 #3 (3 connections now open)
+2019-05-11T11:36:49.000-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.134:37770 #4 (4 connections now open)
+2019-05-11T11:36:49.286-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.118:52098 #5 (5 connections now open)
+2019-05-11T11:36:55.288-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.122:47196 #6 (6 connections now open)
+2019-05-11T11:36:56.845-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.134:37772 #7 (7 connections now open)
+2019-05-11T11:36:56.846-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.134:37774 #8 (8 connections now open)
+2019-05-11T11:37:05.407-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:38954 #9 (9 connections now open)
+2019-05-11T11:37:05.408-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:38956 #10 (10 connections now open)
+2019-05-11T11:37:05.409-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:38958 #11 (11 connections now open)
+2019-05-11T11:37:05.410-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:38960 #12 (12 connections now open)
+2019-05-11T12:05:31.157-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.122:47238 #13 (13 connections now open)
+2019-05-11T12:05:32.147-0700 I NETWORK  [conn13] end connection 128.195.8.122:47238 (12 connections now open)
+2019-05-11T12:05:32.148-0700 I NETWORK  [conn6] end connection 128.195.8.122:47196 (11 connections now open)
+2019-05-11T12:12:02.929-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.134:37800 #14 (12 connections now open)
+2019-05-11T12:12:03.582-0700 I NETWORK  [conn14] end connection 128.195.8.134:37800 (11 connections now open)
+2019-05-11T12:12:03.582-0700 I NETWORK  [conn4] end connection 128.195.8.134:37770 (11 connections now open)
+2019-05-11T12:20:32.146-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.133:34956 #15 (11 connections now open)
+2019-05-11T12:20:33.006-0700 I NETWORK  [conn15] end connection 128.195.8.133:34956 (10 connections now open)
+2019-05-11T12:20:33.006-0700 I NETWORK  [conn3] end connection 128.195.8.133:34936 (10 connections now open)
+2019-05-11T12:21:11.149-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.118:55252 #16 (10 connections now open)
+2019-05-11T12:21:11.704-0700 I NETWORK  [conn16] end connection 128.195.8.118:55252 (9 connections now open)
+2019-05-11T12:21:11.704-0700 I NETWORK  [conn5] end connection 128.195.8.118:52098 (9 connections now open)
+2019-05-11T14:11:47.671-0700 I NETWORK  [conn7] end connection 128.195.8.134:37772 (7 connections now open)
+2019-05-11T14:11:47.671-0700 I NETWORK  [conn8] end connection 128.195.8.134:37774 (7 connections now open)
+2019-05-11T14:12:26.113-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.122:47398 #17 (7 connections now open)
+2019-05-11T14:12:26.115-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.122:47400 #18 (8 connections now open)
+2019-05-12T04:09:10.355-0700 I NETWORK  [conn11] end connection 128.195.8.132:38958 (7 connections now open)
+2019-05-12T04:09:10.355-0700 I NETWORK  [conn9] end connection 128.195.8.132:38954 (7 connections now open)
+2019-05-12T04:09:42.572-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.134:38756 #19 (7 connections now open)
+2019-05-12T04:09:42.574-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.134:38758 #20 (8 connections now open)
+2019-05-12T08:32:45.758-0700 I NETWORK  [conn18] end connection 128.195.8.122:47400 (7 connections now open)
+2019-05-12T08:32:45.758-0700 I NETWORK  [conn17] end connection 128.195.8.122:47398 (7 connections now open)
+2019-05-12T08:33:19.386-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.133:42542 #21 (7 connections now open)
+2019-05-12T08:33:19.388-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.133:42544 #22 (8 connections now open)
+2019-05-12T12:27:28.944-0700 I NETWORK  [conn20] end connection 128.195.8.134:38758 (7 connections now open)
+2019-05-12T12:27:28.944-0700 I NETWORK  [conn19] end connection 128.195.8.134:38756 (7 connections now open)
+2019-05-12T12:28:03.135-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.122:48918 #23 (7 connections now open)
+2019-05-12T12:28:03.139-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.122:48920 #24 (8 connections now open)
+2019-05-12T22:28:43.142-0700 I NETWORK  [conn22] end connection 128.195.8.133:42544 (7 connections now open)
+2019-05-12T22:28:43.142-0700 I NETWORK  [conn21] end connection 128.195.8.133:42542 (7 connections now open)
+2019-05-12T22:29:00.130-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.134:39472 #25 (7 connections now open)
+2019-05-12T22:29:00.131-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.134:39474 #26 (8 connections now open)
+2019-05-13T08:48:26.214-0700 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt), will terminate after current cmd ends
+2019-05-13T08:48:26.214-0700 I CONTROL  [signalProcessingThread] now exiting
+2019-05-13T08:48:26.214-0700 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2019-05-13T08:48:26.214-0700 I NETWORK  [signalProcessingThread] closing listening socket: 9
+2019-05-13T08:48:26.214-0700 I NETWORK  [signalProcessingThread] closing listening socket: 10
+2019-05-13T08:48:26.214-0700 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27001.sock
+2019-05-13T08:48:26.214-0700 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2019-05-13T08:48:26.214-0700 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2019-05-13T08:48:26.214-0700 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2019-05-13T08:48:26.215-0700 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2019-05-13T08:48:26.215-0700 I NETWORK  [conn10] end connection 128.195.8.132:38956 (7 connections now open)
+2019-05-13T08:48:26.215-0700 I NETWORK  [conn2] end connection 127.0.0.1:45370 (7 connections now open)
+2019-05-13T08:48:26.215-0700 I JOURNAL  [signalProcessingThread] journalCleanup...
+2019-05-13T08:48:26.215-0700 I NETWORK  [conn23] end connection 128.195.8.122:48918 (7 connections now open)
+2019-05-13T08:48:26.215-0700 I NETWORK  [conn26] end connection 128.195.8.134:39474 (7 connections now open)
+2019-05-13T08:48:26.215-0700 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2019-05-13T08:48:26.215-0700 I NETWORK  [conn25] end connection 128.195.8.134:39472 (3 connections now open)
+2019-05-13T08:48:26.215-0700 I NETWORK  [conn12] end connection 128.195.8.132:38960 (3 connections now open)
+2019-05-13T08:48:26.215-0700 I NETWORK  [conn24] end connection 128.195.8.122:48920 (3 connections now open)
+2019-05-13T08:48:26.215-0700 I NETWORK  [conn1] end connection 127.0.0.1:45368 (3 connections now open)
+2019-05-13T08:48:26.221-0700 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2019-05-13T08:48:26.317-0700 I JOURNAL  [journal writer] Journal writer thread stopped
+2019-05-13T08:48:26.317-0700 I JOURNAL  [durability] Durability thread stopped
+2019-05-13T08:48:26.317-0700 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2019-05-13T08:48:26.322-0700 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2019-05-13T08:48:26.322-0700 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2019-05-13T08:48:26.324-0700 I CONTROL  [signalProcessingThread] dbexit:  rc: 0

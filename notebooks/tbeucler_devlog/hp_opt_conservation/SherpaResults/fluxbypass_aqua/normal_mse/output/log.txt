@@ -1,0 +1,226 @@
+2019-05-17T09:38:42.965-0700 I JOURNAL  [initandlisten] journal dir=SherpaResults/fluxbypass_aqua/normal_mse/output/journal
+2019-05-17T09:38:42.966-0700 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2019-05-17T09:38:43.022-0700 I JOURNAL  [durability] Durability thread started
+2019-05-17T09:38:43.022-0700 I JOURNAL  [journal writer] Journal writer thread started
+2019-05-17T09:38:43.025-0700 I CONTROL  [initandlisten] MongoDB starting : pid=31592 port=27004 dbpath=SherpaResults/fluxbypass_aqua/normal_mse/output/ 64-bit host=arcus-2.ics.uci.edu
+2019-05-17T09:38:43.026-0700 I CONTROL  [initandlisten] 
+2019-05-17T09:38:43.026-0700 I CONTROL  [initandlisten] ** WARNING: You are running on a NUMA machine.
+2019-05-17T09:38:43.026-0700 I CONTROL  [initandlisten] **          We suggest launching mongod like this to avoid performance problems:
+2019-05-17T09:38:43.026-0700 I CONTROL  [initandlisten] **              numactl --interleave=all mongod [other options]
+2019-05-17T09:38:43.026-0700 I CONTROL  [initandlisten] 
+2019-05-17T09:38:43.026-0700 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2019-05-17T09:38:43.026-0700 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2019-05-17T09:38:43.026-0700 I CONTROL  [initandlisten] 
+2019-05-17T09:38:43.026-0700 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2019-05-17T09:38:43.026-0700 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2019-05-17T09:38:43.026-0700 I CONTROL  [initandlisten] 
+2019-05-17T09:38:43.026-0700 I CONTROL  [initandlisten] db version v3.0.1
+2019-05-17T09:38:43.026-0700 I CONTROL  [initandlisten] git version: 534b5a3f9d10f00cd27737fbcd951032248b5952
+2019-05-17T09:38:43.026-0700 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1e-fips 11 Feb 2013
+2019-05-17T09:38:43.026-0700 I CONTROL  [initandlisten] build info: Linux ip-10-147-45-189 2.6.32-220.el6.x86_64 #1 SMP Wed Nov 9 08:03:13 EST 2011 x86_64 BOOST_LIB_VERSION=1_49
+2019-05-17T09:38:43.026-0700 I CONTROL  [initandlisten] allocator: tcmalloc
+2019-05-17T09:38:43.026-0700 I CONTROL  [initandlisten] options: { net: { port: 27004 }, storage: { dbPath: "SherpaResults/fluxbypass_aqua/normal_mse/output/" }, systemLog: { destination: "file", path: "SherpaResults/fluxbypass_aqua/normal_mse/output/log.txt" } }
+2019-05-17T09:38:43.052-0700 I INDEX    [initandlisten] allocating new ns file SherpaResults/fluxbypass_aqua/normal_mse/output/local.ns, filling with zeroes...
+2019-05-17T09:38:43.210-0700 I STORAGE  [FileAllocator] allocating new datafile SherpaResults/fluxbypass_aqua/normal_mse/output/local.0, filling with zeroes...
+2019-05-17T09:38:43.210-0700 I STORAGE  [FileAllocator] creating directory SherpaResults/fluxbypass_aqua/normal_mse/output/_tmp
+2019-05-17T09:38:43.214-0700 I STORAGE  [FileAllocator] done allocating datafile SherpaResults/fluxbypass_aqua/normal_mse/output/local.0, size: 64MB,  took 0.001 secs
+2019-05-17T09:38:43.227-0700 I NETWORK  [initandlisten] waiting for connections on port 27004
+2019-05-17T09:38:44.431-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:37598 #1 (1 connection now open)
+2019-05-17T09:38:44.433-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:37600 #2 (2 connections now open)
+2019-05-17T09:38:44.436-0700 I INDEX    [conn2] allocating new ns file SherpaResults/fluxbypass_aqua/normal_mse/output/sherpa.ns, filling with zeroes...
+2019-05-17T09:38:44.594-0700 I STORAGE  [FileAllocator] allocating new datafile SherpaResults/fluxbypass_aqua/normal_mse/output/sherpa.0, filling with zeroes...
+2019-05-17T09:38:44.597-0700 I STORAGE  [FileAllocator] done allocating datafile SherpaResults/fluxbypass_aqua/normal_mse/output/sherpa.0, size: 64MB,  took 0.001 secs
+2019-05-17T09:38:44.607-0700 I WRITE    [conn2] insert sherpa.trials query: { trial_id: 1, parameters: { num_layers: 5, layer_0: 512, layer_1: 512, layer_2: 512, layer_3: 512, layer_4: 512, layer_5: 512, layer_6: 512, layer_7: 512, layer_8: 512, alpha: 0.1, dropout: 0.25, batch_norm: 0, leaky_relu: 0.3, lr: 0.001, max_concurrent: 3, P: "arcus_gpu.p", q: "arcus.q", l: "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", env: "/home/jott1/Projects/SHERPA_EX/.profile", alg: "local", data: "fluxbypass_aqua", net_type: "normal", loss_type: "mse", batch_size: 2048, data_dir: "/baldig/chemistry/earth_system_science/", max_dense_layers: 8, epochs: 25, patience: 10 }, _id: ObjectId('5cdee39465144a256826d711') } ninserted:1 keyUpdates:0 writeConflicts:0 numYields:0 locks:{ Global: { acquireCount: { w: 2 } }, MMAPV1Journal: { acquireCount: { w: 8 } }, Database: { acquireCount: { w: 1, W: 1 } }, Collection: { acquireCount: { W: 1 } }, Metadata: { acquireCount: { W: 4 } } } 171ms
+2019-05-17T09:38:44.607-0700 I COMMAND  [conn2] command sherpa.$cmd command: insert { insert: "trials", ordered: true, documents: [ { trial_id: 1, parameters: { num_layers: 5, layer_0: 512, layer_1: 512, layer_2: 512, layer_3: 512, layer_4: 512, layer_5: 512, layer_6: 512, layer_7: 512, layer_8: 512, alpha: 0.1, dropout: 0.25, batch_norm: 0, leaky_relu: 0.3, lr: 0.001, max_concurrent: 3, P: "arcus_gpu.p", q: "arcus.q", l: "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", env: "/home/jott1/Projects/SHERPA_EX/.profile", alg: "local", data: "fluxbypass_aqua", net_type: "normal", loss_type: "mse", batch_size: 2048, data_dir: "/baldig/chemistry/earth_system_science/", max_dense_layers: 8, epochs: 25, patience: 10 }, _id: ObjectId('5cdee39465144a256826d711') } ] } keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{} 171ms
+2019-05-17T09:38:44.643-0700 I NETWORK  [conn2] end connection 127.0.0.1:37600 (1 connection now open)
+2019-05-17T09:38:44.645-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:37604 #3 (2 connections now open)
+2019-05-17T09:38:44.671-0700 I NETWORK  [conn3] end connection 127.0.0.1:37604 (1 connection now open)
+2019-05-17T09:38:44.672-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:37608 #4 (2 connections now open)
+2019-05-17T10:17:57.137-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.134:42666 #5 (3 connections now open)
+2019-05-17T10:17:57.139-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.134:42668 #6 (4 connections now open)
+2019-05-17T10:18:35.429-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.134:42824 #7 (5 connections now open)
+2019-05-17T10:18:35.430-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.134:42826 #8 (6 connections now open)
+2019-05-17T10:47:45.283-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.121:52866 #9 (7 connections now open)
+2019-05-17T10:47:45.286-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.121:52868 #10 (8 connections now open)
+2019-05-17T13:23:18.870-0700 I NETWORK  [conn7] end connection 128.195.8.134:42824 (7 connections now open)
+2019-05-17T13:23:18.870-0700 I NETWORK  [conn8] end connection 128.195.8.134:42826 (7 connections now open)
+2019-05-17T13:23:20.229-0700 I NETWORK  [conn4] end connection 127.0.0.1:37608 (5 connections now open)
+2019-05-17T13:23:20.230-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55434 #11 (6 connections now open)
+2019-05-17T13:34:17.230-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:38138 #12 (7 connections now open)
+2019-05-17T13:34:17.232-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:38140 #13 (8 connections now open)
+2019-05-17T14:03:22.828-0700 I NETWORK  [conn6] end connection 128.195.8.134:42668 (7 connections now open)
+2019-05-17T14:03:22.828-0700 I NETWORK  [conn5] end connection 128.195.8.134:42666 (7 connections now open)
+2019-05-17T14:03:27.745-0700 I NETWORK  [conn11] end connection 127.0.0.1:55434 (5 connections now open)
+2019-05-17T14:03:27.746-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:32972 #14 (6 connections now open)
+2019-05-17T14:04:23.488-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:38172 #15 (7 connections now open)
+2019-05-17T14:04:23.489-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:38174 #16 (8 connections now open)
+2019-05-18T02:48:39.796-0700 I NETWORK  [initandlisten] connection accepted from 128.200.107.230:35810 #17 (9 connections now open)
+2019-05-18T02:48:40.834-0700 I NETWORK  [conn17] end connection 128.200.107.230:35810 (8 connections now open)
+2019-05-18T02:49:56.250-0700 I NETWORK  [initandlisten] connection accepted from 128.200.107.230:34486 #18 (9 connections now open)
+2019-05-18T02:49:58.099-0700 I NETWORK  [conn18] end connection 128.200.107.230:34486 (8 connections now open)
+2019-05-18T02:49:58.351-0700 I NETWORK  [initandlisten] connection accepted from 128.200.107.230:34940 #19 (9 connections now open)
+2019-05-18T02:49:58.459-0700 I NETWORK  [conn19] end connection 128.200.107.230:34940 (8 connections now open)
+2019-05-18T02:49:58.500-0700 I NETWORK  [initandlisten] connection accepted from 128.200.107.230:34956 #20 (9 connections now open)
+2019-05-18T02:49:58.515-0700 I NETWORK  [conn20] end connection 128.200.107.230:34956 (8 connections now open)
+2019-05-18T02:57:45.825-0700 I NETWORK  [initandlisten] connection accepted from 128.200.107.230:41194 #21 (9 connections now open)
+2019-05-18T02:57:45.834-0700 I NETWORK  [conn21] end connection 128.200.107.230:41194 (8 connections now open)
+2019-05-18T14:58:24.315-0700 I NETWORK  [conn12] end connection 128.195.8.132:38138 (7 connections now open)
+2019-05-18T14:58:24.315-0700 I NETWORK  [conn13] end connection 128.195.8.132:38140 (7 connections now open)
+2019-05-18T14:58:36.767-0700 I NETWORK  [conn14] end connection 127.0.0.1:32972 (5 connections now open)
+2019-05-18T14:58:36.767-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49658 #22 (6 connections now open)
+2019-05-18T14:58:47.723-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.134:43770 #23 (7 connections now open)
+2019-05-18T14:58:47.724-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.134:43772 #24 (8 connections now open)
+2019-05-18T15:56:31.261-0700 I NETWORK  [conn9] end connection 128.195.8.121:52866 (7 connections now open)
+2019-05-18T15:56:31.261-0700 I NETWORK  [conn10] end connection 128.195.8.121:52868 (7 connections now open)
+2019-05-18T15:56:43.655-0700 I NETWORK  [conn22] end connection 127.0.0.1:49658 (5 connections now open)
+2019-05-18T15:56:43.655-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57974 #25 (6 connections now open)
+2019-05-18T15:57:23.945-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:39550 #26 (7 connections now open)
+2019-05-18T15:57:23.948-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:39552 #27 (8 connections now open)
+2019-05-18T16:08:15.444-0700 I NETWORK  [conn16] end connection 128.195.8.132:38174 (7 connections now open)
+2019-05-18T16:08:15.444-0700 I NETWORK  [conn15] end connection 128.195.8.132:38172 (7 connections now open)
+2019-05-18T16:08:27.076-0700 I NETWORK  [conn25] end connection 127.0.0.1:57974 (5 connections now open)
+2019-05-18T16:08:27.076-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:59662 #28 (6 connections now open)
+2019-05-18T16:08:40.256-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:39568 #29 (7 connections now open)
+2019-05-18T16:08:40.259-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.132:39570 #30 (8 connections now open)
+2019-05-19T00:15:49.870-0700 I COMMAND  [conn24] command sherpa.$cmd command: insert { insert: "results", ordered: true, documents: [ { parameters: { alpha: 0.1, dropout: 0.25, lr: 0.001, leaky_relu: 0.36, batch_norm: 0, num_layers: 5, layer_0: 512, layer_1: 409, layer_2: 512, layer_3: 512, layer_4: 512, layer_5: 512, layer_6: 409, layer_7: 512, max_concurrent: 3, P: "arcus_gpu.p", q: "arcus.q", l: "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", env: "/home/jott1/Projects/SHERPA_EX/.profile", alg: "local", data: "fluxbypass_aqua", net_type: "normal", loss_type: "mse", batch_size: 2048, data_dir: "/baldig/chemistry/earth_system_science/", max_dense_layers: 8, epochs: 25, patience: 10, results_dir: "SherpaResults/fluxbypass_aqua/normal_mse/", model_dir: "SherpaResults/fluxbypass_aqua/normal_mse/Models/" }, trial_id: 6, objective: 197.5638425090197, iteration: 10, context: { loss: 236.2602772164142, val_loss: 197.5638425090197 }, _id: ObjectId('5ce102a5dcf8b857ac2e020b') } ] } keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{} 113ms
+2019-05-19T02:49:42.487-0700 I COMMAND  [conn24] command sherpa.$cmd command: insert { insert: "results", ordered: true, documents: [ { parameters: { alpha: 0.1, dropout: 0.25, lr: 0.001, leaky_relu: 0.36, batch_norm: 0, num_layers: 5, layer_0: 512, layer_1: 409, layer_2: 512, layer_3: 512, layer_4: 512, layer_5: 512, layer_6: 409, layer_7: 512, max_concurrent: 3, P: "arcus_gpu.p", q: "arcus.q", l: "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", env: "/home/jott1/Projects/SHERPA_EX/.profile", alg: "local", data: "fluxbypass_aqua", net_type: "normal", loss_type: "mse", batch_size: 2048, data_dir: "/baldig/chemistry/earth_system_science/", max_dense_layers: 8, epochs: 25, patience: 10, results_dir: "SherpaResults/fluxbypass_aqua/normal_mse/", model_dir: "SherpaResults/fluxbypass_aqua/normal_mse/Models/" }, trial_id: 6, objective: 223.2710264481414, iteration: 14, context: { loss: 233.3491564060677, val_loss: 223.2710264481414 }, _id: ObjectId('5ce126b6dcf8b857ac2e020f') } ] } keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{} 104ms
+2019-05-19T03:26:57.942-0700 I WRITE    [conn24] insert sherpa.results query: { parameters: { alpha: 0.1, dropout: 0.25, lr: 0.001, leaky_relu: 0.36, batch_norm: 0, num_layers: 5, layer_0: 512, layer_1: 409, layer_2: 512, layer_3: 512, layer_4: 512, layer_5: 512, layer_6: 409, layer_7: 512, max_concurrent: 3, P: "arcus_gpu.p", q: "arcus.q", l: "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", env: "/home/jott1/Projects/SHERPA_EX/.profile", alg: "local", data: "fluxbypass_aqua", net_type: "normal", loss_type: "mse", batch_size: 2048, data_dir: "/baldig/chemistry/earth_system_science/", max_dense_layers: 8, epochs: 25, patience: 10, results_dir: "SherpaResults/fluxbypass_aqua/normal_mse/", model_dir: "SherpaResults/fluxbypass_aqua/normal_mse/Models/" }, trial_id: 6, objective: 201.1541525769031, iteration: 15, context: { loss: 232.8622058261206, val_loss: 201.1541525769031 }, _id: ObjectId('5ce12f71dcf8b857ac2e0210') } ninserted:1 keyUpdates:0 writeConflicts:0 numYields:0 locks:{ Global: { acquireCount: { w: 1 } }, MMAPV1Journal: { acquireCount: { w: 2 }, acquireWaitCount: { w: 1 }, timeAcquiringMicros: { w: 151708 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { W: 1 } } } 192ms
+2019-05-19T03:26:57.969-0700 I COMMAND  [conn24] command sherpa.$cmd command: insert { insert: "results", ordered: true, documents: [ { parameters: { alpha: 0.1, dropout: 0.25, lr: 0.001, leaky_relu: 0.36, batch_norm: 0, num_layers: 5, layer_0: 512, layer_1: 409, layer_2: 512, layer_3: 512, layer_4: 512, layer_5: 512, layer_6: 409, layer_7: 512, max_concurrent: 3, P: "arcus_gpu.p", q: "arcus.q", l: "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", env: "/home/jott1/Projects/SHERPA_EX/.profile", alg: "local", data: "fluxbypass_aqua", net_type: "normal", loss_type: "mse", batch_size: 2048, data_dir: "/baldig/chemistry/earth_system_science/", max_dense_layers: 8, epochs: 25, patience: 10, results_dir: "SherpaResults/fluxbypass_aqua/normal_mse/", model_dir: "SherpaResults/fluxbypass_aqua/normal_mse/Models/" }, trial_id: 6, objective: 201.1541525769031, iteration: 15, context: { loss: 232.8622058261206, val_loss: 201.1541525769031 }, _id: ObjectId('5ce12f71dcf8b857ac2e0210') } ] } keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{} 304ms
+2019-05-19T07:03:41.676-0700 I NETWORK  [conn24] end connection 128.195.8.134:43772 (7 connections now open)
+2019-05-19T07:03:41.676-0700 I NETWORK  [conn23] end connection 128.195.8.134:43770 (7 connections now open)
+2019-05-19T07:03:50.651-0700 I NETWORK  [conn28] end connection 127.0.0.1:59662 (5 connections now open)
+2019-05-19T07:03:50.911-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:33886 #31 (6 connections now open)
+2019-05-19T07:04:09.620-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.118:42014 #32 (7 connections now open)
+2019-05-19T07:04:09.622-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.118:42016 #33 (8 connections now open)
+2019-05-19T07:04:12.862-0700 I NETWORK  [conn32] end connection 128.195.8.118:42014 (7 connections now open)
+2019-05-19T07:04:12.862-0700 I NETWORK  [conn33] end connection 128.195.8.118:42016 (7 connections now open)
+2019-05-19T07:04:17.729-0700 I NETWORK  [conn31] end connection 127.0.0.1:33886 (5 connections now open)
+2019-05-19T07:04:17.730-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:33942 #34 (7 connections now open)
+2019-05-19T07:04:26.630-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.118:42022 #35 (7 connections now open)
+2019-05-19T07:04:26.632-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.118:42024 #36 (8 connections now open)
+2019-05-19T07:04:28.803-0700 I NETWORK  [conn35] end connection 128.195.8.118:42022 (7 connections now open)
+2019-05-19T07:04:28.803-0700 I NETWORK  [conn36] end connection 128.195.8.118:42024 (7 connections now open)
+2019-05-19T07:04:33.066-0700 I NETWORK  [conn34] end connection 127.0.0.1:33942 (5 connections now open)
+2019-05-19T07:04:33.067-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:33976 #37 (6 connections now open)
+2019-05-19T07:04:47.083-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.123:59034 #38 (7 connections now open)
+2019-05-19T07:04:47.099-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.123:59036 #39 (8 connections now open)
+2019-05-19T07:04:49.315-0700 I NETWORK  [conn39] end connection 128.195.8.123:59036 (7 connections now open)
+2019-05-19T07:04:49.315-0700 I NETWORK  [conn38] end connection 128.195.8.123:59034 (6 connections now open)
+2019-05-19T07:04:53.287-0700 I NETWORK  [conn37] end connection 127.0.0.1:33976 (5 connections now open)
+2019-05-19T07:04:53.288-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:34020 #40 (6 connections now open)
+2019-05-19T07:05:01.847-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.123:59044 #41 (7 connections now open)
+2019-05-19T07:05:01.848-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.123:59046 #42 (8 connections now open)
+2019-05-19T07:05:03.553-0700 I NETWORK  [conn42] end connection 128.195.8.123:59046 (7 connections now open)
+2019-05-19T07:05:03.553-0700 I NETWORK  [conn41] end connection 128.195.8.123:59044 (7 connections now open)
+2019-05-19T07:05:08.522-0700 I NETWORK  [conn40] end connection 127.0.0.1:34020 (5 connections now open)
+2019-05-19T07:05:08.523-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:34054 #43 (6 connections now open)
+2019-05-19T07:05:24.692-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.121:49382 #44 (7 connections now open)
+2019-05-19T07:05:24.693-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.121:49384 #45 (8 connections now open)
+2019-05-19T07:05:29.375-0700 I NETWORK  [conn45] end connection 128.195.8.121:49384 (7 connections now open)
+2019-05-19T07:05:29.375-0700 I NETWORK  [conn44] end connection 128.195.8.121:49382 (7 connections now open)
+2019-05-19T07:05:33.800-0700 I NETWORK  [conn43] end connection 127.0.0.1:34054 (5 connections now open)
+2019-05-19T07:05:33.801-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:34108 #46 (7 connections now open)
+2019-05-19T07:05:45.139-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.121:49930 #47 (7 connections now open)
+2019-05-19T07:05:45.141-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.121:49932 #48 (8 connections now open)
+2019-05-19T07:05:49.413-0700 I NETWORK  [conn48] end connection 128.195.8.121:49932 (7 connections now open)
+2019-05-19T07:05:49.413-0700 I NETWORK  [conn47] end connection 128.195.8.121:49930 (7 connections now open)
+2019-05-19T07:05:55.024-0700 I NETWORK  [conn46] end connection 127.0.0.1:34108 (5 connections now open)
+2019-05-19T07:05:55.025-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:34152 #49 (6 connections now open)
+2019-05-19T07:06:04.731-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.118:42028 #50 (7 connections now open)
+2019-05-19T07:06:04.752-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.118:42030 #51 (8 connections now open)
+2019-05-19T07:06:07.428-0700 I NETWORK  [conn51] end connection 128.195.8.118:42030 (7 connections now open)
+2019-05-19T07:06:07.428-0700 I NETWORK  [conn50] end connection 128.195.8.118:42028 (7 connections now open)
+2019-05-19T07:06:10.383-0700 I NETWORK  [conn49] end connection 127.0.0.1:34152 (5 connections now open)
+2019-05-19T07:06:10.383-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:34186 #52 (6 connections now open)
+2019-05-19T07:06:19.219-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.118:42036 #53 (7 connections now open)
+2019-05-19T07:06:19.221-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.118:42038 #54 (8 connections now open)
+2019-05-19T07:06:21.892-0700 I NETWORK  [conn53] end connection 128.195.8.118:42036 (7 connections now open)
+2019-05-19T07:06:21.892-0700 I NETWORK  [conn54] end connection 128.195.8.118:42038 (7 connections now open)
+2019-05-19T07:06:26.746-0700 I NETWORK  [conn52] end connection 127.0.0.1:34186 (5 connections now open)
+2019-05-19T07:06:26.746-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:34224 #55 (6 connections now open)
+2019-05-19T07:06:34.720-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.118:42042 #56 (7 connections now open)
+2019-05-19T07:06:34.723-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.118:42044 #57 (8 connections now open)
+2019-05-19T07:06:36.980-0700 I NETWORK  [conn57] end connection 128.195.8.118:42044 (7 connections now open)
+2019-05-19T07:06:36.980-0700 I NETWORK  [conn56] end connection 128.195.8.118:42042 (7 connections now open)
+2019-05-19T07:06:41.934-0700 I NETWORK  [conn55] end connection 127.0.0.1:34224 (5 connections now open)
+2019-05-19T07:06:41.934-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:34258 #58 (7 connections now open)
+2019-05-19T07:06:50.728-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.123:59052 #59 (7 connections now open)
+2019-05-19T07:06:50.730-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.123:59054 #60 (8 connections now open)
+2019-05-19T07:06:52.930-0700 I NETWORK  [conn59] end connection 128.195.8.123:59052 (7 connections now open)
+2019-05-19T07:06:52.930-0700 I NETWORK  [conn60] end connection 128.195.8.123:59054 (7 connections now open)
+2019-05-19T07:06:57.176-0700 I NETWORK  [conn58] end connection 127.0.0.1:34258 (5 connections now open)
+2019-05-19T07:06:57.176-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:34292 #61 (6 connections now open)
+2019-05-19T07:07:06.194-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.123:59062 #62 (7 connections now open)
+2019-05-19T07:07:06.214-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.123:59064 #63 (8 connections now open)
+2019-05-19T07:07:08.503-0700 I NETWORK  [conn62] end connection 128.195.8.123:59062 (7 connections now open)
+2019-05-19T07:07:08.503-0700 I NETWORK  [conn63] end connection 128.195.8.123:59064 (7 connections now open)
+2019-05-19T07:07:12.386-0700 I NETWORK  [conn61] end connection 127.0.0.1:34292 (5 connections now open)
+2019-05-19T07:07:12.387-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:34326 #64 (6 connections now open)
+2019-05-19T07:07:21.400-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.118:42048 #65 (7 connections now open)
+2019-05-19T07:07:21.403-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.118:42050 #66 (8 connections now open)
+2019-05-19T07:07:23.598-0700 I NETWORK  [conn66] end connection 128.195.8.118:42050 (7 connections now open)
+2019-05-19T07:07:23.598-0700 I NETWORK  [conn65] end connection 128.195.8.118:42048 (7 connections now open)
+2019-05-19T07:07:27.607-0700 I NETWORK  [conn64] end connection 127.0.0.1:34326 (5 connections now open)
+2019-05-19T07:07:27.607-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:34360 #67 (6 connections now open)
+2019-05-19T07:07:36.838-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.118:42056 #68 (7 connections now open)
+2019-05-19T07:07:36.840-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.118:42058 #69 (8 connections now open)
+2019-05-19T07:07:39.517-0700 I NETWORK  [conn68] end connection 128.195.8.118:42056 (7 connections now open)
+2019-05-19T07:07:39.517-0700 I NETWORK  [conn69] end connection 128.195.8.118:42058 (7 connections now open)
+2019-05-19T07:07:42.791-0700 I NETWORK  [conn67] end connection 127.0.0.1:34360 (5 connections now open)
+2019-05-19T07:07:42.791-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:34394 #70 (7 connections now open)
+2019-05-19T07:07:50.379-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.118:42062 #71 (7 connections now open)
+2019-05-19T07:07:50.380-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.118:42064 #72 (8 connections now open)
+2019-05-19T07:07:52.705-0700 I NETWORK  [conn71] end connection 128.195.8.118:42062 (7 connections now open)
+2019-05-19T07:07:52.705-0700 I NETWORK  [conn72] end connection 128.195.8.118:42064 (7 connections now open)
+2019-05-19T07:07:57.979-0700 I NETWORK  [conn70] end connection 127.0.0.1:34394 (5 connections now open)
+2019-05-19T07:07:57.979-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:34428 #73 (6 connections now open)
+2019-05-19T07:08:06.417-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.123:59072 #74 (7 connections now open)
+2019-05-19T07:08:06.419-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.123:59074 #75 (8 connections now open)
+2019-05-19T07:08:08.693-0700 I NETWORK  [conn75] end connection 128.195.8.123:59074 (7 connections now open)
+2019-05-19T07:08:08.693-0700 I NETWORK  [conn74] end connection 128.195.8.123:59072 (7 connections now open)
+2019-05-19T07:08:13.217-0700 I NETWORK  [conn73] end connection 127.0.0.1:34428 (5 connections now open)
+2019-05-19T07:08:13.218-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:34462 #76 (6 connections now open)
+2019-05-19T07:08:21.577-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.123:59080 #77 (7 connections now open)
+2019-05-19T07:08:21.580-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.123:59082 #78 (8 connections now open)
+2019-05-19T07:08:23.256-0700 I NETWORK  [conn78] end connection 128.195.8.123:59082 (7 connections now open)
+2019-05-19T07:08:23.256-0700 I NETWORK  [conn77] end connection 128.195.8.123:59080 (7 connections now open)
+2019-05-19T07:08:28.384-0700 I NETWORK  [conn76] end connection 127.0.0.1:34462 (5 connections now open)
+2019-05-19T07:08:28.384-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:34496 #79 (6 connections now open)
+2019-05-19T07:08:36.029-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.123:59086 #80 (7 connections now open)
+2019-05-19T07:08:36.032-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.123:59088 #81 (8 connections now open)
+2019-05-19T07:08:37.743-0700 I NETWORK  [conn81] end connection 128.195.8.123:59088 (7 connections now open)
+2019-05-19T07:08:37.743-0700 I NETWORK  [conn80] end connection 128.195.8.123:59086 (7 connections now open)
+2019-05-19T07:08:43.575-0700 I NETWORK  [conn79] end connection 127.0.0.1:34496 (5 connections now open)
+2019-05-19T07:08:43.575-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:34530 #82 (7 connections now open)
+2019-05-19T07:08:51.484-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.123:59092 #83 (7 connections now open)
+2019-05-19T07:08:51.486-0700 I NETWORK  [initandlisten] connection accepted from 128.195.8.123:59094 #84 (8 connections now open)
+2019-05-19T07:08:53.696-0700 I NETWORK  [conn83] end connection 128.195.8.123:59092 (7 connections now open)
+2019-05-19T07:08:53.696-0700 I NETWORK  [conn84] end connection 128.195.8.123:59094 (7 connections now open)
+2019-05-19T16:40:54.204-0700 I COMMAND  [conn27] command sherpa.$cmd command: insert { insert: "results", ordered: true, documents: [ { parameters: { alpha: 0.1, dropout: 0.25, lr: 0.001, leaky_relu: 0.3, batch_norm: 1, num_layers: 5, layer_0: 512, layer_1: 409, layer_2: 512, layer_3: 512, layer_4: 512, layer_5: 512, layer_6: 409, layer_7: 512, max_concurrent: 3, P: "arcus_gpu.p", q: "arcus.q", l: "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", env: "/home/jott1/Projects/SHERPA_EX/.profile", alg: "local", data: "fluxbypass_aqua", net_type: "normal", loss_type: "mse", batch_size: 2048, data_dir: "/baldig/chemistry/earth_system_science/", max_dense_layers: 8, epochs: 25, patience: 10, results_dir: "SherpaResults/fluxbypass_aqua/normal_mse/", model_dir: "SherpaResults/fluxbypass_aqua/normal_mse/Models/" }, trial_id: 7, objective: 301.6842322870455, iteration: 7, context: { loss: 369.1770551992034, val_loss: 301.6842322870455 }, _id: ObjectId('5ce1e985ab504fa0091fa542') } ] } keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{} 111ms
+2019-05-19T17:56:58.739-0700 I COMMAND  [conn30] command sherpa.$cmd command: insert { insert: "results", ordered: true, documents: [ { parameters: { alpha: 0.1, dropout: 0.25, lr: 0.001, leaky_relu: 0.24, batch_norm: 0, num_layers: 5, layer_0: 512, layer_1: 409, layer_2: 512, layer_3: 512, layer_4: 512, layer_5: 512, layer_6: 409, layer_7: 512, max_concurrent: 3, P: "arcus_gpu.p", q: "arcus.q", l: "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", env: "/home/jott1/Projects/SHERPA_EX/.profile", alg: "local", data: "fluxbypass_aqua", net_type: "normal", loss_type: "mse", batch_size: 2048, data_dir: "/baldig/chemistry/earth_system_science/", max_dense_layers: 8, epochs: 25, patience: 10, results_dir: "SherpaResults/fluxbypass_aqua/normal_mse/", model_dir: "SherpaResults/fluxbypass_aqua/normal_mse/Models/" }, trial_id: 8, objective: 210.8963071212968, iteration: 9, context: { loss: 220.4682536558504, val_loss: 210.8963071212968 }, _id: ObjectId('5ce1fb5acc30ce21c22ef0ba') } ] } keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{} 112ms
+2019-05-20T01:27:19.817-0700 I NETWORK  [conn29] end connection 128.195.8.132:39568 (5 connections now open)
+2019-05-20T01:27:19.843-0700 I NETWORK  [conn30] end connection 128.195.8.132:39570 (5 connections now open)
+2019-05-20T06:08:35.109-0700 I COMMAND  [conn27] command sherpa.$cmd command: insert { insert: "results", ordered: true, documents: [ { parameters: { alpha: 0.1, dropout: 0.25, lr: 0.001, leaky_relu: 0.3, batch_norm: 1, num_layers: 5, layer_0: 512, layer_1: 409, layer_2: 512, layer_3: 512, layer_4: 512, layer_5: 512, layer_6: 409, layer_7: 512, max_concurrent: 3, P: "arcus_gpu.p", q: "arcus.q", l: "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", env: "/home/jott1/Projects/SHERPA_EX/.profile", alg: "local", data: "fluxbypass_aqua", net_type: "normal", loss_type: "mse", batch_size: 2048, data_dir: "/baldig/chemistry/earth_system_science/", max_dense_layers: 8, epochs: 25, patience: 10, results_dir: "SherpaResults/fluxbypass_aqua/normal_mse/", model_dir: "SherpaResults/fluxbypass_aqua/normal_mse/Models/" }, trial_id: 7, objective: 324.1041341519411, iteration: 12, context: { loss: 367.2689612311904, val_loss: 324.1041341519411 }, _id: ObjectId('5ce2a6d2ab504fa0091fa547') } ] } keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{} 108ms
+2019-05-20T08:12:10.582-0700 I NETWORK  [conn27] end connection 128.195.8.132:39552 (3 connections now open)
+2019-05-20T08:12:10.597-0700 I NETWORK  [conn26] end connection 128.195.8.132:39550 (3 connections now open)
+2019-05-20T08:12:28.576-0700 I CONTROL  [signalProcessingThread] got signal 15 (Terminated), will terminate after current cmd ends
+2019-05-20T08:12:28.623-0700 I CONTROL  [signalProcessingThread] now exiting
+2019-05-20T08:12:28.623-0700 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2019-05-20T08:12:28.623-0700 I NETWORK  [signalProcessingThread] closing listening socket: 9
+2019-05-20T08:12:28.637-0700 I NETWORK  [signalProcessingThread] closing listening socket: 10
+2019-05-20T08:12:28.637-0700 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27004.sock
+2019-05-20T08:12:28.637-0700 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2019-05-20T08:12:28.637-0700 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2019-05-20T08:12:28.769-0700 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2019-05-20T08:12:28.769-0700 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2019-05-20T08:12:28.771-0700 I JOURNAL  [signalProcessingThread] journalCleanup...
+2019-05-20T08:12:28.771-0700 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2019-05-20T08:12:28.786-0700 I NETWORK  [conn82] end connection 127.0.0.1:34530 (1 connection now open)
+2019-05-20T08:12:28.786-0700 I NETWORK  [conn1] end connection 127.0.0.1:37598 (1 connection now open)
+2019-05-20T08:12:28.815-0700 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2019-05-20T08:12:28.871-0700 I JOURNAL  [journal writer] Journal writer thread stopped
+2019-05-20T08:12:28.886-0700 I JOURNAL  [durability] Durability thread stopped
+2019-05-20T08:12:28.928-0700 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2019-05-20T08:12:28.947-0700 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2019-05-20T08:12:28.947-0700 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2019-05-20T08:12:28.954-0700 I CONTROL  [signalProcessingThread] dbexit:  rc: 0

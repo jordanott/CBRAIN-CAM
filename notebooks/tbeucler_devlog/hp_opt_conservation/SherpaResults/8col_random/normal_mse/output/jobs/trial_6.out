@@ -1,0 +1,26 @@
+2019-05-20 08:05:37.720501: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-20 08:05:42.867454: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: GeForce GTX 980 major: 5 minor: 2 memoryClockRate(GHz): 1.2155
+pciBusID: 0000:82:00.0
+totalMemory: 3.95GiB freeMemory: 3.86GiB
+2019-05-20 08:05:42.867551: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-20 08:05:49.366938: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-20 08:05:49.367024: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-20 08:05:49.367036: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-20 08:05:49.367396: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3338 MB memory) -> physical GPU (device: 0, name: GeForce GTX 980, pci bus id: 0000:82:00.0, compute capability: 5.2)
+Generator will have 71163904 samples in 34748 batches
+Features have shape 94; targets have shape 65
+Generator will have 72343552 samples in 35324 batches
+Features have shape 94; targets have shape 65
+Epoch 1/25
+ - 5690s - loss: 1.4708 - mean_squared_error: 1.4708 - val_loss: 0.0048 - val_mean_squared_error: 0.0048
+Epoch 2/25
+ - 4810s - loss: 1.6041 - mean_squared_error: 1.6041 - val_loss: 0.0055 - val_mean_squared_error: 0.0055
+Epoch 3/25
+ - 5041s - loss: 1.3592 - mean_squared_error: 1.3592 - val_loss: 0.0034 - val_mean_squared_error: 0.0034
+Epoch 4/25
+ - 5005s - loss: 1.2353 - mean_squared_error: 1.2353 - val_loss: 0.0127 - val_mean_squared_error: 0.0127
+Epoch 5/25
+ - 5039s - loss: 1.2151 - mean_squared_error: 1.2151 - val_loss: 0.0033 - val_mean_squared_error: 0.0033
+Epoch 6/25
+ - 4519s - loss: 1.1752 - mean_squared_error: 1.1752 - val_loss: 0.0039 - val_mean_squared_error: 0.0039

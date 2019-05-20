@@ -1,0 +1,14 @@
+2019-05-20 11:34:22.840006: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-20 11:34:23.806263: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:82:00.0
+totalMemory: 11.91GiB freeMemory: 11.55GiB
+2019-05-20 11:34:23.806314: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-20 11:34:24.248786: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-20 11:34:24.248835: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-20 11:34:24.248843: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-20 11:34:24.249155: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10776 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:82:00.0, compute capability: 6.1)
+Epoch 1/25
+ - 7242s - loss: 197.3727 - mean_squared_error: 328.9545 - val_loss: 171.2776 - val_mean_squared_error: 285.4626
+Epoch 2/25
+ - 7324s - loss: 154.6108 - mean_squared_error: 257.6846 - val_loss: 135.1949 - val_mean_squared_error: 225.3249

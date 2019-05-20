@@ -1,0 +1,40 @@
+ERROR: Only reserved 0 of 1 requested devices. You probably need to clear stale locks in arcus-5:/tmp/gpuLock/.
+ERROR: Only reserved 0 of 1 requested devices. You probably need to clear stale locks in arcus-6:/tmp/gpuLock/.
+ERROR: Only reserved 0 of 1 requested devices. You probably need to clear stale locks in arcus-2.ics.uci.edu:/tmp/gpuLock/.
+Running from arcus-1.ics.uci.edu
+2019-05-14 14:00:47.979663: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: GeForce GTX TITAN major: 3 minor: 5 memoryClockRate(GHz): 0.8755
+pciBusID: 0000:84:00.0
+totalMemory: 5.94GiB freeMemory: 5.87GiB
+2019-05-14 14:00:47.980013: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-14 14:00:48.415394: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-14 14:00:48.415457: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-14 14:00:48.415474: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-14 14:00:48.415777: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 5662 MB memory) -> physical GPU (device: 0, name: GeForce GTX TITAN, pci bus id: 0000:84:00.0, compute capability: 3.5)
+{'alpha': 0.4501039169971566, 'dropout': 0.2603666588505406, 'lr': 0.0023372702924272844, 'leaky_relu': 0.21523877135872088, 'batch_norm': 1, 'num_layers': 6, 'layer_0': 46, 'layer_1': 208, 'layer_2': 379, 'layer_3': 286, 'layer_4': 232, 'layer_5': 110, 'layer_6': 489, 'layer_7': 181, 'max_concurrent': 3, 'P': 'arcus_gpu.p', 'q': 'arcus.q', 'l': "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", 'env': '/home/jott1/Projects/SHERPA_EX/.profile', 'data': 'fluxbypass_aqua', 'net_type': 'normal', 'loss_type': 'mse', 'batch_size': 2048, 'data_dir': '/baldig/chemistry/earth_system_science/', 'max_dense_layers': 8, 'epochs': 25, 'patience': 10}
+Epoch 1/25
+ - 4784s - loss: 497.5595 - mean_squared_error: 497.5595 - val_loss: 414.4204 - val_mean_squared_error: 414.4204
+Epoch 2/25
+ - 3815s - loss: 439.2663 - mean_squared_error: 439.2663 - val_loss: 472.3588 - val_mean_squared_error: 472.3588
+Epoch 3/25
+ - 4203s - loss: 434.4157 - mean_squared_error: 434.4157 - val_loss: 505.8004 - val_mean_squared_error: 505.8004
+Epoch 4/25
+ - 3974s - loss: 432.1658 - mean_squared_error: 432.1658 - val_loss: 468.9247 - val_mean_squared_error: 468.9247
+Epoch 5/25
+ - 3968s - loss: 430.6396 - mean_squared_error: 430.6396 - val_loss: 481.1124 - val_mean_squared_error: 481.1124
+Epoch 6/25
+ - 4452s - loss: 429.5770 - mean_squared_error: 429.5770 - val_loss: 475.2462 - val_mean_squared_error: 475.2462
+Epoch 7/25
+ - 4413s - loss: 428.6175 - mean_squared_error: 428.6175 - val_loss: 473.0161 - val_mean_squared_error: 473.0161
+Epoch 8/25
+ - 4308s - loss: 428.2285 - mean_squared_error: 428.2285 - val_loss: 470.6080 - val_mean_squared_error: 470.6080
+Epoch 9/25
+ - 4073s - loss: 427.4825 - mean_squared_error: 427.4825 - val_loss: 504.1421 - val_mean_squared_error: 504.1421
+Epoch 10/25
+ - 4907s - loss: 427.1188 - mean_squared_error: 427.1188 - val_loss: 497.9940 - val_mean_squared_error: 497.9940
+Epoch 11/25
+ - 4270s - loss: 426.8159 - mean_squared_error: 426.8159 - val_loss: 520.1480 - val_mean_squared_error: 520.1480
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Done with trial 2

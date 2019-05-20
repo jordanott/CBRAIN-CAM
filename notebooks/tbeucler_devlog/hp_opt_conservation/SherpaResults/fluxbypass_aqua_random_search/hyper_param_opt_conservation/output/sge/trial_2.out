@@ -1,0 +1,42 @@
+Running from arcus-4.ics.uci.edu
+2019-05-13 13:25:23.065857: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: Tesla K40c major: 3 minor: 5 memoryClockRate(GHz): 0.745
+pciBusID: 0000:84:00.0
+totalMemory: 11.17GiB freeMemory: 11.09GiB
+2019-05-13 13:25:23.066332: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-13 13:25:23.409173: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-13 13:25:23.409226: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-13 13:25:23.409237: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-13 13:25:23.409533: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10750 MB memory) -> physical GPU (device: 0, name: Tesla K40c, pci bus id: 0000:84:00.0, compute capability: 3.5)
+{'alpha': 0.9901620703276794, 'dropout': 0.4180196341010292, 'lr': 0.003196281546087239, 'leaky_relu': 0.48386797286750977, 'batch_norm': 1, 'loss_type': 'weak_loss', 'num_layers': 7, 'layer_0': 190, 'layer_1': 315, 'layer_2': 479, 'layer_3': 172, 'layer_4': 79, 'layer_5': 222, 'layer_6': 334, 'layer_7': 142, 'max_concurrent': 4, 'P': 'arcus_gpu.p', 'q': 'arcus.q', 'l': "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", 'env': '/home/jott1/Projects/SHERPA_EX/.profile', 'data': 'fluxbypass_aqua', 'run_type': 'hyper_param_opt_conservation', 'batch_size': 2048, 'data_dir': '/baldig/chemistry/earth_system_science/', 'max_dense_layers': 8, 'epochs': 25, 'patience': 10, 'conservation': 0}
+Epoch 1/25
+ - 4881s - loss: -1.6436e+12 - mean_squared_error: 555506997471.9103 - val_loss: -1.1353e+13 - val_mean_squared_error: 3835517038882.6479
+Epoch 2/25
+ - 4983s - loss: -3.9516e+13 - mean_squared_error: 13356531122556.1387 - val_loss: -1.3834e+14 - val_mean_squared_error: 46746619302676.7891
+Epoch 3/25
+ - 4890s - loss: -2.4076e+14 - mean_squared_error: 81379930340818.4688 - val_loss: -4.5033e+14 - val_mean_squared_error: 152140077595937.0625
+Epoch 4/25
+ - 5138s - loss: -8.3990e+14 - mean_squared_error: 283893624906025.7500 - val_loss: -1.4212e+15 - val_mean_squared_error: 480175813578951.5625
+Epoch 5/25
+ - 5433s - loss: -2.1842e+15 - mean_squared_error: 738274144789639.5000 - val_loss: -3.7941e+15 - val_mean_squared_error: 1281915823033034.2500
+Epoch 6/25
+ - 5409s - loss: -4.7300e+15 - mean_squared_error: 1598775090456802.5000 - val_loss: -9.6092e+15 - val_mean_squared_error: 3246850974184960.5000
+Epoch 7/25
+ - 4863s - loss: -9.0432e+15 - mean_squared_error: 3056650958528695.5000 - val_loss: -1.4154e+16 - val_mean_squared_error: 4782341285045143.0000
+Epoch 8/25
+ - 5308s - loss: -1.5810e+16 - mean_squared_error: 5343879346413219.0000 - val_loss: -2.7904e+16 - val_mean_squared_error: 9428244498832300.0000
+Epoch 9/25
+ - 5791s - loss: -2.5818e+16 - mean_squared_error: 8726497026400618.0000 - val_loss: -4.0124e+16 - val_mean_squared_error: 13557155357885658.0000
+Epoch 10/25
+ - 5351s - loss: -3.9995e+16 - mean_squared_error: 13517990106926834.0000 - val_loss: -5.5981e+16 - val_mean_squared_error: 18917927405378020.0000
+Epoch 11/25
+ - 5230s - loss: -5.9358e+16 - mean_squared_error: 20062592342374104.0000 - val_loss: -9.8901e+16 - val_mean_squared_error: 33426285221442944.0000
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "main.py", line 76, in <module>
+    net.train(train_gen, valid_gen, trial=trial, client=client)
+  File "/home/jott1/Projects/CBRAIN-CAM/notebooks/tbeucler_devlog/hp_opt_conservation/model.py", line 140, in train
+    json_file.write(history.history)
+TypeError: write() argument must be str, not dict

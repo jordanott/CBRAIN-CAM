@@ -1,0 +1,65 @@
+Running from arcus-8
+2019-05-17 02:26:29.583448: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-17 02:26:30.409144: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:02:00.0
+totalMemory: 11.91GiB freeMemory: 11.75GiB
+2019-05-17 02:26:30.409200: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-17 02:26:30.858629: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-17 02:26:30.858680: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-17 02:26:30.858688: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-17 02:26:30.859005: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11374 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:02:00.0, compute capability: 6.1)
+Epoch 1/25
+ - 3346s - loss: -2.1222e+25 - mean_squared_error: 2079822299145240830980128768.0000 - val_loss: -3.7230e+25 - val_mean_squared_error: 3648720531707664527429468160.0000
+Epoch 2/25
+ - 3559s - loss: -4.3078e+25 - mean_squared_error: 4221782479176550042933657600.0000 - val_loss: -4.8723e+25 - val_mean_squared_error: 4775001433375899961465503744.0000
+Epoch 3/25
+ - 3624s - loss: -5.5043e+25 - mean_squared_error: 5394432628867878025842130944.0000 - val_loss: -6.1277e+25 - val_mean_squared_error: 6005402828392851267288825856.0000
+Epoch 4/25
+ - 3886s - loss: -6.8408e+25 - mean_squared_error: 6704212212616928779548229632.0000 - val_loss: -7.5219e+25 - val_mean_squared_error: 7371781842667697576890859520.0000
+Epoch 5/25
+ - 3612s - loss: -8.2965e+25 - mean_squared_error: 8130880838333122515828736000.0000 - val_loss: -9.0222e+25 - val_mean_squared_error: 8842138800158906299986214912.0000
+Epoch 6/25
+ - 3295s - loss: -9.8279e+25 - mean_squared_error: 9631669668035752014024540160.0000 - val_loss: -1.0503e+26 - val_mean_squared_error: 10293756065270690634780377088.0000
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Epoch 7/25
+Traceback (most recent call last):
+  File "main.py", line 98, in <module>
+    
+  File "/home/jott1/Projects/CBRAIN-CAM/notebooks/tbeucler_devlog/hp_opt_conservation/model.py", line 130, in train
+    callbacks=callbacks,
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/keras/engine/training.py", line 1779, in fit_generator
+    initial_epoch=initial_epoch)
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/keras/engine/training_generator.py", line 244, in fit_generator
+    callbacks.on_epoch_end(epoch, epoch_logs)
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/keras/callbacks.py", line 96, in on_epoch_end
+    callback.on_epoch_end(epoch, logs)
+  File "/home/jott1/.local/lib/python3.6/site-packages/sherpa/database.py", line 226, in <lambda>
+    context={n: logs[n] for n in context_names})
+  File "/home/jott1/.local/lib/python3.6/site-packages/sherpa/database.py", line 209, in send_metrics
+    self.db.results.insert_one(result)
+  File "/home/jott1/.local/lib/python3.6/site-packages/pymongo/collection.py", line 700, in insert_one
+    session=session),
+  File "/home/jott1/.local/lib/python3.6/site-packages/pymongo/collection.py", line 614, in _insert
+    bypass_doc_val, session)
+  File "/home/jott1/.local/lib/python3.6/site-packages/pymongo/collection.py", line 602, in _insert_one
+    acknowledged, _insert_command, session)
+  File "/home/jott1/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1279, in _retryable_write
+    with self._tmp_session(session) as s:
+  File "/pkg/python/3.6.1-centos7/lib/python3.6/contextlib.py", line 82, in __enter__
+    return next(self.gen)
+  File "/home/jott1/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1611, in _tmp_session
+    s = self._ensure_session(session)
+  File "/home/jott1/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1598, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "/home/jott1/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1551, in __start_session
+    server_session = self._get_server_session()
+  File "/home/jott1/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1584, in _get_server_session
+    return self._topology.get_server_session()
+  File "/home/jott1/.local/lib/python3.6/site-packages/pymongo/topology.py", line 429, in get_server_session
+    None)
+  File "/home/jott1/.local/lib/python3.6/site-packages/pymongo/topology.py", line 200, in _select_servers_loop
+    self._error_message(selector))
+pymongo.errors.ServerSelectionTimeoutError: arcus-2.ics.uci.edu:27002: [Errno 111] Connection refused

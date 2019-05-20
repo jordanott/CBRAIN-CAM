@@ -1,0 +1,17 @@
+2019-05-20 11:46:43.829703: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: GeForce GTX TITAN Black major: 3 minor: 5 memoryClockRate(GHz): 0.98
+pciBusID: 0000:03:00.0
+totalMemory: 5.94GiB freeMemory: 5.59GiB
+2019-05-20 11:46:43.829756: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-20 11:46:50.177129: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-20 11:46:50.177183: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-20 11:46:50.177208: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-20 11:46:50.177555: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 5230 MB memory) -> physical GPU (device: 0, name: GeForce GTX TITAN Black, pci bus id: 0000:03:00.0, compute capability: 3.5)
+Generator will have 200378880 samples in 97841 batches
+Features have shape 64; targets have shape 65
+Generator will have 200378880 samples in 97841 batches
+Features have shape 64; targets have shape 65
+Epoch 1/25
+ - 7224s - loss: 664.4669 - mean_squared_error: 664.4669 - val_loss: 0.0435 - val_mean_squared_error: 0.0435
+Epoch 2/25
+ - 7377s - loss: 731.8392 - mean_squared_error: 731.8392 - val_loss: 1.7134 - val_mean_squared_error: 1.7134

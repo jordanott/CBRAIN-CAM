@@ -1,0 +1,47 @@
+Running from arcus-1.ics.uci.edu
+2019-05-16 10:26:56.848680: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: GeForce GTX TITAN major: 3 minor: 5 memoryClockRate(GHz): 0.8755
+pciBusID: 0000:03:00.0
+totalMemory: 5.94GiB freeMemory: 5.87GiB
+2019-05-16 10:26:56.848946: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-16 10:27:00.093283: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-16 10:27:00.093355: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-16 10:27:00.093377: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-16 10:27:00.093718: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 5662 MB memory) -> physical GPU (device: 0, name: GeForce GTX TITAN, pci bus id: 0000:03:00.0, compute capability: 3.5)
+{'alpha': 0.4137629330107516, 'dropout': 0.1163778711041496, 'lr': 0.006109676281439979, 'leaky_relu': 0.12429170952371832, 'batch_norm': 1, 'num_layers': 5, 'layer_0': 460, 'layer_1': 222, 'layer_2': 216, 'layer_3': 357, 'layer_4': 444, 'layer_5': 169, 'layer_6': 350, 'layer_7': 367, 'max_concurrent': 3, 'P': 'arcus_gpu.p', 'q': 'arcus.q', 'l': "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", 'env': '/home/jott1/Projects/SHERPA_EX/.profile', 'data': 'fluxbypass_aqua', 'net_type': 'normal', 'loss_type': 'mse', 'batch_size': 2048, 'data_dir': '/baldig/chemistry/earth_system_science/', 'max_dense_layers': 8, 'epochs': 25, 'patience': 10}
+Epoch 1/25
+ - 3709s - loss: 403.4894 - mean_squared_error: 403.4894 - val_loss: 377.5413 - val_mean_squared_error: 377.5413
+Epoch 2/25
+ - 5507s - loss: 371.6686 - mean_squared_error: 371.6686 - val_loss: 378.2728 - val_mean_squared_error: 378.2728
+Epoch 3/25
+ - 5508s - loss: 366.0607 - mean_squared_error: 366.0607 - val_loss: 336.3764 - val_mean_squared_error: 336.3764
+Epoch 4/25
+ - 5181s - loss: 363.2696 - mean_squared_error: 363.2696 - val_loss: 376.3714 - val_mean_squared_error: 376.3714
+Epoch 5/25
+ - 4874s - loss: 360.9997 - mean_squared_error: 360.9997 - val_loss: 380.6714 - val_mean_squared_error: 380.6714
+Epoch 6/25
+ - 4837s - loss: 359.2177 - mean_squared_error: 359.2177 - val_loss: 334.5469 - val_mean_squared_error: 334.5469
+Epoch 7/25
+ - 5121s - loss: 358.1532 - mean_squared_error: 358.1532 - val_loss: 383.6901 - val_mean_squared_error: 383.6901
+Epoch 8/25
+ - 4927s - loss: 357.1591 - mean_squared_error: 357.1591 - val_loss: 352.6432 - val_mean_squared_error: 352.6432
+Epoch 9/25
+ - 4949s - loss: 356.3580 - mean_squared_error: 356.3580 - val_loss: 350.3112 - val_mean_squared_error: 350.3112
+Epoch 10/25
+ - 5535s - loss: 355.8512 - mean_squared_error: 355.8512 - val_loss: 358.0505 - val_mean_squared_error: 358.0505
+Epoch 11/25
+ - 5888s - loss: 355.4820 - mean_squared_error: 355.4820 - val_loss: 344.8101 - val_mean_squared_error: 344.8101
+Epoch 12/25
+ - 4594s - loss: 355.1650 - mean_squared_error: 355.1650 - val_loss: 334.5589 - val_mean_squared_error: 334.5589
+Epoch 13/25
+ - 5562s - loss: 354.9459 - mean_squared_error: 354.9459 - val_loss: 370.3427 - val_mean_squared_error: 370.3427
+Epoch 14/25
+ - 5670s - loss: 354.5943 - mean_squared_error: 354.5943 - val_loss: 367.5859 - val_mean_squared_error: 367.5859
+Epoch 15/25
+ - 5558s - loss: 354.3045 - mean_squared_error: 354.3045 - val_loss: 341.5365 - val_mean_squared_error: 341.5365
+Epoch 16/25
+ - 4572s - loss: 353.9697 - mean_squared_error: 353.9697 - val_loss: 366.4819 - val_mean_squared_error: 366.4819
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Done with trial 14

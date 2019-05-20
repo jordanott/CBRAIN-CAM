@@ -1,0 +1,42 @@
+Running from arcus-8
+2019-05-18 06:07:48.016621: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-18 06:07:49.168193: E tensorflow/stream_executor/cuda/cuda_driver.cc:397] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2019-05-18 06:07:49.168289: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:163] retrieving CUDA diagnostic information for host: arcus-8
+2019-05-18 06:07:49.168311: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:170] hostname: arcus-8
+2019-05-18 06:07:49.168386: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:194] libcuda reported version is: 396.26.0
+2019-05-18 06:07:49.168497: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:198] kernel reported version is: 396.26.0
+2019-05-18 06:07:49.168509: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:305] kernel version seems to match DSO: 396.26.0
+Epoch 1/25
+ - 9073s - loss: 213.1638 - mean_squared_error: 355.2729 - val_loss: 175.4106 - val_mean_squared_error: 292.3510
+Epoch 2/25
+ - 9025s - loss: 164.3351 - mean_squared_error: 273.8917 - val_loss: 147.4762 - val_mean_squared_error: 245.7937
+Epoch 3/25
+ - 8783s - loss: 157.2781 - mean_squared_error: 262.1302 - val_loss: 130.3500 - val_mean_squared_error: 217.2500
+Epoch 4/25
+ - 8463s - loss: 153.8885 - mean_squared_error: 256.4808 - val_loss: 125.0372 - val_mean_squared_error: 208.3953
+Epoch 5/25
+ - 10734s - loss: 151.8574 - mean_squared_error: 253.0957 - val_loss: 124.9011 - val_mean_squared_error: 208.1686
+Epoch 6/25
+ - 10910s - loss: 150.3055 - mean_squared_error: 250.5091 - val_loss: 154.6465 - val_mean_squared_error: 257.7442
+Epoch 7/25
+ - 10640s - loss: 148.8001 - mean_squared_error: 248.0001 - val_loss: 127.3151 - val_mean_squared_error: 212.1918
+Epoch 8/25
+ - 10536s - loss: 147.9325 - mean_squared_error: 246.5542 - val_loss: 132.1054 - val_mean_squared_error: 220.1756
+Epoch 9/25
+ - 10298s - loss: 147.2879 - mean_squared_error: 245.4798 - val_loss: 131.3531 - val_mean_squared_error: 218.9219
+Epoch 10/25
+ - 9774s - loss: 146.3826 - mean_squared_error: 243.9710 - val_loss: 146.8744 - val_mean_squared_error: 244.7906
+Epoch 11/25
+ - 12583s - loss: 146.0771 - mean_squared_error: 243.4618 - val_loss: 132.2390 - val_mean_squared_error: 220.3983
+Epoch 12/25
+ - 11206s - loss: 145.5327 - mean_squared_error: 242.5545 - val_loss: 157.4172 - val_mean_squared_error: 262.3620
+Epoch 13/25
+ - 10615s - loss: 145.0204 - mean_squared_error: 241.7007 - val_loss: 141.2331 - val_mean_squared_error: 235.3884
+Epoch 14/25
+ - 10453s - loss: 144.6192 - mean_squared_error: 241.0320 - val_loss: 142.3143 - val_mean_squared_error: 237.1905
+Epoch 15/25
+ - 10752s - loss: 144.0079 - mean_squared_error: 240.0131 - val_loss: 154.9282 - val_mean_squared_error: 258.2137
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Done with trial 5

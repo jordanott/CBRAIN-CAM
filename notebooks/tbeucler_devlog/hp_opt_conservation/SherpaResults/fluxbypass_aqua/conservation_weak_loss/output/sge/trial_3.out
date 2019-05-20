@@ -1,0 +1,47 @@
+Running from arcus-8
+2019-05-17 10:14:57.938122: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-17 10:14:58.909500: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:81:00.0
+totalMemory: 11.91GiB freeMemory: 11.75GiB
+2019-05-17 10:14:58.909557: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-17 10:15:12.867825: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-17 10:15:12.868312: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-17 10:15:12.868340: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-17 10:15:12.868917: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11374 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:81:00.0, compute capability: 6.1)
+Epoch 1/25
+ - 3850s - loss: 213.3459 - mean_squared_error: 355.5764 - val_loss: 199.5702 - val_mean_squared_error: 332.6170
+Epoch 2/25
+ - 4037s - loss: 164.4697 - mean_squared_error: 274.1162 - val_loss: 129.1953 - val_mean_squared_error: 215.3255
+Epoch 3/25
+ - 3840s - loss: 157.1785 - mean_squared_error: 261.9642 - val_loss: 137.8473 - val_mean_squared_error: 229.7456
+Epoch 4/25
+ - 4257s - loss: 153.8008 - mean_squared_error: 256.3346 - val_loss: 161.2175 - val_mean_squared_error: 268.6958
+Epoch 5/25
+ - 4603s - loss: 151.8252 - mean_squared_error: 253.0421 - val_loss: 151.7742 - val_mean_squared_error: 252.9570
+Epoch 6/25
+ - 4652s - loss: 150.0313 - mean_squared_error: 250.0521 - val_loss: 127.1238 - val_mean_squared_error: 211.8731
+Epoch 7/25
+ - 3714s - loss: 149.0338 - mean_squared_error: 248.3896 - val_loss: 127.7731 - val_mean_squared_error: 212.9551
+Epoch 8/25
+ - 3933s - loss: 148.0165 - mean_squared_error: 246.6942 - val_loss: 130.0909 - val_mean_squared_error: 216.8182
+Epoch 9/25
+ - 3809s - loss: 147.1302 - mean_squared_error: 245.2170 - val_loss: 153.8227 - val_mean_squared_error: 256.3712
+Epoch 10/25
+ - 3879s - loss: 146.4913 - mean_squared_error: 244.1522 - val_loss: 173.5635 - val_mean_squared_error: 289.2725
+Epoch 11/25
+ - 4866s - loss: 145.9591 - mean_squared_error: 243.2652 - val_loss: 142.7745 - val_mean_squared_error: 237.9575
+Epoch 12/25
+ - 4237s - loss: 145.4432 - mean_squared_error: 242.4053 - val_loss: 145.7944 - val_mean_squared_error: 242.9907
+Epoch 13/25
+ - 6218s - loss: 144.7856 - mean_squared_error: 241.3094 - val_loss: 149.8239 - val_mean_squared_error: 249.7066
+Epoch 14/25
+ - 5700s - loss: 143.8079 - mean_squared_error: 239.6798 - val_loss: 161.2468 - val_mean_squared_error: 268.7447
+Epoch 15/25
+ - 4694s - loss: 143.0983 - mean_squared_error: 238.4971 - val_loss: 138.5536 - val_mean_squared_error: 230.9226
+Epoch 16/25
+ - 5206s - loss: 142.5551 - mean_squared_error: 237.5919 - val_loss: 162.0675 - val_mean_squared_error: 270.1125
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Done with trial 3

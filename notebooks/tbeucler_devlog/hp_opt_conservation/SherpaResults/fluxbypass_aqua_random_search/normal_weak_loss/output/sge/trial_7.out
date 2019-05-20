@@ -1,0 +1,38 @@
+Running from arcus-8
+2019-05-15 23:31:15.311618: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-15 23:31:19.480199: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:02:00.0
+totalMemory: 11.91GiB freeMemory: 11.75GiB
+2019-05-15 23:31:19.582380: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-15 23:31:30.400088: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-15 23:31:30.400821: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-15 23:31:30.400851: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-15 23:31:30.403150: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11374 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:02:00.0, compute capability: 6.1)
+{'alpha': 0.9265650864089379, 'dropout': 0.0483112795942543, 'lr': 0.005292796559254372, 'leaky_relu': 0.36053690337385697, 'batch_norm': 1, 'num_layers': 5, 'layer_0': 187, 'layer_1': 482, 'layer_2': 136, 'layer_3': 310, 'layer_4': 387, 'layer_5': 82, 'layer_6': 169, 'layer_7': 127, 'max_concurrent': 3, 'P': 'arcus_gpu.p', 'q': 'arcus.q', 'l': "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", 'env': '/home/jott1/Projects/SHERPA_EX/.profile', 'data': 'fluxbypass_aqua', 'net_type': 'normal', 'loss_type': 'weak_loss', 'batch_size': 2048, 'data_dir': '/baldig/chemistry/earth_system_science/', 'max_dense_layers': 8, 'epochs': 25, 'patience': 10}
+Epoch 1/25
+ - 6227s - loss: -1.0360e+12 - mean_squared_error: 383168272844.9350 - val_loss: -1.7264e+13 - val_mean_squared_error: 6382658741497.4668
+Epoch 2/25
+ - 4875s - loss: -7.9652e+13 - mean_squared_error: 29469363507336.2148 - val_loss: -4.8735e+14 - val_mean_squared_error: 180272061647359.5938
+Epoch 3/25
+ - 5367s - loss: -7.3853e+14 - mean_squared_error: 273373849600950.3438 - val_loss: -3.5853e+15 - val_mean_squared_error: 1327007348625823.0000
+Epoch 4/25
+ - 5436s - loss: -3.1847e+15 - mean_squared_error: 1179261703148353.0000 - val_loss: -8.5427e+15 - val_mean_squared_error: 3163864882878909.0000
+Epoch 5/25
+ - 5295s - loss: -9.4013e+15 - mean_squared_error: 3481832154833447.0000 - val_loss: -1.9862e+16 - val_mean_squared_error: 7350826485447969.0000
+Epoch 6/25
+ - 5771s - loss: -2.2172e+16 - mean_squared_error: 8212463880214390.0000 - val_loss: -5.8001e+16 - val_mean_squared_error: 21470122029314012.0000
+Epoch 7/25
+ - 5223s - loss: -4.5152e+16 - mean_squared_error: 16725378014345564.0000 - val_loss: -8.0567e+16 - val_mean_squared_error: 29829692566176936.0000
+Epoch 8/25
+ - 5004s - loss: -8.2906e+16 - mean_squared_error: 30711666581832796.0000 - val_loss: -1.4938e+17 - val_mean_squared_error: 55328276518840296.0000
+Epoch 9/25
+ - 4609s - loss: -1.4084e+17 - mean_squared_error: 52176334237638144.0000 - val_loss: -1.5809e+17 - val_mean_squared_error: 58614141383167744.0000
+Epoch 10/25
+ - 3785s - loss: -2.2515e+17 - mean_squared_error: 83407810144332672.0000 - val_loss: -2.9863e+17 - val_mean_squared_error: 110628106771032992.0000
+Epoch 11/25
+ - 3335s - loss: -3.4304e+17 - mean_squared_error: 127084819405223904.0000 - val_loss: -4.5630e+17 - val_mean_squared_error: 169102670317940640.0000
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Done with trial 7

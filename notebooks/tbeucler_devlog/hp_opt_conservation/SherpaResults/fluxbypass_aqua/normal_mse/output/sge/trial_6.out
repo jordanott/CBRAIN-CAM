@@ -1,0 +1,56 @@
+Running from arcus-10
+2019-05-18 14:58:47.725391: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-18 14:58:47.753654: E tensorflow/stream_executor/cuda/cuda_driver.cc:397] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2019-05-18 14:58:47.753733: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:163] retrieving CUDA diagnostic information for host: arcus-10
+2019-05-18 14:58:47.753745: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:170] hostname: arcus-10
+2019-05-18 14:58:47.753823: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:194] libcuda reported version is: 410.79.0
+2019-05-18 14:58:47.753908: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:198] kernel reported version is: 410.79.0
+2019-05-18 14:58:47.753918: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:305] kernel version seems to match DSO: 410.79.0
+Epoch 1/25
+ - 3103s - loss: 318.8591 - mean_squared_error: 318.8591 - val_loss: 253.8144 - val_mean_squared_error: 253.8144
+Epoch 2/25
+ - 3163s - loss: 262.1036 - mean_squared_error: 262.1036 - val_loss: 228.2113 - val_mean_squared_error: 228.2113
+Epoch 3/25
+ - 3401s - loss: 252.3229 - mean_squared_error: 252.3229 - val_loss: 227.7133 - val_mean_squared_error: 227.7133
+Epoch 4/25
+ - 3090s - loss: 247.3283 - mean_squared_error: 247.3283 - val_loss: 199.1183 - val_mean_squared_error: 199.1183
+Epoch 5/25
+ - 3477s - loss: 244.2025 - mean_squared_error: 244.2025 - val_loss: 226.4239 - val_mean_squared_error: 226.4239
+Epoch 6/25
+ - 3469s - loss: 241.7585 - mean_squared_error: 241.7585 - val_loss: 246.5276 - val_mean_squared_error: 246.5276
+Epoch 7/25
+ - 2866s - loss: 240.1829 - mean_squared_error: 240.1829 - val_loss: 194.6272 - val_mean_squared_error: 194.6272
+Epoch 8/25
+ - 3212s - loss: 239.0041 - mean_squared_error: 239.0041 - val_loss: 221.5268 - val_mean_squared_error: 221.5268
+Epoch 9/25
+ - 2710s - loss: 237.9918 - mean_squared_error: 237.9918 - val_loss: 211.3495 - val_mean_squared_error: 211.3495
+Epoch 10/25
+ - 2530s - loss: 237.0283 - mean_squared_error: 237.0283 - val_loss: 207.5469 - val_mean_squared_error: 207.5469
+Epoch 11/25
+ - 2379s - loss: 236.2603 - mean_squared_error: 236.2603 - val_loss: 197.5638 - val_mean_squared_error: 197.5638
+Epoch 12/25
+ - 2389s - loss: 235.5857 - mean_squared_error: 235.5857 - val_loss: 193.3492 - val_mean_squared_error: 193.3492
+Epoch 13/25
+ - 2368s - loss: 234.5430 - mean_squared_error: 234.5430 - val_loss: 211.9138 - val_mean_squared_error: 211.9138
+Epoch 14/25
+ - 2239s - loss: 233.8212 - mean_squared_error: 233.8212 - val_loss: 217.4035 - val_mean_squared_error: 217.4035
+Epoch 15/25
+ - 2236s - loss: 233.3492 - mean_squared_error: 233.3492 - val_loss: 223.2710 - val_mean_squared_error: 223.2710
+Epoch 16/25
+ - 2235s - loss: 232.8622 - mean_squared_error: 232.8622 - val_loss: 201.1542 - val_mean_squared_error: 201.1542
+Epoch 17/25
+ - 2198s - loss: 232.3205 - mean_squared_error: 232.3205 - val_loss: 212.6618 - val_mean_squared_error: 212.6618
+Epoch 18/25
+ - 2190s - loss: 231.9400 - mean_squared_error: 231.9400 - val_loss: 233.2656 - val_mean_squared_error: 233.2656
+Epoch 19/25
+ - 2163s - loss: 231.5847 - mean_squared_error: 231.5847 - val_loss: 242.1414 - val_mean_squared_error: 242.1414
+Epoch 20/25
+ - 2155s - loss: 231.3187 - mean_squared_error: 231.3187 - val_loss: 212.6329 - val_mean_squared_error: 212.6329
+Epoch 21/25
+ - 2150s - loss: 230.9151 - mean_squared_error: 230.9151 - val_loss: 259.0064 - val_mean_squared_error: 259.0064
+Epoch 22/25
+ - 2147s - loss: 230.5984 - mean_squared_error: 230.5984 - val_loss: 285.8786 - val_mean_squared_error: 285.8786
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Done with trial 6

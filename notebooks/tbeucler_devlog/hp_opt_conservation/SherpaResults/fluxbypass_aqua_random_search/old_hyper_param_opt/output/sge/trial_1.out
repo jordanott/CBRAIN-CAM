@@ -1,0 +1,136 @@
+Running from arcus-8
+2019-05-11 11:37:40.870656: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-11 11:37:42.045144: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:82:00.0
+totalMemory: 11.91GiB freeMemory: 11.75GiB
+2019-05-11 11:37:42.045197: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-11 11:37:42.453002: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-11 11:37:42.453051: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-11 11:37:42.453059: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-11 11:37:42.453367: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11374 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:82:00.0, compute capability: 6.1)
+{'alpha': 0.400267216889989, 'dropout': 0.386213879919993, 'lr': 0.00667985961558422, 'leaky_relu': 0.3798179023487902, 'batch_norm': 0, 'loss_type': 'weak_loss', 'num_layers': 2, 'layer_0': 203, 'layer_1': 429, 'layer_2': 413, 'layer_3': 463, 'layer_4': 484, 'layer_5': 256, 'layer_6': 202, 'layer_7': 353, 'max_concurrent': 3, 'P': 'arcus_gpu.p', 'q': 'arcus.q', 'l': "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", 'env': '/home/jott1/Projects/SHERPA_EX/.profile', 'data': 'fluxbypass_aqua', 'run_type': 'hyper_param_opt', 'batch_size': 2048, 'data_dir': '/baldig/chemistry/earth_system_science/', 'max_dense_layers': 8, 'epochs': 100, 'patience': 10, 'conservation': 0}
+Epoch 1/100
+ - 3026s - loss: -6.0718e+23 - val_loss: -4.1329e+24
+Epoch 2/100
+ - 3089s - loss: -1.5031e+25 - val_loss: -2.6264e+25
+Epoch 3/100
+ - 3449s - loss: -3.9437e+25 - val_loss: -5.3738e+25
+Epoch 4/100
+ - 6284s - loss: -7.1389e+25 - val_loss: -9.0007e+25
+Epoch 5/100
+ - 5134s - loss: -1.1230e+26 - val_loss: -1.3532e+26
+Epoch 6/100
+ - 4375s - loss: -1.6238e+26 - val_loss: -1.8976e+26
+Epoch 7/100
+ - 4020s - loss: -2.2152e+26 - val_loss: -2.5316e+26
+Epoch 8/100
+ - 5080s - loss: -2.8971e+26 - val_loss: -3.2568e+26
+Epoch 9/100
+ - 4200s - loss: -3.6609e+26 - val_loss: -4.0493e+26
+Epoch 10/100
+ - 3499s - loss: -4.4967e+26 - val_loss: -4.9246e+26
+Epoch 11/100
+ - 3847s - loss: -5.4177e+26 - val_loss: -5.8857e+26
+Epoch 12/100
+ - 5154s - loss: -6.4262e+26 - val_loss: -6.9339e+26
+Epoch 13/100
+ - 4419s - loss: -7.5223e+26 - val_loss: -8.0695e+26
+Epoch 14/100
+ - 3900s - loss: -8.7055e+26 - val_loss: -9.2936e+26
+Epoch 15/100
+ - 4056s - loss: -9.9788e+26 - val_loss: -1.0605e+27
+Epoch 16/100
+ - 3331s - loss: -1.1238e+27 - val_loss: -1.1586e+27
+Epoch 17/100
+ - 3755s - loss: -1.1767e+27 - val_loss: -1.1859e+27
+Epoch 18/100
+ - 3467s - loss: -1.2033e+27 - val_loss: -1.2123e+27
+Epoch 19/100
+ - 3650s - loss: -1.2298e+27 - val_loss: -1.2387e+27
+Epoch 20/100
+ - 4039s - loss: -1.2564e+27 - val_loss: -1.2655e+27
+Epoch 21/100
+ - 3295s - loss: -1.2834e+27 - val_loss: -1.2925e+27
+Epoch 22/100
+ - 3441s - loss: -1.3107e+27 - val_loss: -1.3198e+27
+Epoch 23/100
+ - 4158s - loss: -1.3382e+27 - val_loss: -1.3475e+27
+Epoch 24/100
+ - 3848s - loss: -1.3661e+27 - val_loss: -1.3755e+27
+Epoch 25/100
+ - 3351s - loss: -1.3945e+27 - val_loss: -1.4039e+27
+Epoch 26/100
+ - 3379s - loss: -1.4230e+27 - val_loss: -1.4326e+27
+Epoch 27/100
+ - 3433s - loss: -1.4520e+27 - val_loss: -1.4616e+27
+Epoch 28/100
+ - 3143s - loss: -1.4813e+27 - val_loss: -1.4909e+27
+Epoch 29/100
+ - 3209s - loss: -1.5109e+27 - val_loss: -1.5205e+27
+Epoch 30/100
+ - 3472s - loss: -1.5407e+27 - val_loss: -1.5504e+27
+Epoch 31/100
+ - 3393s - loss: -1.5709e+27 - val_loss: -1.5805e+27
+Epoch 32/100
+ - 3436s - loss: -1.6011e+27 - val_loss: -1.6107e+27
+Epoch 33/100
+ - 4504s - loss: -1.6317e+27 - val_loss: -1.6413e+27
+Epoch 34/100
+ - 3823s - loss: -1.6625e+27 - val_loss: -1.6721e+27
+Epoch 35/100
+ - 5424s - loss: -1.6936e+27 - val_loss: -1.7033e+27
+Epoch 36/100
+ - 3879s - loss: -1.7251e+27 - val_loss: -1.7348e+27
+Epoch 37/100
+ - 3589s - loss: -1.7569e+27 - val_loss: -1.7666e+27
+Epoch 38/100
+ - 5319s - loss: -1.7891e+27 - val_loss: -1.7987e+27
+Epoch 39/100
+ - 3822s - loss: -1.8214e+27 - val_loss: -1.8311e+27
+Epoch 40/100
+ - 3638s - loss: -1.8541e+27 - val_loss: -1.8637e+27
+Epoch 41/100
+ - 3337s - loss: -1.8870e+27 - val_loss: -1.8966e+27
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Epoch 42/100
+Traceback (most recent call last):
+  File "main.py", line 72, in <module>
+    # save lr model
+  File "/home/jott1/Projects/CBRAIN-CAM/notebooks/tbeucler_devlog/hp_opt_conservation/model.py", line 135, in train
+    callbacks=callbacks,
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/keras/engine/training.py", line 1779, in fit_generator
+    initial_epoch=initial_epoch)
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/keras/engine/training_generator.py", line 244, in fit_generator
+    callbacks.on_epoch_end(epoch, epoch_logs)
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/keras/callbacks.py", line 96, in on_epoch_end
+    callback.on_epoch_end(epoch, logs)
+  File "/home/jott1/.local/lib/python3.6/site-packages/sherpa/database.py", line 226, in <lambda>
+    context={n: logs[n] for n in context_names})
+  File "/home/jott1/.local/lib/python3.6/site-packages/sherpa/database.py", line 209, in send_metrics
+    self.db.results.insert_one(result)
+  File "/home/jott1/.local/lib/python3.6/site-packages/pymongo/collection.py", line 700, in insert_one
+    session=session),
+  File "/home/jott1/.local/lib/python3.6/site-packages/pymongo/collection.py", line 614, in _insert
+    bypass_doc_val, session)
+  File "/home/jott1/.local/lib/python3.6/site-packages/pymongo/collection.py", line 602, in _insert_one
+    acknowledged, _insert_command, session)
+  File "/home/jott1/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1279, in _retryable_write
+    with self._tmp_session(session) as s:
+  File "/pkg/python/3.6.1-centos7/lib/python3.6/contextlib.py", line 82, in __enter__
+    return next(self.gen)
+  File "/home/jott1/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1611, in _tmp_session
+    s = self._ensure_session(session)
+  File "/home/jott1/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1598, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "/home/jott1/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1551, in __start_session
+    server_session = self._get_server_session()
+  File "/home/jott1/.local/lib/python3.6/site-packages/pymongo/mongo_client.py", line 1584, in _get_server_session
+    return self._topology.get_server_session()
+  File "/home/jott1/.local/lib/python3.6/site-packages/pymongo/topology.py", line 429, in get_server_session
+    None)
+  File "/home/jott1/.local/lib/python3.6/site-packages/pymongo/topology.py", line 200, in _select_servers_loop
+    self._error_message(selector))
+pymongo.errors.ServerSelectionTimeoutError: arcus-1.ics.uci.edu:27001: [Errno 111] Connection refused
