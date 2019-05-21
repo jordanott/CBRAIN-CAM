@@ -24,3 +24,21 @@ Epoch 5/25
  - 5108s - loss: 0.0037 - mean_squared_error: 0.0037 - val_loss: 0.0043 - val_mean_squared_error: 0.0043
 Epoch 6/25
  - 4916s - loss: 0.0037 - mean_squared_error: 0.0037 - val_loss: 0.0044 - val_mean_squared_error: 0.0044
+Epoch 7/25
+ - 5608s - loss: 0.0037 - mean_squared_error: 0.0037 - val_loss: 0.0038 - val_mean_squared_error: 0.0038
+Epoch 8/25
+ - 4844s - loss: 0.0037 - mean_squared_error: 0.0037 - val_loss: 0.0038 - val_mean_squared_error: 0.0038
+Epoch 9/25
+ - 4592s - loss: 0.0037 - mean_squared_error: 0.0037 - val_loss: 0.0038 - val_mean_squared_error: 0.0038
+Epoch 10/25
+ - 5361s - loss: 0.0037 - mean_squared_error: 0.0037 - val_loss: 0.0039 - val_mean_squared_error: 0.0039
+Epoch 11/25
+ - 5309s - loss: 0.0037 - mean_squared_error: 0.0037 - val_loss: 0.0039 - val_mean_squared_error: 0.0039
+Epoch 12/25
+ - 4598s - loss: 0.0037 - mean_squared_error: 0.0037 - val_loss: 0.0042 - val_mean_squared_error: 0.0042
+Epoch 13/25
+ - 4983s - loss: 0.0037 - mean_squared_error: 0.0037 - val_loss: 0.0038 - val_mean_squared_error: 0.0038
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Done with trial 5

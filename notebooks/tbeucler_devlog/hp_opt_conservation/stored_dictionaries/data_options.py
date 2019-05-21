@@ -9,8 +9,8 @@ data_opts = {
 			'target_fn': 'full_physics_essentials_valid_month02_targets.nc'
 		},
 		'norm_fn': 'full_physics_essentials_train_month01_norm.nc',
-        'input_shape':64,
-        'output_shape':64,
+        'input_shape':94,
+        'output_shape':65,
 	},
 	'32col':{
 		'train':{
@@ -23,7 +23,7 @@ data_opts = {
 		},
 		'norm_fn': 'full_physics_essentials_train_month01-06_norm.nc',
         'input_shape':64,
-        'output_shape':64,
+        'output_shape':65,
 	},
     'land_data':{
         'train':{
@@ -36,7 +36,7 @@ data_opts = {
         },
         'norm_fn':'full_physics_essentials_train_month01_norm.nc',
         'input_shape':64,
-        'output_shape':64,
+        'output_shape':65,
     },
     'fluxbypass_aqua':{
         'input_shape':304,

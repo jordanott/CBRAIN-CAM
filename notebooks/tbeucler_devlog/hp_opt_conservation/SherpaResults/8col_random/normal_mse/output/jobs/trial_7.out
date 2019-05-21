@@ -24,3 +24,19 @@ Epoch 5/25
  - 5108s - loss: 0.0025 - mean_squared_error: 0.0025 - val_loss: 0.0025 - val_mean_squared_error: 0.0025
 Epoch 6/25
  - 4916s - loss: 0.0025 - mean_squared_error: 0.0025 - val_loss: 0.0025 - val_mean_squared_error: 0.0025
+Epoch 7/25
+ - 5607s - loss: 0.0025 - mean_squared_error: 0.0025 - val_loss: 0.0025 - val_mean_squared_error: 0.0025
+Epoch 8/25
+ - 4845s - loss: 0.0025 - mean_squared_error: 0.0025 - val_loss: 0.0027 - val_mean_squared_error: 0.0027
+Epoch 9/25
+ - 4591s - loss: 0.0025 - mean_squared_error: 0.0025 - val_loss: 0.0025 - val_mean_squared_error: 0.0025
+Epoch 10/25
+ - 5118s - loss: 0.0025 - mean_squared_error: 0.0025 - val_loss: 0.0027 - val_mean_squared_error: 0.0027
+Epoch 11/25
+ - 5165s - loss: 0.0025 - mean_squared_error: 0.0025 - val_loss: 0.0028 - val_mean_squared_error: 0.0028
+Epoch 12/25
+ - 4841s - loss: 0.0025 - mean_squared_error: 0.0025 - val_loss: 0.0031 - val_mean_squared_error: 0.0031
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Done with trial 7

@@ -1,0 +1,9 @@
+2019-05-21 13:00:46.736092: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: GeForce GTX TITAN Black major: 3 minor: 5 memoryClockRate(GHz): 0.98
+pciBusID: 0000:02:00.0
+totalMemory: 5.94GiB freeMemory: 4.84GiB
+2019-05-21 13:00:46.736137: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-21 13:00:54.343900: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-21 13:00:54.343950: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-21 13:00:54.343962: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-21 13:00:54.344214: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 4610 MB memory) -> physical GPU (device: 0, name: GeForce GTX TITAN Black, pci bus id: 0000:02:00.0, compute capability: 3.5)

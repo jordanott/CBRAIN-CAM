@@ -1,0 +1,32 @@
+2019-05-21 00:51:11.896668: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-21 00:51:12.449680: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: GeForce GTX TITAN X major: 5 minor: 2 memoryClockRate(GHz): 1.076
+pciBusID: 0000:03:00.0
+totalMemory: 11.93GiB freeMemory: 11.23GiB
+2019-05-21 00:51:12.450227: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-21 00:51:16.657578: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-21 00:51:16.658300: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-21 00:51:16.658359: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-21 00:51:16.660601: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10865 MB memory) -> physical GPU (device: 0, name: GeForce GTX TITAN X, pci bus id: 0000:03:00.0, compute capability: 5.2)
+Generator will have 71163904 samples in 34748 batches
+Features have shape 94; targets have shape 65
+Generator will have 72343552 samples in 35324 batches
+Features have shape 94; targets have shape 65
+Epoch 1/25
+ - 4953s - loss: 0.0038 - mean_squared_error: 0.0038 - val_loss: 0.0035 - val_mean_squared_error: 0.0035
+Epoch 2/25
+ - 5117s - loss: 0.0037 - mean_squared_error: 0.0037 - val_loss: 0.0037 - val_mean_squared_error: 0.0037
+Epoch 3/25
+ - 4874s - loss: 0.0037 - mean_squared_error: 0.0037 - val_loss: 0.0029 - val_mean_squared_error: 0.0029
+Epoch 4/25
+ - 4850s - loss: 0.0037 - mean_squared_error: 0.0037 - val_loss: 0.0031 - val_mean_squared_error: 0.0031
+Epoch 5/25
+ - 4303s - loss: 0.0036 - mean_squared_error: 0.0036 - val_loss: 0.0030 - val_mean_squared_error: 0.0030
+Epoch 6/25
+ - 5688s - loss: 0.0036 - mean_squared_error: 0.0036 - val_loss: 0.0028 - val_mean_squared_error: 0.0028
+Epoch 7/25
+ - 4610s - loss: 0.0036 - mean_squared_error: 0.0036 - val_loss: 0.0033 - val_mean_squared_error: 0.0033
+Epoch 8/25
+ - 4581s - loss: 0.0036 - mean_squared_error: 0.0036 - val_loss: 0.0033 - val_mean_squared_error: 0.0033
+Epoch 9/25
+ - 4455s - loss: 0.0036 - mean_squared_error: 0.0036 - val_loss: 0.0035 - val_mean_squared_error: 0.0035

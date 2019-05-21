@@ -1,0 +1,20 @@
+2019-05-21 09:08:53.378176: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-21 09:08:54.013403: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: GeForce GTX TITAN Black major: 3 minor: 5 memoryClockRate(GHz): 0.98
+pciBusID: 0000:81:00.0
+totalMemory: 5.94GiB freeMemory: 5.41GiB
+2019-05-21 09:08:54.015160: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-21 09:09:14.363835: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-21 09:09:14.364161: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-21 09:09:14.364195: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-21 09:09:14.366339: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 5197 MB memory) -> physical GPU (device: 0, name: GeForce GTX TITAN Black, pci bus id: 0000:81:00.0, compute capability: 3.5)
+Generator will have 71163904 samples in 34748 batches
+Features have shape 94; targets have shape 65
+Generator will have 72343552 samples in 35324 batches
+Features have shape 94; targets have shape 65
+Epoch 1/25
+ - 4514s - loss: 0.0034 - mean_squared_error: 0.0034 - val_loss: 0.0025 - val_mean_squared_error: 0.0025
+Epoch 2/25
+ - 4572s - loss: 0.0026 - mean_squared_error: 0.0026 - val_loss: 0.0025 - val_mean_squared_error: 0.0025
+Epoch 3/25
+ - 4461s - loss: 0.0026 - mean_squared_error: 0.0026 - val_loss: 0.0024 - val_mean_squared_error: 0.0024

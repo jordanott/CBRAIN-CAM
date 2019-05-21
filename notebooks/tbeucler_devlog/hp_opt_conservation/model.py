@@ -39,8 +39,9 @@ class Network:
         self.build_model()
 
     def init_paths(self):
-        self.args['results_dir'] = 'SherpaResults/{data}/{net_type}_{loss_type}/'.format(
+        self.args['results_dir'] = 'SherpaResults/{data}_{alg}/{net_type}_{loss_type}/'.format(
             data=self.args['data'],
+            alg=self.args['alg'],
             net_type=self.args['net_type'],
             loss_type=self.args['loss_type']
         )

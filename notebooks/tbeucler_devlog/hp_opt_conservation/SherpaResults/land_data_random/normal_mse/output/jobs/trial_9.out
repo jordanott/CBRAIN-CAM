@@ -15,3 +15,23 @@ Epoch 1/25
  - 7224s - loss: 0.0041 - mean_squared_error: 0.0041 - val_loss: 0.0036 - val_mean_squared_error: 0.0036
 Epoch 2/25
  - 7381s - loss: 0.0038 - mean_squared_error: 0.0038 - val_loss: 0.0036 - val_mean_squared_error: 0.0036
+Epoch 3/25
+ - 7232s - loss: 0.0038 - mean_squared_error: 0.0038 - val_loss: 0.0035 - val_mean_squared_error: 0.0035
+Epoch 4/25
+ - 6627s - loss: 0.0038 - mean_squared_error: 0.0038 - val_loss: 0.0036 - val_mean_squared_error: 0.0036
+Epoch 5/25
+ - 6566s - loss: 0.0038 - mean_squared_error: 0.0038 - val_loss: 0.0035 - val_mean_squared_error: 0.0035
+Epoch 6/25
+ - 8132s - loss: 0.0038 - mean_squared_error: 0.0038 - val_loss: 0.0035 - val_mean_squared_error: 0.0035
+Epoch 7/25
+ - 10520s - loss: 0.0038 - mean_squared_error: 0.0038 - val_loss: 0.0035 - val_mean_squared_error: 0.0035
+Epoch 8/25
+ - 8383s - loss: 0.0038 - mean_squared_error: 0.0038 - val_loss: 0.0036 - val_mean_squared_error: 0.0036
+Epoch 9/25
+ - 7169s - loss: 0.0038 - mean_squared_error: 0.0038 - val_loss: 0.0036 - val_mean_squared_error: 0.0036
+Epoch 10/25
+ - 8495s - loss: 0.0038 - mean_squared_error: 0.0038 - val_loss: 0.0036 - val_mean_squared_error: 0.0036
+Epoch 11/25
+ - 6922s - loss: 0.0038 - mean_squared_error: 0.0038 - val_loss: 0.0036 - val_mean_squared_error: 0.0036
+Epoch 12/25
+ - 6110s - loss: 0.0038 - mean_squared_error: 0.0038 - val_loss: 0.0035 - val_mean_squared_error: 0.0035

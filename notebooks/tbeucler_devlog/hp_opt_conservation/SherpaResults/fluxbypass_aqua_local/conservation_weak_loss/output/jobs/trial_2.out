@@ -12,3 +12,25 @@ Epoch 1/25
  - 7242s - loss: 220.7667 - mean_squared_error: 367.9445 - val_loss: 138.1555 - val_mean_squared_error: 230.2592
 Epoch 2/25
  - 7323s - loss: 170.9345 - mean_squared_error: 284.8909 - val_loss: 146.6300 - val_mean_squared_error: 244.3833
+Epoch 3/25
+ - 7665s - loss: 163.9093 - mean_squared_error: 273.1822 - val_loss: 147.4081 - val_mean_squared_error: 245.6801
+Epoch 4/25
+ - 7194s - loss: 160.3280 - mean_squared_error: 267.2133 - val_loss: 167.8382 - val_mean_squared_error: 279.7303
+Epoch 5/25
+ - 7319s - loss: 157.2433 - mean_squared_error: 262.0721 - val_loss: 140.8652 - val_mean_squared_error: 234.7753
+Epoch 6/25
+ - 7155s - loss: 155.3980 - mean_squared_error: 258.9967 - val_loss: 146.3667 - val_mean_squared_error: 243.9444
+Epoch 7/25
+ - 7597s - loss: 154.1681 - mean_squared_error: 256.9468 - val_loss: 169.4088 - val_mean_squared_error: 282.3480
+Epoch 8/25
+ - 7220s - loss: 153.2722 - mean_squared_error: 255.4537 - val_loss: 185.0957 - val_mean_squared_error: 308.4928
+Epoch 9/25
+ - 6626s - loss: 152.5143 - mean_squared_error: 254.1905 - val_loss: 164.7059 - val_mean_squared_error: 274.5099
+Epoch 10/25
+ - 6765s - loss: 151.8352 - mean_squared_error: 253.0586 - val_loss: 143.1951 - val_mean_squared_error: 238.6585
+Epoch 11/25
+ - 7412s - loss: 151.1246 - mean_squared_error: 251.8743 - val_loss: 152.1035 - val_mean_squared_error: 253.5059
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Done with trial 2

@@ -3,7 +3,7 @@
 import os
 
 gpu = os.environ.get("SHERPA_RESOURCE", '')
-os.environ['CUDA_VISIBLE_DEVICES'] = str(gpu or args.gpu)
+os.environ['CUDA_VISIBLE_DEVICES'] = str(gpu)
 
 # set random seeds
 import numpy as np
@@ -68,7 +68,7 @@ if trial.parameters['data'] == 'fluxbypass_aqua':
     	sub=train_gen.input_transform.sub,
     	div=train_gen.input_transform.div
     )
-elif trial.parameters['data'] == 'land_data':
+else:
     from data_generator import DataGenerator
 
     train_gen = DataGenerator(

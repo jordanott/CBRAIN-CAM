@@ -24,3 +24,17 @@ Epoch 5/25
  - 5072s - loss: 0.0039 - mean_squared_error: 0.0039 - val_loss: 0.0041 - val_mean_squared_error: 0.0041
 Epoch 6/25
  - 4475s - loss: 0.0039 - mean_squared_error: 0.0039 - val_loss: 0.0036 - val_mean_squared_error: 0.0036
+Epoch 7/25
+ - 5608s - loss: 0.0039 - mean_squared_error: 0.0039 - val_loss: 0.0041 - val_mean_squared_error: 0.0041
+Epoch 8/25
+ - 4897s - loss: 0.0039 - mean_squared_error: 0.0039 - val_loss: 0.0035 - val_mean_squared_error: 0.0035
+Epoch 9/25
+ - 4946s - loss: 0.0039 - mean_squared_error: 0.0039 - val_loss: 0.0041 - val_mean_squared_error: 0.0041
+Epoch 10/25
+ - 4988s - loss: 0.0039 - mean_squared_error: 0.0039 - val_loss: 0.0047 - val_mean_squared_error: 0.0047
+Epoch 11/25
+ - 5227s - loss: 0.0039 - mean_squared_error: 0.0039 - val_loss: 0.0047 - val_mean_squared_error: 0.0047
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Done with trial 4
