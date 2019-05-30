@@ -11,8 +11,8 @@ from cbrain.cam_constants import *
 from tensorflow.keras.layers import *
 from tensorflow.keras.models import *
 from tensorflow.keras.backend import eval
-from tensorflow.keras.optimizers import RMSprop
-from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
+from tensorflow.keras.optimizers import RMSprop, Adam
+from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping, Callback, LearningRateScheduler
 from stored_dictionaries.data_options import data_opts
 
 class Network:
@@ -25,7 +25,11 @@ class Network:
 
         self.init_paths()
 
-        self.build_model()
+        if args['alg'] == 'pbt':
+            if args['load_from'] == '':
+                self.build_model()
+        else:
+            self.build_model()
 
     def baseline_model(self):
         self.args['num_layers'] = 5
@@ -39,12 +43,19 @@ class Network:
         self.build_model()
 
     def init_paths(self):
-        self.args['results_dir'] = 'SherpaResults/{data}_{alg}/{net_type}_{loss_type}/'.format(
-            data=self.args['data'],
-            alg=self.args['alg'],
-            net_type=self.args['net_type'],
-            loss_type=self.args['loss_type']
-        )
+        if self.args['alg'] == 'baseline':
+            self.args['results_dir'] = 'SherpaResults/baselines/{data}/{net_type}_{loss_type}/'.format(
+                data=self.args['data'],
+                net_type=self.args['net_type'],
+                loss_type=self.args['loss_type']
+            )
+        else:
+            self.args['results_dir'] = 'SherpaResults/{data}_{alg}/{net_type}_{loss_type}/'.format(
+                data=self.args['data'],
+                alg=self.args['alg'],
+                net_type=self.args['net_type'],
+                loss_type=self.args['loss_type']
+            )
         self.args['model_dir'] = self.args['results_dir'] + 'Models/'
 
     def build_model(self):
@@ -94,15 +105,15 @@ class Network:
                 inp_sub=self.sub,
                 norm_q=self.scale_dict['PHQ'],
                 hyai=hyai, hybi=hybi, name='loss',
-                alpha_mass=self.args['alpha'], alpha_ent=self.args['alpha'],
-                alpha_lw=self.args['alpha'], alpha_sw=self.args['alpha']
+                alpha_mass=self.args['alpha']/4., alpha_ent=self.args['alpha']/4.,
+                alpha_lw=self.args['alpha']/4., alpha_sw=self.args['alpha']/4.
             )
         else:
             loss = self.args['loss_type']
 
         model.compile(
             loss=loss,
-            optimizer=RMSprop(lr=self.args['lr']),
+            optimizer=Adam(lr=self.args['lr']),
             metrics=['mse']
         )
         return model
@@ -113,6 +124,31 @@ class Network:
         callbacks = [es, checkpoint]
 
         if trial is not None: callbacks.append(client.keras_send_metrics(trial, objective_name='val_loss', context_names=['loss', 'val_loss']))
+        if self.args['alg'] == 'pbt': callbacks[-1] = client.keras_send_metrics(trial, objective_name='val_mean_squared_error', context_names=['loss', 'val_loss', 'mean_squared_error', 'val_mean_squared_error'])
+
+        if self.args['alg'] != 'baseline':
+            def schedule(epoch, lr):
+                return lr * self.args['lr_decay']
+
+            class EarlyStoppingByLossVal(Callback):
+                def __init__(self, monitor='val_mean_squared_error', value=0.0025, verbose=1):
+                    super(Callback, self).__init__()
+                    self.monitor = monitor
+                    self.value = value
+                    self.verbose = verbose
+
+                def on_epoch_end(self, epoch, logs={}):
+                    current = logs.get(self.monitor)
+                    if current is None:
+                        warnings.warn("Early stopping requires %s available!" % self.monitor, RuntimeWarning)
+
+                    if current > self.value:
+                        if self.verbose > 0:
+                            print("Epoch %05d: early stopping THR" % epoch)
+                        self.model.stop_training = True
+
+            lr_sch = LearningRateScheduler(schedule); callbacks.append(lr_sch)
+            # esblv = EarlyStoppingByLossVal(monitor='val_mean_squared_error'); callbacks.append(esblv)
 
         # training
         if self.args['data'] == 'fluxbypass_aqua':
@@ -138,6 +174,7 @@ class Network:
 
         with open(self.args['model_dir'] + '%05d.json' % self.ID, "w") as json_file:
             # write to file
+            history.history['epochs'] = range(len(history.history['loss']))
             json_file.write(str(history.history))
 
     def get_model_path(self):
@@ -150,17 +187,15 @@ class Network:
         # save to h5 file
         self.model.save(file_name+'.h5')
 
-    def load(self, file_name=None, weights=False):
-        # if no file specified use the best model from hyper param trials
-        if file_name is None: file_name = self.args['model_location']
-        # load model structure from json file
-        with open(file_name+'.json','r') as json_file:
-            json_model = json_file.read()
-            # set lr param in args from model dump
-            self.args['lr'] = json.loads(json_model)['lr']
-            # create keras model from the saved json file
-            model = model_from_json(json_model)
-        # load weights from h5 file
-        if weights: model.load_weights(file_name+'.h5')
-
-        self.model = self._compile(model)
+    def load(self, file_name=None, weights_separate=False):
+        if weights_separate:
+            # load model structure from json file
+            with open(file_name+'.json','r') as json_file:
+                json_model = json_file.read()
+                # create keras model from the saved json file
+                model = model_from_json(json_model)
+            # load weights from h5 file
+            if weights: model.load_weights(file_name+'.h5')
+        else:
+            model = load_model(file_name)
+        self.model = model

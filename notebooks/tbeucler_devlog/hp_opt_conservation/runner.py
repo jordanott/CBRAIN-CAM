@@ -3,6 +3,7 @@ import sherpa.schedulers
 import argparse
 import itertools
 from utils import build_directory
+from stored_dictionaries.default import default_params
 
 parser = argparse.ArgumentParser()
 
@@ -12,10 +13,9 @@ parser.add_argument('-P',help="Specifies the project to which this  job  is  ass
 parser.add_argument('-q',help='Defines a list of cluster queues or queue instances which may be used to execute this job.',default='arcus.q')
 parser.add_argument('-l', help='the given resource list.',default="hostname=\'(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)\'")
 parser.add_argument('--env', help='Your environment path.',default='/home/jott1/Projects/SHERPA_EX/.profile',type=str)
-parser.add_argument('--alg',default='local',type=str, choices=['local', 'random', 'bayes', 'hyper_band'])
+parser.add_argument('--alg',default='local',type=str, choices=['local', 'random', 'bayes', 'hyper_band', 'pbt'])
 parser.add_argument('--sch',default='local',type=str, choices=['local', 'sge'])
 parser.add_argument('--gpus',default='0,1,2,3',type=str)
-
 # ---------------- Important parameters -------------------------
 parser.add_argument('--loss_type', type=str, default='mse', choices=['mse', 'weak_loss'], help='What to run?')
 parser.add_argument('--net_type', type=str, default='normal', choices=['normal', 'conservation'], help='What to run?')
@@ -31,43 +31,65 @@ parser.add_argument('--patience', type=int, default=10, help='How long to wait f
 FLAGS = parser.parse_args()
 
 
-# Define Hyperparameter ranges
+#Define Hyperparameter ranges
 parameters = [
-    sherpa.Continuous('dropout', [0., 0.5]),
-    sherpa.Continuous('lr', [0.00001, 0.01]),
-    sherpa.Continuous('leaky_relu', [0., 0.5]),
+    sherpa.Continuous('dropout', [0., 0.25]),
+    sherpa.Continuous('lr', [0.00001, 0.1], 'log'),
+    sherpa.Continuous('leaky_relu', [0., 0.4]),
     sherpa.Ordinal('batch_norm', [1, 0]),
-    sherpa.Discrete('num_layers', [2, FLAGS.max_dense_layers]),
+    sherpa.Discrete('num_layers', [4,FLAGS.max_dense_layers]),
+    sherpa.Continuous('lr_decay', [0.5, 1.])
 ]
 
+# parameters = [
+#     sherpa.Choice('dropout', [0]),
+#     sherpa.Continuous('lr', [0.000996, 0.001396]),
+#     sherpa.Choice('leaky_relu', [0.395656]),
+#     sherpa.Choice('batch_norm', [0]),
+#     sherpa.Choice('num_layers', [10]),
+#     sherpa.Continuous('lr_decay', [0.5, 1.])
+# ]
+
 if FLAGS.loss_type == 'weak_loss':
-    parameters.append(sherpa.Continuous('alpha', [0., 1]))
+    parameters.append(sherpa.Choice('alpha', [0.01]))
 
 parameters.extend([
-    sherpa.Discrete('layer_{}'.format(i), [32, 512]) for i in range(FLAGS.max_dense_layers)
+    sherpa.Discrete('layer_{}'.format(i), [100, 300]) for i in range(FLAGS.max_dense_layers)
 ])
+
+# parameters.extend([
+#     sherpa.Choice('layer_{}'.format(i), [n]) for i,n in enumerate([299,269,248,293,251,281,258,277,209,270])
+# ])
+
 
 dict_flags = vars(FLAGS)
 
 for arg in dict_flags:
+    if FLAGS.alg == 'pbt' and arg == 'epochs': continue
     parameters.append(sherpa.Choice(name=arg, range=[dict_flags[arg] ]))
 
+# local search
 if FLAGS.alg == 'local':
-    if FLAGS.data == '8col':
-        from stored_dictionaries.default import default_params_8col as default_params
-    else:
-        from stored_dictionaries.default import default_params
+    if FLAGS.loss_type == 'weak_loss': default_params[FLAGS.data]['alpha'] = 0.01
 
-    if FLAGS.loss_type == 'weak_loss': default_params['alpha'] = 0.1
-
-    default_params.update(dict_flags)
-    algorithm = sherpa.algorithms.LocalSearch(default_params)
+    default_params[FLAGS.data].update(dict_flags)
+    algorithm = sherpa.algorithms.LocalSearch(default_params[FLAGS.data], repeat_trials=2)
+#################### bayesian optimization ###############################
 elif FLAGS.alg == 'bayes':
     algorithm = sherpa.algorithms.GPyOpt(max_num_trials=100)
+####################### Successive Halving ###############################
 elif FLAGS.alg == 'hyper_band':
     algorithm = sherpa.successive_halving.SuccessiveHalving()
+########################## Random Search #################################
 elif FLAGS.alg == 'random':
     algorithm = sherpa.algorithms.RandomSearch(max_num_trials=500)
+#################### Population Based Training ###########################
+elif FLAGS.alg == 'pbt':
+    algorithm = sherpa.algorithms.PopulationBasedTraining(
+        population_size=100,
+        parameter_range={'lr':[0.0000001, 1.]}
+    )
+    parameters.append(sherpa.Choice(name='epochs', range=[2]))
 
 # The scheduler
 if FLAGS.sch == 'sge':
