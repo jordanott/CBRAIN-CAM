@@ -1,0 +1,55 @@
+2019-05-23T13:32:39.239-0700 I JOURNAL  [initandlisten] journal dir=SherpaResults/fluxbypass_aqua_random/conservation_weak_loss/output/journal
+2019-05-23T13:32:39.240-0700 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2019-05-23T13:32:39.283-0700 I JOURNAL  [durability] Durability thread started
+2019-05-23T13:32:39.283-0700 I JOURNAL  [journal writer] Journal writer thread started
+2019-05-23T13:32:39.286-0700 I CONTROL  [initandlisten] MongoDB starting : pid=6104 port=27001 dbpath=SherpaResults/fluxbypass_aqua_random/conservation_weak_loss/output/ 64-bit host=arcus-12
+2019-05-23T13:32:39.287-0700 I CONTROL  [initandlisten] 
+2019-05-23T13:32:39.287-0700 I CONTROL  [initandlisten] ** WARNING: You are running on a NUMA machine.
+2019-05-23T13:32:39.287-0700 I CONTROL  [initandlisten] **          We suggest launching mongod like this to avoid performance problems:
+2019-05-23T13:32:39.287-0700 I CONTROL  [initandlisten] **              numactl --interleave=all mongod [other options]
+2019-05-23T13:32:39.289-0700 I CONTROL  [initandlisten] 
+2019-05-23T13:32:39.289-0700 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2019-05-23T13:32:39.289-0700 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2019-05-23T13:32:39.289-0700 I CONTROL  [initandlisten] 
+2019-05-23T13:32:39.289-0700 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2019-05-23T13:32:39.289-0700 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2019-05-23T13:32:39.289-0700 I CONTROL  [initandlisten] 
+2019-05-23T13:32:39.289-0700 I CONTROL  [initandlisten] db version v3.0.1
+2019-05-23T13:32:39.289-0700 I CONTROL  [initandlisten] git version: 534b5a3f9d10f00cd27737fbcd951032248b5952
+2019-05-23T13:32:39.289-0700 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1e-fips 11 Feb 2013
+2019-05-23T13:32:39.289-0700 I CONTROL  [initandlisten] build info: Linux ip-10-147-45-189 2.6.32-220.el6.x86_64 #1 SMP Wed Nov 9 08:03:13 EST 2011 x86_64 BOOST_LIB_VERSION=1_49
+2019-05-23T13:32:39.289-0700 I CONTROL  [initandlisten] allocator: tcmalloc
+2019-05-23T13:32:39.289-0700 I CONTROL  [initandlisten] options: { net: { port: 27001 }, storage: { dbPath: "SherpaResults/fluxbypass_aqua_random/conservation_weak_loss/output/" }, systemLog: { destination: "file", path: "SherpaResults/fluxbypass_aqua_random/conservation_weak_loss/output/log.txt" } }
+2019-05-23T13:32:39.322-0700 I INDEX    [initandlisten] allocating new ns file SherpaResults/fluxbypass_aqua_random/conservation_weak_loss/output/local.ns, filling with zeroes...
+2019-05-23T13:32:39.392-0700 I STORAGE  [FileAllocator] allocating new datafile SherpaResults/fluxbypass_aqua_random/conservation_weak_loss/output/local.0, filling with zeroes...
+2019-05-23T13:32:39.392-0700 I STORAGE  [FileAllocator] creating directory SherpaResults/fluxbypass_aqua_random/conservation_weak_loss/output/_tmp
+2019-05-23T13:32:39.395-0700 I STORAGE  [FileAllocator] done allocating datafile SherpaResults/fluxbypass_aqua_random/conservation_weak_loss/output/local.0, size: 64MB,  took 0.001 secs
+2019-05-23T13:32:39.460-0700 I NETWORK  [initandlisten] waiting for connections on port 27001
+2019-05-23T13:32:40.545-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:59300 #1 (1 connection now open)
+2019-05-23T13:32:40.547-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:59302 #2 (2 connections now open)
+2019-05-23T13:32:40.551-0700 I INDEX    [conn2] allocating new ns file SherpaResults/fluxbypass_aqua_random/conservation_weak_loss/output/sherpa.ns, filling with zeroes...
+2019-05-23T13:32:40.622-0700 I STORAGE  [FileAllocator] allocating new datafile SherpaResults/fluxbypass_aqua_random/conservation_weak_loss/output/sherpa.0, filling with zeroes...
+2019-05-23T13:32:40.624-0700 I STORAGE  [FileAllocator] done allocating datafile SherpaResults/fluxbypass_aqua_random/conservation_weak_loss/output/sherpa.0, size: 64MB,  took 0.001 secs
+2019-05-23T13:32:40.694-0700 I WRITE    [conn2] insert sherpa.trials query: { trial_id: 1, parameters: { dropout: 0, lr: 0.001, leaky_relu: 0.3, batch_norm: 0, num_layers: 5, alpha: 0.0134131142145049, layer_0: 512, layer_1: 512, layer_2: 512, layer_3: 512, layer_4: 512, layer_5: 512, layer_6: 512, max_concurrent: 5, P: "arcus_gpu.p", q: "arcus.q", l: "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", env: "/home/jott1/Projects/SHERPA_EX/.profile", alg: "random", sch: "local", gpus: "2", loss_type: "weak_loss", net_type: "conservation", data: "fluxbypass_aqua", batch_size: 2048, data_dir: "/baldig/chemistry/earth_system_science/", max_dense_layers: 7, epochs: 25, patience: 10 }, _id: ObjectId('5ce703684c61eceed749be46') } ninserted:1 keyUpdates:0 writeConflicts:0 numYields:0 locks:{ Global: { acquireCount: { w: 2 } }, MMAPV1Journal: { acquireCount: { w: 8 } }, Database: { acquireCount: { w: 1, W: 1 } }, Collection: { acquireCount: { W: 1 } }, Metadata: { acquireCount: { W: 4 } } } 143ms
+2019-05-23T13:32:40.695-0700 I COMMAND  [conn2] command sherpa.$cmd command: insert { insert: "trials", ordered: true, documents: [ { trial_id: 1, parameters: { dropout: 0, lr: 0.001, leaky_relu: 0.3, batch_norm: 0, num_layers: 5, alpha: 0.0134131142145049, layer_0: 512, layer_1: 512, layer_2: 512, layer_3: 512, layer_4: 512, layer_5: 512, layer_6: 512, max_concurrent: 5, P: "arcus_gpu.p", q: "arcus.q", l: "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'", env: "/home/jott1/Projects/SHERPA_EX/.profile", alg: "random", sch: "local", gpus: "2", loss_type: "weak_loss", net_type: "conservation", data: "fluxbypass_aqua", batch_size: 2048, data_dir: "/baldig/chemistry/earth_system_science/", max_dense_layers: 7, epochs: 25, patience: 10 }, _id: ObjectId('5ce703684c61eceed749be46') } ] } keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{} 144ms
+2019-05-23T13:32:51.423-0700 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt), will terminate after current cmd ends
+2019-05-23T13:32:51.423-0700 I CONTROL  [signalProcessingThread] now exiting
+2019-05-23T13:32:51.423-0700 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2019-05-23T13:32:51.423-0700 I NETWORK  [signalProcessingThread] closing listening socket: 9
+2019-05-23T13:32:51.423-0700 I NETWORK  [signalProcessingThread] closing listening socket: 10
+2019-05-23T13:32:51.423-0700 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27001.sock
+2019-05-23T13:32:51.423-0700 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2019-05-23T13:32:51.423-0700 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2019-05-23T13:32:51.423-0700 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2019-05-23T13:32:51.423-0700 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2019-05-23T13:32:51.427-0700 I JOURNAL  [signalProcessingThread] journalCleanup...
+2019-05-23T13:32:51.427-0700 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2019-05-23T13:32:51.430-0700 I NETWORK  [conn2] end connection 127.0.0.1:59302 (1 connection now open)
+2019-05-23T13:32:51.430-0700 I NETWORK  [conn1] end connection 127.0.0.1:59300 (1 connection now open)
+2019-05-23T13:32:51.432-0700 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2019-05-23T13:32:51.526-0700 I JOURNAL  [journal writer] Journal writer thread stopped
+2019-05-23T13:32:51.526-0700 I JOURNAL  [durability] Durability thread stopped
+2019-05-23T13:32:51.526-0700 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2019-05-23T13:32:51.527-0700 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2019-05-23T13:32:51.527-0700 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2019-05-23T13:32:51.528-0700 I CONTROL  [signalProcessingThread] dbexit:  rc: 0

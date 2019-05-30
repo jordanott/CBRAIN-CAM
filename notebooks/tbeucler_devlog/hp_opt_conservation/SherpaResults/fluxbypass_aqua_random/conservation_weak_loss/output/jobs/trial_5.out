@@ -1,0 +1,74 @@
+2019-05-23 13:33:40.151000: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: Tesla K40c major: 3 minor: 5 memoryClockRate(GHz): 0.745
+pciBusID: 0000:84:00.0
+totalMemory: 11.17GiB freeMemory: 10.83GiB
+2019-05-23 13:33:40.151051: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-23 13:33:44.727188: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-23 13:33:44.727240: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-23 13:33:44.727254: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-23 13:33:44.727611: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10322 MB memory) -> physical GPU (device: 0, name: Tesla K40c, pci bus id: 0000:84:00.0, compute capability: 3.5)
+{   'P': 'arcus_gpu.p',
+    'alg': 'random',
+    'alpha': 0.006964175618028521,
+    'batch_norm': 0,
+    'batch_size': 2048,
+    'data': 'fluxbypass_aqua',
+    'data_dir': '/baldig/chemistry/earth_system_science/',
+    'dropout': 0,
+    'env': '/home/jott1/Projects/SHERPA_EX/.profile',
+    'epochs': 25,
+    'gpus': '2',
+    'l': "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'",
+    'layer_0': 512,
+    'layer_1': 512,
+    'layer_2': 512,
+    'layer_3': 512,
+    'layer_4': 512,
+    'layer_5': 512,
+    'layer_6': 512,
+    'leaky_relu': 0.3,
+    'loss_type': 'weak_loss',
+    'lr': 0.001,
+    'max_concurrent': 5,
+    'max_dense_layers': 7,
+    'net_type': 'conservation',
+    'num_layers': 5,
+    'patience': 10,
+    'q': 'arcus.q',
+    'sch': 'local'}
+Epoch 1/25
+ - 8182s - loss: 291.1350 - mean_squared_error: 293.1768 - val_loss: 279.1950 - val_mean_squared_error: 281.1530
+Epoch 2/25
+ - 8475s - loss: 205.2895 - mean_squared_error: 206.7292 - val_loss: 188.6718 - val_mean_squared_error: 189.9950
+Epoch 3/25
+ - 8707s - loss: 192.0366 - mean_squared_error: 193.3833 - val_loss: 187.2544 - val_mean_squared_error: 188.5677
+Epoch 4/25
+ - 7877s - loss: 185.4046 - mean_squared_error: 186.7048 - val_loss: 185.1698 - val_mean_squared_error: 186.4683
+Epoch 5/25
+ - 8991s - loss: 181.4190 - mean_squared_error: 182.6913 - val_loss: 176.8394 - val_mean_squared_error: 178.0796
+Epoch 6/25
+ - 8842s - loss: 178.7637 - mean_squared_error: 180.0174 - val_loss: 167.9015 - val_mean_squared_error: 169.0790
+Epoch 7/25
+ - 8005s - loss: 176.8636 - mean_squared_error: 178.1040 - val_loss: 179.0589 - val_mean_squared_error: 180.3147
+Epoch 8/25
+ - 7626s - loss: 175.0212 - mean_squared_error: 176.2487 - val_loss: 176.1961 - val_mean_squared_error: 177.4318
+Epoch 9/25
+ - 7715s - loss: 173.6421 - mean_squared_error: 174.8598 - val_loss: 169.8710 - val_mean_squared_error: 171.0623
+Epoch 10/25
+ - 8112s - loss: 172.6174 - mean_squared_error: 173.8279 - val_loss: 173.2153 - val_mean_squared_error: 174.4301
+Epoch 11/25
+ - 8009s - loss: 171.8196 - mean_squared_error: 173.0245 - val_loss: 175.7040 - val_mean_squared_error: 176.9362
+Epoch 12/25
+ - 9007s - loss: 171.0695 - mean_squared_error: 172.2692 - val_loss: 171.9555 - val_mean_squared_error: 173.1614
+Epoch 13/25
+ - 7659s - loss: 170.5258 - mean_squared_error: 171.7217 - val_loss: 170.5097 - val_mean_squared_error: 171.7055
+Epoch 14/25
+ - 7796s - loss: 170.0198 - mean_squared_error: 171.2122 - val_loss: 168.8059 - val_mean_squared_error: 169.9897
+Epoch 15/25
+ - 7454s - loss: 169.5429 - mean_squared_error: 170.7319 - val_loss: 170.4700 - val_mean_squared_error: 171.6655
+Epoch 16/25
+ - 7613s - loss: 169.2035 - mean_squared_error: 170.3902 - val_loss: 172.8810 - val_mean_squared_error: 174.0935
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Done with trial 5
