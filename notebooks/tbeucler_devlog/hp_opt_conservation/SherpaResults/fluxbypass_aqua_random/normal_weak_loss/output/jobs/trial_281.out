@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "main.py", line 11, in <module>
+    from tensorflow import set_random_seed
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/__init__.py", line 22, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/__init__.py", line 63, in <module>
+    from tensorflow.python.framework.framework_lib import *  # pylint: disable=redefined-builtin
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/framework/framework_lib.py", line 52, in <module>
+    from tensorflow.python.framework.importer import import_graph_def
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/framework/importer.py", line 27, in <module>
+    from tensorflow.python.framework import function
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/framework/function.py", line 38, in <module>
+    from tensorflow.python.ops import resource_variable_ops
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/ops/resource_variable_ops.py", line 1274, in <module>
+    from_proto=_from_proto_fn)
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 5884, in register_proto_function
+    collection_name)
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/framework/registry.py", line 67, in register
+    stack = traceback.extract_stack()
+  File "/pkg/python/3.6.1-centos7/lib/python3.6/traceback.py", line 207, in extract_stack
+    stack = StackSummary.extract(walk_stack(f), limit=limit)
+  File "/pkg/python/3.6.1-centos7/lib/python3.6/traceback.py", line 352, in extract
+    filename, lineno, name, lookup_line=False, locals=f_locals))
+  File "/pkg/python/3.6.1-centos7/lib/python3.6/traceback.py", line 239, in __init__
+    def __init__(self, filename, lineno, name, *, lookup_line=True,
+KeyboardInterrupt

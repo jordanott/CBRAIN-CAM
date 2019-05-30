@@ -1,0 +1,101 @@
+2019-05-28 09:16:29.009804: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-28 09:16:31.004863: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:82:00.0
+totalMemory: 11.91GiB freeMemory: 11.20GiB
+2019-05-28 09:16:31.004905: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-28 09:16:37.395281: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-28 09:16:37.395341: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-28 09:16:37.395351: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-28 09:16:37.395744: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10489 MB memory) -> physical GPU (device: 0, name: TITAN X (Pascal), pci bus id: 0000:82:00.0, compute capability: 6.1)
+{   'P': 'arcus_gpu.p',
+    'alg': 'random',
+    'alpha': 0.007416436120179508,
+    'batch_norm': 0,
+    'batch_size': 2048,
+    'data': 'fluxbypass_aqua',
+    'data_dir': '/baldig/chemistry/earth_system_science/',
+    'dropout': 0,
+    'env': '/home/jott1/Projects/SHERPA_EX/.profile',
+    'epochs': 25,
+    'gpus': '2,3',
+    'l': "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'",
+    'layer_0': 512,
+    'layer_1': 512,
+    'layer_2': 512,
+    'layer_3': 512,
+    'layer_4': 512,
+    'layer_5': 512,
+    'layer_6': 512,
+    'leaky_relu': 0.3,
+    'loss_type': 'weak_loss',
+    'lr': 0.001,
+    'max_concurrent': 8,
+    'max_dense_layers': 7,
+    'net_type': 'normal',
+    'num_layers': 5,
+    'patience': 10,
+    'q': 'arcus.q',
+    'sch': 'local'}
+Epoch 1/25
+ - 4199s - loss: 237.4420 - mean_squared_error: 231.1883 - val_loss: 184.3031 - val_mean_squared_error: 185.1286
+Epoch 2/25
+ - 4175s - loss: 182.2385 - mean_squared_error: 181.2496 - val_loss: 171.6632 - val_mean_squared_error: 172.7123
+Epoch 3/25
+ - 4160s - loss: 173.9211 - mean_squared_error: 173.4419 - val_loss: 172.5863 - val_mean_squared_error: 173.0969
+Epoch 4/25
+ - 4195s - loss: 169.3225 - mean_squared_error: 169.0222 - val_loss: 167.9403 - val_mean_squared_error: 168.0670
+Epoch 5/25
+ - 4293s - loss: 165.9060 - mean_squared_error: 165.8331 - val_loss: 165.7321 - val_mean_squared_error: 166.5634
+Epoch 6/25
+ - 4338s - loss: 163.8659 - mean_squared_error: 163.7184 - val_loss: 177.9982 - val_mean_squared_error: 178.3097
+Epoch 7/25
+ - 4202s - loss: 162.1487 - mean_squared_error: 161.9258 - val_loss: 167.2129 - val_mean_squared_error: 166.1308
+Epoch 8/25
+ - 4208s - loss: 160.8460 - mean_squared_error: 160.6941 - val_loss: 165.8275 - val_mean_squared_error: 166.8471
+Epoch 9/25
+ - 4164s - loss: 159.5650 - mean_squared_error: 159.5740 - val_loss: 155.7263 - val_mean_squared_error: 156.4554
+Epoch 10/25
+ - 4213s - loss: 158.9491 - mean_squared_error: 158.3653 - val_loss: 155.7511 - val_mean_squared_error: 156.3475
+Epoch 11/25
+ - 4175s - loss: 157.7099 - mean_squared_error: 157.7177 - val_loss: 158.2134 - val_mean_squared_error: 157.9299
+Epoch 12/25
+ - 4105s - loss: 157.1132 - mean_squared_error: 157.0831 - val_loss: 158.8006 - val_mean_squared_error: 159.5796
+Epoch 13/25
+ - 4198s - loss: 160.4340 - mean_squared_error: 157.5424 - val_loss: 166.3479 - val_mean_squared_error: 165.5153
+Epoch 14/25
+ - 4132s - loss: 156.0625 - mean_squared_error: 155.9167 - val_loss: 163.4022 - val_mean_squared_error: 162.2753
+Epoch 15/25
+ - 4106s - loss: 155.4567 - mean_squared_error: 155.4789 - val_loss: 155.3810 - val_mean_squared_error: 156.0966
+Epoch 16/25
+ - 4006s - loss: 154.7532 - mean_squared_error: 154.7482 - val_loss: 159.2593 - val_mean_squared_error: 158.0999
+Epoch 17/25
+ - 3947s - loss: 154.1453 - mean_squared_error: 154.0025 - val_loss: 153.4739 - val_mean_squared_error: 154.2788
+Epoch 18/25
+ - 3992s - loss: 154.5946 - mean_squared_error: 153.9877 - val_loss: 151.4729 - val_mean_squared_error: 152.4537
+Epoch 19/25
+ - 4063s - loss: 154.0830 - mean_squared_error: 153.4978 - val_loss: 153.6399 - val_mean_squared_error: 153.7746
+Epoch 20/25
+ - 4090s - loss: 156.5859 - mean_squared_error: 153.2376 - val_loss: 151.5678 - val_mean_squared_error: 152.4373
+Epoch 21/25
+ - 4093s - loss: 152.9000 - mean_squared_error: 152.6517 - val_loss: 156.6208 - val_mean_squared_error: 155.2309
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Epoch 22/25
+Traceback (most recent call last):
+  File "main.py", line 121, in <module>
+    net.train(train_gen, valid_gen, trial=trial, client=client)
+  File "/home/jott1/Projects/CBRAIN-CAM/notebooks/tbeucler_devlog/hp_opt_conservation/model.py", line 166, in train
+    )
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/keras/engine/training.py", line 1779, in fit_generator
+    initial_epoch=initial_epoch)
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/keras/engine/training_generator.py", line 204, in fit_generator
+    x, y, sample_weight=sample_weight, class_weight=class_weight)
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/keras/engine/training.py", line 1552, in train_on_batch
+    outputs = self.train_function(ins)
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/keras/backend.py", line 2914, in __call__
+    fetched = self._callable_fn(*array_vals)
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1382, in __call__
+    run_metadata_ptr)
+KeyboardInterrupt
