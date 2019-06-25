@@ -1,56 +1,55 @@
-2019-05-20 08:05:37.782957: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2019-05-20 08:05:42.889759: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
-name: GeForce GTX TITAN X major: 5 minor: 2 memoryClockRate(GHz): 1.076
-pciBusID: 0000:02:00.0
-totalMemory: 11.93GiB freeMemory: 11.80GiB
-2019-05-20 08:05:42.889842: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2019-05-20 08:05:49.147929: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2019-05-20 08:05:49.148170: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2019-05-20 08:05:49.148187: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2019-05-20 08:05:49.149385: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11125 MB memory) -> physical GPU (device: 0, name: GeForce GTX TITAN X, pci bus id: 0000:02:00.0, compute capability: 5.2)
+2019-05-27 09:06:26.931756: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-27 09:06:40.304679: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: TITAN V major: 7 minor: 0 memoryClockRate(GHz): 1.455
+pciBusID: 0000:82:00.0
+totalMemory: 11.75GiB freeMemory: 8.92GiB
+2019-05-27 09:06:40.304737: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-27 09:06:41.098437: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-27 09:06:41.098505: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-27 09:06:41.098518: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-27 09:06:41.098895: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 8131 MB memory) -> physical GPU (device: 0, name: TITAN V, pci bus id: 0000:82:00.0, compute capability: 7.0)
+{   'P': 'arcus_gpu.p',
+    'alg': 'random',
+    'batch_norm': 0,
+    'batch_size': 2048,
+    'data': '8col',
+    'data_dir': '/baldig/chemistry/earth_system_science/',
+    'dropout': 0.03926844889241779,
+    'env': '/home/jott1/Projects/SHERPA_EX/.profile',
+    'epochs': 18,
+    'gpus': '0,1,2,3',
+    'l': "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'",
+    'layer_0': 254,
+    'layer_1': 257,
+    'layer_10': 290,
+    'layer_11': 281,
+    'layer_2': 270,
+    'layer_3': 241,
+    'layer_4': 215,
+    'layer_5': 298,
+    'layer_6': 289,
+    'layer_7': 235,
+    'layer_8': 233,
+    'layer_9': 230,
+    'leaky_relu': 0.0639860002760694,
+    'loss_type': 'mse',
+    'lr': 0.00704984725948173,
+    'max_concurrent': 28,
+    'max_dense_layers': 7,
+    'net_type': 'normal',
+    'new_trial': 1,
+    'num_layers': 9,
+    'patience': 10,
+    'q': 'arcus.q',
+    'sch': 'local'}
 Generator will have 71163904 samples in 34748 batches
 Features have shape 94; targets have shape 65
 Generator will have 72343552 samples in 35324 batches
 Features have shape 94; targets have shape 65
-Epoch 1/25
- - 5481s - loss: 0.0032 - mean_squared_error: 0.0032 - val_loss: 0.0037 - val_mean_squared_error: 0.0037
-Epoch 2/25
- - 4876s - loss: 0.0023 - mean_squared_error: 0.0023 - val_loss: 0.0024 - val_mean_squared_error: 0.0024
-Epoch 3/25
- - 5183s - loss: 0.0023 - mean_squared_error: 0.0023 - val_loss: 0.0023 - val_mean_squared_error: 0.0023
-Epoch 4/25
- - 4539s - loss: 0.0023 - mean_squared_error: 0.0023 - val_loss: 0.0022 - val_mean_squared_error: 0.0022
-Epoch 5/25
- - 5108s - loss: 0.0023 - mean_squared_error: 0.0023 - val_loss: 0.0021 - val_mean_squared_error: 0.0021
-Epoch 6/25
- - 4915s - loss: 0.0022 - mean_squared_error: 0.0022 - val_loss: 0.0036 - val_mean_squared_error: 0.0036
-Epoch 7/25
- - 5608s - loss: 0.0022 - mean_squared_error: 0.0022 - val_loss: 0.0020 - val_mean_squared_error: 0.0020
-Epoch 8/25
- - 4845s - loss: 0.0022 - mean_squared_error: 0.0022 - val_loss: 0.0020 - val_mean_squared_error: 0.0020
-Epoch 9/25
- - 4591s - loss: 0.0022 - mean_squared_error: 0.0022 - val_loss: 0.0021 - val_mean_squared_error: 0.0021
-Epoch 10/25
- - 5117s - loss: 0.0022 - mean_squared_error: 0.0022 - val_loss: 0.0021 - val_mean_squared_error: 0.0021
-Epoch 11/25
- - 5165s - loss: 0.0022 - mean_squared_error: 0.0022 - val_loss: 0.0023 - val_mean_squared_error: 0.0023
-Epoch 12/25
- - 4842s - loss: 0.0022 - mean_squared_error: 0.0022 - val_loss: 0.0021 - val_mean_squared_error: 0.0021
-Epoch 13/25
- - 5018s - loss: 0.0022 - mean_squared_error: 0.0022 - val_loss: 0.0020 - val_mean_squared_error: 0.0020
-Epoch 14/25
- - 5122s - loss: 0.0022 - mean_squared_error: 0.0022 - val_loss: 0.0020 - val_mean_squared_error: 0.0020
-Epoch 15/25
- - 4870s - loss: 0.0022 - mean_squared_error: 0.0022 - val_loss: 0.0020 - val_mean_squared_error: 0.0020
-Epoch 16/25
- - 4859s - loss: 0.0022 - mean_squared_error: 0.0022 - val_loss: 0.0020 - val_mean_squared_error: 0.0020
-Epoch 17/25
- - 4296s - loss: 0.0022 - mean_squared_error: 0.0022 - val_loss: 0.0020 - val_mean_squared_error: 0.0020
-Epoch 18/25
- - 5681s - loss: 0.0022 - mean_squared_error: 0.0022 - val_loss: 0.0020 - val_mean_squared_error: 0.0020
-Epoch 19/25
- - 4622s - loss: 0.0022 - mean_squared_error: 0.0022 - val_loss: 0.0021 - val_mean_squared_error: 0.0021
-Epoch 20/25
- - 4576s - loss: 0.0022 - mean_squared_error: 0.0022 - val_loss: 0.0020 - val_mean_squared_error: 0.0020
-Epoch 21/25
- - 4452s - loss: 0.0022 - mean_squared_error: 0.0022 - val_loss: 0.0020 - val_mean_squared_error: 0.0020
+Epoch 1/18
+Epoch 00000: early stopping THR
+ - 1455s - loss: 4135940723817.3789 - mean_squared_error: 4135940723817.3789 - val_loss: 4983711001.2927 - val_mean_squared_error: 4983711001.2927
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Done with trial 10

@@ -1,0 +1,80 @@
+2019-05-28 13:56:10.868838: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-28 13:56:11.387632: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: TITAN V major: 7 minor: 0 memoryClockRate(GHz): 1.455
+pciBusID: 0000:82:00.0
+totalMemory: 11.75GiB freeMemory: 6.89GiB
+2019-05-28 13:56:11.387702: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-28 13:56:14.023380: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-28 13:56:14.023454: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-28 13:56:14.023467: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-28 13:56:14.023984: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 6619 MB memory) -> physical GPU (device: 0, name: TITAN V, pci bus id: 0000:82:00.0, compute capability: 7.0)
+{   'P': 'arcus_gpu.p',
+    'alg': 'random',
+    'batch_norm': 0,
+    'batch_size': 2048,
+    'data': '8col',
+    'data_dir': '/baldig/chemistry/earth_system_science/',
+    'dropout': 0.06544730295606546,
+    'env': '/home/jott1/Projects/SHERPA_EX/.profile',
+    'epochs': 18,
+    'gpus': '0,1,2,3',
+    'l': "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'",
+    'layer_0': 264,
+    'layer_1': 228,
+    'layer_10': 293,
+    'layer_11': 281,
+    'layer_2': 290,
+    'layer_3': 214,
+    'layer_4': 239,
+    'layer_5': 229,
+    'layer_6': 275,
+    'layer_7': 249,
+    'layer_8': 255,
+    'layer_9': 245,
+    'leaky_relu': 0.005410579355376033,
+    'loss_type': 'mse',
+    'lr': 0.00011497058986429759,
+    'max_concurrent': 28,
+    'max_dense_layers': 7,
+    'net_type': 'normal',
+    'new_trial': 1,
+    'num_layers': 8,
+    'patience': 10,
+    'q': 'arcus.q',
+    'sch': 'local'}
+Generator will have 71163904 samples in 34748 batches
+Features have shape 94; targets have shape 65
+Generator will have 72343552 samples in 35324 batches
+Features have shape 94; targets have shape 65
+Epoch 1/18
+ - 1191s - loss: 0.0024 - mean_squared_error: 0.0024 - val_loss: 0.0022 - val_mean_squared_error: 0.0022
+Epoch 2/18
+ - 1209s - loss: 0.0022 - mean_squared_error: 0.0022 - val_loss: 0.0021 - val_mean_squared_error: 0.0021
+Epoch 3/18
+ - 1226s - loss: 0.0021 - mean_squared_error: 0.0021 - val_loss: 0.0021 - val_mean_squared_error: 0.0021
+Epoch 4/18
+ - 1209s - loss: 0.0021 - mean_squared_error: 0.0021 - val_loss: 0.0021 - val_mean_squared_error: 0.0021
+Epoch 5/18
+ - 1214s - loss: 0.0021 - mean_squared_error: 0.0021 - val_loss: 0.0021 - val_mean_squared_error: 0.0021
+Epoch 6/18
+ - 1235s - loss: 0.0021 - mean_squared_error: 0.0021 - val_loss: 0.0021 - val_mean_squared_error: 0.0021
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Epoch 7/18
+Traceback (most recent call last):
+  File "main.py", line 121, in <module>
+    net.train(train_gen, valid_gen, trial=trial, client=client)
+  File "/home/jott1/Projects/CBRAIN-CAM/notebooks/tbeucler_devlog/hp_opt_conservation/model.py", line 178, in train
+    callbacks=callbacks,
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/keras/engine/training.py", line 1779, in fit_generator
+    initial_epoch=initial_epoch)
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/keras/engine/training_generator.py", line 204, in fit_generator
+    x, y, sample_weight=sample_weight, class_weight=class_weight)
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/keras/engine/training.py", line 1552, in train_on_batch
+    outputs = self.train_function(ins)
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/keras/backend.py", line 2914, in __call__
+    fetched = self._callable_fn(*array_vals)
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1382, in __call__
+    run_metadata_ptr)
+KeyboardInterrupt

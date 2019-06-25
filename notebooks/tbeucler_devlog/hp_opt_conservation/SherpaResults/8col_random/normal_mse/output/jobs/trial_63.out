@@ -1,0 +1,55 @@
+2019-05-27 19:32:41.649870: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-27 19:32:42.178659: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: TITAN V major: 7 minor: 0 memoryClockRate(GHz): 1.455
+pciBusID: 0000:83:00.0
+totalMemory: 11.75GiB freeMemory: 7.01GiB
+2019-05-27 19:32:42.178736: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-27 19:32:44.527100: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-27 19:32:44.527156: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-27 19:32:44.527164: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-27 19:32:44.527433: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 6741 MB memory) -> physical GPU (device: 0, name: TITAN V, pci bus id: 0000:83:00.0, compute capability: 7.0)
+{   'P': 'arcus_gpu.p',
+    'alg': 'random',
+    'batch_norm': 0,
+    'batch_size': 2048,
+    'data': '8col',
+    'data_dir': '/baldig/chemistry/earth_system_science/',
+    'dropout': 0.24535994328183852,
+    'env': '/home/jott1/Projects/SHERPA_EX/.profile',
+    'epochs': 18,
+    'gpus': '0,1,2,3',
+    'l': "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'",
+    'layer_0': 206,
+    'layer_1': 261,
+    'layer_10': 248,
+    'layer_11': 231,
+    'layer_2': 209,
+    'layer_3': 255,
+    'layer_4': 241,
+    'layer_5': 275,
+    'layer_6': 240,
+    'layer_7': 274,
+    'layer_8': 287,
+    'layer_9': 297,
+    'leaky_relu': 0.27614122523663664,
+    'loss_type': 'mse',
+    'lr': 0.00418451326841913,
+    'max_concurrent': 28,
+    'max_dense_layers': 7,
+    'net_type': 'normal',
+    'new_trial': 1,
+    'num_layers': 10,
+    'patience': 10,
+    'q': 'arcus.q',
+    'sch': 'local'}
+Generator will have 71163904 samples in 34748 batches
+Features have shape 94; targets have shape 65
+Generator will have 72343552 samples in 35324 batches
+Features have shape 94; targets have shape 65
+Epoch 1/18
+Epoch 00000: early stopping THR
+ - 1397s - loss: 1661357.7142 - mean_squared_error: 1661357.7142 - val_loss: 0.0100 - val_mean_squared_error: 0.0100
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Done with trial 63

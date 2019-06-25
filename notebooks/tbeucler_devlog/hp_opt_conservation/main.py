@@ -1,7 +1,7 @@
 # tgb - 4/18/2019 - Python script callable from command line
 # Follows notebook 010 @ https://github.com/tbeucler/CBRAIN-CAM/blob/master/notebooks/tbeucler_devlog/010_Conserving_Network_Paper_Runs.ipynb
 import os
-
+import pprint
 gpu = os.environ.get("SHERPA_RESOURCE", '')
 os.environ['CUDA_VISIBLE_DEVICES'] = str(gpu)
 
@@ -33,6 +33,9 @@ trial = client.get_trial()  # contains ID and parameters
 
 # Otherwise tensorflow will use ALL your GPU RAM for no reason
 limit_mem()
+
+pp = pprint.PrettyPrinter(indent=4)
+pp.pprint(trial.parameters)
 
 if trial.parameters['data'] == 'fluxbypass_aqua':
     PREFIX = '8col009_01_'
@@ -97,10 +100,33 @@ else:
 
     net = Network(trial.parameters, trial.id)
 
+if trial.parameters['alg'] == 'pbt':
+    output_path = 'SherpaResults/{data}_{alg}/{net_type}_{loss_type}/output/'.format(
+        data=trial.parameters['data'],
+        net_type=trial.parameters['net_type'],
+        loss_type=trial.parameters['loss_type'],
+        alg=trial.parameters['alg']
+    )
+
+    if trial.parameters['load_from'] == '':
+        pass
+    else:
+        net.load(output_path + str(trial.parameters['load_from']).replace('.h5','') + '.h5')
+        K.set_value(net.model.optimizer.lr, trial.parameters['lr'])
+
 # save lr model
 net.save()
 
 # train linear regression model
 net.train(train_gen, valid_gen, trial=trial, client=client)
+
+if trial.parameters['alg'] == 'pbt':
+    output_path = 'SherpaResults/{data}_{alg}/{net_type}_{loss_type}/output/'.format(
+        data=trial.parameters['data'],
+        net_type=trial.parameters['net_type'],
+        loss_type=trial.parameters['loss_type'],
+        alg=trial.parameters['alg']
+    )
+    net.save(output_path + str(trial.parameters['save_to']).replace('.h5', ''))
 
 print ('Done with trial ' + str(trial.id) )

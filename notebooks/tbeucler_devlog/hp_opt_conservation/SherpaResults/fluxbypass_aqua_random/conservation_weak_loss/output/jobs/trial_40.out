@@ -1,0 +1,90 @@
+2019-05-27 23:32:29.647124: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: GeForce GTX TITAN Black major: 3 minor: 5 memoryClockRate(GHz): 0.98
+pciBusID: 0000:83:00.0
+totalMemory: 5.94GiB freeMemory: 5.28GiB
+2019-05-27 23:32:29.647176: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-27 23:32:35.397433: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-27 23:32:35.397508: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-27 23:32:35.397520: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-27 23:32:35.397764: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 4920 MB memory) -> physical GPU (device: 0, name: GeForce GTX TITAN Black, pci bus id: 0000:83:00.0, compute capability: 3.5)
+{   'P': 'arcus_gpu.p',
+    'alg': 'random',
+    'alpha': 0.0009908192583482722,
+    'batch_norm': 0,
+    'batch_size': 2048,
+    'data': 'fluxbypass_aqua',
+    'data_dir': '/baldig/chemistry/earth_system_science/',
+    'dropout': 0,
+    'env': '/home/jott1/Projects/SHERPA_EX/.profile',
+    'epochs': 25,
+    'gpus': '0,2,3',
+    'l': "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'",
+    'layer_0': 512,
+    'layer_1': 512,
+    'layer_2': 512,
+    'layer_3': 512,
+    'layer_4': 512,
+    'layer_5': 512,
+    'layer_6': 512,
+    'leaky_relu': 0.3,
+    'loss_type': 'weak_loss',
+    'lr': 0.001,
+    'max_concurrent': 15,
+    'max_dense_layers': 7,
+    'net_type': 'conservation',
+    'num_layers': 5,
+    'patience': 10,
+    'q': 'arcus.q',
+    'sch': 'local'}
+Epoch 1/25
+ - 7626s - loss: 253.2039 - mean_squared_error: 253.4550 - val_loss: 216.0967 - val_mean_squared_error: 216.3110
+Epoch 2/25
+ - 7763s - loss: 218.3574 - mean_squared_error: 218.5740 - val_loss: 220.1594 - val_mean_squared_error: 220.3778
+Epoch 3/25
+ - 7823s - loss: 193.6178 - mean_squared_error: 193.8099 - val_loss: 180.5061 - val_mean_squared_error: 180.6851
+Epoch 4/25
+ - 7591s - loss: 176.6346 - mean_squared_error: 176.8098 - val_loss: 172.8616 - val_mean_squared_error: 173.0330
+Epoch 5/25
+ - 8003s - loss: 171.6246 - mean_squared_error: 171.7948 - val_loss: 187.1681 - val_mean_squared_error: 187.3537
+Epoch 6/25
+ - 7531s - loss: 168.2991 - mean_squared_error: 168.4660 - val_loss: 168.1668 - val_mean_squared_error: 168.3336
+Epoch 7/25
+ - 7503s - loss: 166.2021 - mean_squared_error: 166.3670 - val_loss: 165.7679 - val_mean_squared_error: 165.9323
+Epoch 8/25
+ - 7702s - loss: 165.2287 - mean_squared_error: 165.3925 - val_loss: 167.5951 - val_mean_squared_error: 167.7613
+Epoch 9/25
+ - 7371s - loss: 162.8719 - mean_squared_error: 163.0334 - val_loss: 180.9636 - val_mean_squared_error: 181.1431
+Epoch 10/25
+ - 7256s - loss: 168.3093 - mean_squared_error: 168.4762 - val_loss: 161.0641 - val_mean_squared_error: 161.2239
+Epoch 11/25
+ - 7502s - loss: 161.0410 - mean_squared_error: 161.2007 - val_loss: 162.6363 - val_mean_squared_error: 162.7976
+Epoch 12/25
+ - 7569s - loss: 167.3663 - mean_squared_error: 167.5322 - val_loss: 165.0448 - val_mean_squared_error: 165.2085
+Epoch 13/25
+ - 7261s - loss: 160.1309 - mean_squared_error: 160.2897 - val_loss: 157.2507 - val_mean_squared_error: 157.4066
+Epoch 14/25
+ - 7048s - loss: 159.3776 - mean_squared_error: 159.5356 - val_loss: 166.0607 - val_mean_squared_error: 166.2254
+Epoch 15/25
+ - 7396s - loss: 162.7152 - mean_squared_error: 162.8765 - val_loss: 161.1752 - val_mean_squared_error: 161.3351
+Epoch 16/25
+ - 7290s - loss: 157.7088 - mean_squared_error: 157.8652 - val_loss: 158.0760 - val_mean_squared_error: 158.2327
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Epoch 17/25
+Traceback (most recent call last):
+  File "main.py", line 121, in <module>
+    net.train(train_gen, valid_gen, trial=trial, client=client)
+  File "/home/jott1/Projects/CBRAIN-CAM/notebooks/tbeucler_devlog/hp_opt_conservation/model.py", line 166, in train
+    )
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/keras/engine/training.py", line 1779, in fit_generator
+    initial_epoch=initial_epoch)
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/keras/engine/training_generator.py", line 204, in fit_generator
+    x, y, sample_weight=sample_weight, class_weight=class_weight)
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/keras/engine/training.py", line 1552, in train_on_batch
+    outputs = self.train_function(ins)
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/keras/backend.py", line 2914, in __call__
+    fetched = self._callable_fn(*array_vals)
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1382, in __call__
+    run_metadata_ptr)
+KeyboardInterrupt

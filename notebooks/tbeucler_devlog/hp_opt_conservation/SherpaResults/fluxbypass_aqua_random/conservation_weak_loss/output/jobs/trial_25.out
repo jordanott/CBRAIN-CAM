@@ -1,0 +1,92 @@
+2019-05-25 20:26:46.891303: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: GeForce GTX TITAN Black major: 3 minor: 5 memoryClockRate(GHz): 0.98
+pciBusID: 0000:83:00.0
+totalMemory: 5.94GiB freeMemory: 5.28GiB
+2019-05-25 20:26:46.891358: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-25 20:26:53.684400: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-25 20:26:53.684478: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-25 20:26:53.684493: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-25 20:26:53.684813: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 4959 MB memory) -> physical GPU (device: 0, name: GeForce GTX TITAN Black, pci bus id: 0000:83:00.0, compute capability: 3.5)
+{   'P': 'arcus_gpu.p',
+    'alg': 'random',
+    'alpha': 0.007060881084733006,
+    'batch_norm': 0,
+    'batch_size': 2048,
+    'data': 'fluxbypass_aqua',
+    'data_dir': '/baldig/chemistry/earth_system_science/',
+    'dropout': 0,
+    'env': '/home/jott1/Projects/SHERPA_EX/.profile',
+    'epochs': 25,
+    'gpus': '0,2,3',
+    'l': "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'",
+    'layer_0': 512,
+    'layer_1': 512,
+    'layer_2': 512,
+    'layer_3': 512,
+    'layer_4': 512,
+    'layer_5': 512,
+    'layer_6': 512,
+    'leaky_relu': 0.3,
+    'loss_type': 'weak_loss',
+    'lr': 0.001,
+    'max_concurrent': 15,
+    'max_dense_layers': 7,
+    'net_type': 'conservation',
+    'num_layers': 5,
+    'patience': 10,
+    'q': 'arcus.q',
+    'sch': 'local'}
+Epoch 1/25
+ - 7417s - loss: 291.0752 - mean_squared_error: 293.1450 - val_loss: 202.8440 - val_mean_squared_error: 204.2864
+Epoch 2/25
+ - 8036s - loss: 205.6373 - mean_squared_error: 207.0996 - val_loss: 192.3164 - val_mean_squared_error: 193.6840
+Epoch 3/25
+ - 7989s - loss: 192.0839 - mean_squared_error: 193.4498 - val_loss: 179.9397 - val_mean_squared_error: 181.2193
+Epoch 4/25
+ - 7484s - loss: 185.5416 - mean_squared_error: 186.8610 - val_loss: 176.6815 - val_mean_squared_error: 177.9379
+Epoch 5/25
+ - 8055s - loss: 181.7548 - mean_squared_error: 183.0473 - val_loss: 176.0239 - val_mean_squared_error: 177.2757
+Epoch 6/25
+ - 7412s - loss: 179.0467 - mean_squared_error: 180.3199 - val_loss: 182.1967 - val_mean_squared_error: 183.4923
+Epoch 7/25
+ - 7296s - loss: 177.0418 - mean_squared_error: 178.3008 - val_loss: 184.2958 - val_mean_squared_error: 185.6063
+Epoch 8/25
+ - 7504s - loss: 175.5201 - mean_squared_error: 176.7682 - val_loss: 174.5123 - val_mean_squared_error: 175.7533
+Epoch 9/25
+ - 7073s - loss: 174.2456 - mean_squared_error: 175.4847 - val_loss: 171.7384 - val_mean_squared_error: 172.9596
+Epoch 10/25
+ - 7109s - loss: 173.1453 - mean_squared_error: 174.3765 - val_loss: 191.1437 - val_mean_squared_error: 192.5029
+Epoch 11/25
+ - 7063s - loss: 172.3158 - mean_squared_error: 173.5411 - val_loss: 166.6351 - val_mean_squared_error: 167.8201
+Epoch 12/25
+ - 7319s - loss: 171.4533 - mean_squared_error: 172.6725 - val_loss: 190.5729 - val_mean_squared_error: 191.9280
+Epoch 13/25
+ - 7156s - loss: 170.9199 - mean_squared_error: 172.1354 - val_loss: 169.4147 - val_mean_squared_error: 170.6195
+Epoch 14/25
+ - 7748s - loss: 170.3309 - mean_squared_error: 171.5422 - val_loss: 168.2430 - val_mean_squared_error: 169.4394
+Epoch 15/25
+ - 7165s - loss: 169.8717 - mean_squared_error: 171.0797 - val_loss: 181.4481 - val_mean_squared_error: 182.7384
+Epoch 16/25
+ - 7548s - loss: 169.3032 - mean_squared_error: 170.5071 - val_loss: 165.0221 - val_mean_squared_error: 166.1956
+Epoch 17/25
+ - 7215s - loss: 168.9012 - mean_squared_error: 170.1022 - val_loss: 171.8538 - val_mean_squared_error: 173.0758
+Epoch 18/25
+ - 7101s - loss: 168.6125 - mean_squared_error: 169.8115 - val_loss: 169.9625 - val_mean_squared_error: 171.1711
+Epoch 19/25
+ - 7094s - loss: 168.1987 - mean_squared_error: 169.3948 - val_loss: 163.2968 - val_mean_squared_error: 164.4581
+Epoch 20/25
+ - 7268s - loss: 167.7706 - mean_squared_error: 168.9637 - val_loss: 170.4416 - val_mean_squared_error: 171.6536
+Epoch 21/25
+ - 7252s - loss: 167.5060 - mean_squared_error: 168.6971 - val_loss: 168.7821 - val_mean_squared_error: 169.9824
+Epoch 22/25
+ - 6943s - loss: 167.3672 - mean_squared_error: 168.5574 - val_loss: 170.5351 - val_mean_squared_error: 171.7478
+Epoch 23/25
+ - 7162s - loss: 167.1207 - mean_squared_error: 168.3091 - val_loss: 164.6007 - val_mean_squared_error: 165.7712
+Epoch 24/25
+ - 7298s - loss: 166.8966 - mean_squared_error: 168.0834 - val_loss: 190.3070 - val_mean_squared_error: 191.6603
+Epoch 25/25
+ - 7024s - loss: 166.6901 - mean_squared_error: 167.8755 - val_loss: 173.3921 - val_mean_squared_error: 174.6251
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+Done with trial 25

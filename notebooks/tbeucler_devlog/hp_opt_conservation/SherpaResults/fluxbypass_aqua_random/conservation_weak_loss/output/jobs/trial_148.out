@@ -1,0 +1,58 @@
+2019-05-29 09:31:24.072585: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: Tesla K40c major: 3 minor: 5 memoryClockRate(GHz): 0.745
+pciBusID: 0000:84:00.0
+totalMemory: 11.17GiB freeMemory: 9.57GiB
+2019-05-29 09:31:24.072649: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2019-05-29 09:31:24.519821: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-29 09:31:24.519890: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2019-05-29 09:31:24.519903: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2019-05-29 09:31:24.520312: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 9268 MB memory) -> physical GPU (device: 0, name: Tesla K40c, pci bus id: 0000:84:00.0, compute capability: 3.5)
+/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+{   'P': 'arcus_gpu.p',
+    'alg': 'random',
+    'alpha': 0.01671097288485604,
+    'batch_norm': 0,
+    'batch_size': 2048,
+    'data': 'fluxbypass_aqua',
+    'data_dir': '/baldig/chemistry/earth_system_science/',
+    'dropout': 0,
+    'env': '/home/jott1/Projects/SHERPA_EX/.profile',
+    'epochs': 25,
+    'gpus': '0,2,3',
+    'l': "hostname='(arcus-1|arcus-2|arcus-3|arcus-4|arcus-5|arcus-6|arcus-7|arcus-8|arcus-9|arcus-10)'",
+    'layer_0': 512,
+    'layer_1': 512,
+    'layer_2': 512,
+    'layer_3': 512,
+    'layer_4': 512,
+    'layer_5': 512,
+    'layer_6': 512,
+    'leaky_relu': 0.3,
+    'loss_type': 'weak_loss',
+    'lr': 0.001,
+    'max_concurrent': 15,
+    'max_dense_layers': 7,
+    'net_type': 'conservation',
+    'num_layers': 5,
+    'patience': 10,
+    'q': 'arcus.q',
+    'sch': 'local'}
+Traceback (most recent call last):
+  File "main.py", line 118, in <module>
+    net.save()
+  File "/home/jott1/Projects/CBRAIN-CAM/notebooks/tbeucler_devlog/hp_opt_conservation/model.py", line 193, in save
+    self.model.save(file_name+'.h5')
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/keras/engine/network.py", line 1278, in save
+    save_model(self, filepath, overwrite, include_optimizer)
+  File "/home/jott1/.local/lib/python3.6/site-packages/tensorflow/python/keras/engine/saving.py", line 89, in save_model
+    f = h5py.File(filepath, mode='w')
+  File "/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/_hl/files.py", line 271, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, swmr=swmr)
+  File "/pkg/python/3.6.1-centos7/lib/python3.6/site-packages/h5py/_hl/files.py", line 107, in make_fid
+    fid = h5f.create(name, h5f.ACC_TRUNC, fapl=fapl, fcpl=fcpl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper (/tmp/pip-s_7obrrg-build/h5py/_objects.c:2840)
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper (/tmp/pip-s_7obrrg-build/h5py/_objects.c:2798)
+  File "h5py/h5f.pyx", line 98, in h5py.h5f.create (/tmp/pip-s_7obrrg-build/h5py/h5f.c:2284)
+OSError: Unable to create file (Unable to open file: name = 'sherparesults/baselines/fluxbypass_aqua/conservation_weak_loss/models/00148.h5', errno = 2, error message = 'no such file or directory', flags = 13, o_flags = 242)
